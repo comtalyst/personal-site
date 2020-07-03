@@ -1,6 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import customTheme from './CustomTheme.js'
+import { ThemeProvider, CSSReset } from '@chakra-ui/core'
+
+import NavigationBar from './components/NavigationBar.js';
 
 const draftStyle = {
   textAlign: 'center'
@@ -8,8 +12,9 @@ const draftStyle = {
 
 function App() {
   return (
-    <div style={draftStyle}>
-      <h1>Navigation bar</h1>
+    <ThemeProvider theme={customTheme} >
+      <CSSReset />
+      <NavigationBar/>
       <hr/>
       <h2>TL;DR</h2>
       <hr/>
@@ -26,7 +31,7 @@ function App() {
       <h2>Honors</h2>
       <hr/>
       <h2>Contact</h2>
-    </div>
+    </ThemeProvider>
   );
 }
 
