@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import './App.css';
 
 import customTheme from './CustomTheme.js'
@@ -7,19 +7,26 @@ import { ThemeProvider, CSSReset, Box } from '@chakra-ui/core'
 import NavigationBar from './components/NavigationBar.js';
 import Profile from './components/Profile.js';
 
-const draftStyle = {
-  textAlign: 'center'
-};
-
 function App() {
+  const ref = useRef(null)
+  const scrollTo = (compName) => {
+    if(compName == 'Profile') {
+      window.scrollTo(0, ref.current.offsetTop)
+    }
+    else{
+      console.log('NOPE')
+    }
+  }
+
   return (
     <ThemeProvider theme={customTheme}>
       <Box bg='gray.700' color='white'>
         <CSSReset />
-        <NavigationBar/>
+        <NavigationBar scrollTo={scrollTo}/>
         <hr/>
         <h2>TL;DR</h2>
         <hr/>
+        <div ref={ref}></div>
         <Profile/>
         <hr/>
         <h2>Education/Courseworks</h2>

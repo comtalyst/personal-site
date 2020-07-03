@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button, Text, Flex } from "@chakra-ui/core";
 
-function NavigationBar() {
+function NavigationBar(props) {
+  const {scrollTo} = props
   return (
     <Flex>
       <Flex h='4rem'></Flex>
@@ -25,6 +26,7 @@ function NavigationBar() {
             _hover={{bg: '#FFFFFF10'}} rounded='1px' h='100%'
             _active={{ transform: 'scale(0.9)'}}
             _focus={{ boxShadow: '0 0 0 0'}}
+            onClick={() => scrollTo('Profile')}
           >
             Profile
           </Button>
