@@ -5,7 +5,7 @@ const customTheme = {
   ...theme,
   colors: {
     ...theme.colors,
-    reactDark: '#20232a'
+    reactDark: '#20232a',
   },
   fonts: {
     body: "system-ui, sans-serif",
