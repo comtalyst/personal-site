@@ -5,8 +5,8 @@ function NavigationBar(props) {
   const {scrollTo} = props
   return (
     <Flex>
-      <Flex h='4rem'></Flex>
-      <Flex bg='reactDark' w='100%' color='white' py='0' justifyContent='space-between' px='1.5rem' h='4rem' 
+      <Flex h='64px'></Flex>
+      <Flex bg='reactDark' w='100%' color='white' py='0' justifyContent='space-between' px='1.5rem' h='64px' 
         alignItems='center' position='fixed'
       >
         <Flex>
@@ -35,6 +35,7 @@ function NavigationBar(props) {
             _hover={{bg: '#FFFFFF10'}} rounded='1px' h='100%'
             _active={{ transform: 'scale(0.9)'}}
             _focus={{ boxShadow: '0 0 0 0'}}
+            onClick={() => scrollTo('Education')}
           >
             Education
           </Button>

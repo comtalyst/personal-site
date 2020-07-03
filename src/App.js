@@ -8,14 +8,13 @@ import NavigationBar from './components/NavigationBar.js';
 import Profile from './components/Profile.js';
 
 function App() {
-  const ref = useRef(null)
+  const ref = {
+    "Profile": useRef(null),
+    "Education": useRef(null),
+  }
+
   const scrollTo = (compName) => {
-    if(compName == 'Profile') {
-      window.scrollTo(0, ref.current.offsetTop)
-    }
-    else{
-      console.log('NOPE')
-    }
+    window.scrollTo(0, ref[compName].current.offsetTop - 64) 
   }
 
   return (
@@ -26,9 +25,10 @@ function App() {
         <hr/>
         <h2>TL;DR</h2>
         <hr/>
-        <div ref={ref}></div>
+        <div ref={ref['Profile']}></div>
         <Profile/>
         <hr/>
+        <div ref={ref['Education']}></div>
         <h2>Education/Courseworks</h2>
         <hr/>
         <h2>Tech Proficiency</h2>
