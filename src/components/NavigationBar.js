@@ -9,8 +9,14 @@ function NavigationBar() {
         alignItems='center' position='fixed'
       >
         <Flex>
-          <Text fontSize='xl'>
-            Rawin (Robin) Deeboonchai
+          <Text fontSize='xl' letterSpacing='widest' fontWeight='light'>
+            Rawin (
+          </Text>
+          <Text fontSize='xl' letterSpacing='widest' fontWeight='bold' color='blue.400'>
+            Robin 
+          </Text>
+          <Text fontSize='xl' letterSpacing='widest' fontWeight='light'>
+            ) Deeboonchai
           </Text>
         </Flex>
         <Flex h='100%'>
