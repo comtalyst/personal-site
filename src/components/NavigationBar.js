@@ -1,5 +1,5 @@
-import React, {useRef, Component} from 'react';
-import { Button, Text, Flex } from "@chakra-ui/core";
+import React, {Component} from 'react';
+import { Button, Text, Flex, Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/core";
 
 const clashRange = 80                         // additional constant for title-buttons clash measurement
 
@@ -13,7 +13,7 @@ class NavigationBar extends Component {
     this.titleSize = 0
 
     this.buttonsRef = null
-    this.setButtonsRef = element => {               // will be called after target element is ready
+    this.setButtonsRef = element => {               // callback after target element is ready
       if(element != null){
         this.buttonsRef = element
         this.buttonsOrigSize = element.offsetWidth
@@ -74,22 +74,35 @@ class NavigationBar extends Component {
               <Flex h='100%' ref={this.setButtonsRef}>
               {
                 names.map((name) => (
-                  
-                    <Button
-                      variant='ghost' color='white'
-                      _hover={{bg: '#FFFFFF10'}} rounded='1px' h='100%'
-                      _active={{ transform: 'scale(0.9)'}}
-                      _focus={{ boxShadow: '0 0 0 0'}}
-                      onClick={() => scrollTo(name)}
-                    >
-                      {name}
-                    </Button>
+                  <Button
+                    variant='ghost' color='white'
+                    _hover={{bg: '#FFFFFF10'}} rounded='1px' h='100%'
+                    _active={{ transform: 'scale(0.9)'}}
+                    _focus={{ boxShadow: '0 0 0 0'}}
+                    onClick={() => scrollTo(name)}
+                  >
+                    {name}
+                  </Button>
                 ))
               }
               </Flex>
             ):
             (
-              <Text>Yo</Text>
+              <Menu>
+                <MenuButton as={Button} rightIcon="chevron-down"
+                  variant='ghost' color='white'
+                  _hover={{bg: '#FFFFFF10'}} rounded='1px' h='100%'
+                  _active={{ transform: 'scale(0.9)'}}
+                  _focus={{ boxShadow: '0 0 0 0'}}
+                >
+                  Navigate
+                </MenuButton>
+                <MenuList bg='reactDark' color='white' borderColor='#00000000'>
+                {
+                  names.map((name) => (<MenuItem _focus={{bg: '#FFFFFF10'}} onClick={() => scrollTo(name)}>{name}</MenuItem>))
+                }
+                </MenuList>
+              </Menu>
             )
           }
           
