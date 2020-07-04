@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Text, Flex } from "@chakra-ui/core";
 
 function NavigationBar(props) {
-  const {scrollTo} = props
+  const {scrollTo, names} = props
   return (
     <Flex>
       <Flex h='64px'></Flex>
@@ -21,24 +21,20 @@ function NavigationBar(props) {
           </Text>
         </Flex>
         <Flex h='100%'>
-          <Button
-            variant='ghost' color='white'
-            _hover={{bg: '#FFFFFF10'}} rounded='1px' h='100%'
-            _active={{ transform: 'scale(0.9)'}}
-            _focus={{ boxShadow: '0 0 0 0'}}
-            onClick={() => scrollTo('Profile')}
-          >
-            Profile
-          </Button>
-          <Button
-            variant='ghost' color='white'
-            _hover={{bg: '#FFFFFF10'}} rounded='1px' h='100%'
-            _active={{ transform: 'scale(0.9)'}}
-            _focus={{ boxShadow: '0 0 0 0'}}
-            onClick={() => scrollTo('Education')}
-          >
-            Education
-          </Button>
+        {
+          names.map((name) => (
+            
+              <Button
+                variant='ghost' color='white'
+                _hover={{bg: '#FFFFFF10'}} rounded='1px' h='100%'
+                _active={{ transform: 'scale(0.9)'}}
+                _focus={{ boxShadow: '0 0 0 0'}}
+                onClick={() => scrollTo(name)}
+              >
+                {name}
+              </Button>
+          ))
+        }
         </Flex>
       </Flex>
     </Flex>

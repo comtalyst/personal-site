@@ -21,7 +21,7 @@ function App() {
     <ThemeProvider theme={customTheme}>
       <Box bg='gray.700' color='white'>
         <CSSReset />
-        <NavigationBar scrollTo={scrollTo}/>
+        <NavigationBar scrollTo={scrollTo} names={['Profile', 'Education']}/>
         <hr/>
         <h2>TL;DR</h2>
         <hr/>
