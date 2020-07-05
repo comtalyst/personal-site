@@ -4,11 +4,11 @@ import uw_logo from '../media/uw_logo.png';
 
 function Education() {
   return (
-    <Flex w='100%' pb='6rem' pt='1rem' direction='column' bg='#FF000010'>
+    <Flex w='100%' pb='3rem' pt='1rem' direction='column' bg='#FF000010'>
       <Text w='100%' textAlign='center' fontSize='5xl'>
         Education
       </Text>
-      <Grid templateColumns={{ base: "1fr", md: "auto auto"}} columnGap='0px'>
+      <Grid templateColumns={{ base: "1fr", md: "auto auto"}} columnGap='0px' pt='1.5rem'>
         <Flex>
           <Image src={uw_logo} alt='logo' size='100px' objectFit='contain' mx='20px'/>
           <Text fontSize='xl' lineHeight='tall' letterSpacing='wider' fontWeight='light'>
