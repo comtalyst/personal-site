@@ -55,7 +55,7 @@ class NavigationBar extends Component {
       <Flex>
         <Flex h='64px'></Flex>
         <Flex bg='reactDark' w='100%' color='white' py='0' justifyContent='space-between' px='1.5rem' h='64px' 
-          alignItems='center' position='fixed'
+          alignItems='center' position='fixed' zIndex={100}
         >
           <Flex ref={this.setTitleRef}>
             <Text fontSize='xl' letterSpacing='wide' fontWeight='light'>
