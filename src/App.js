@@ -2,10 +2,11 @@ import React, {useRef} from 'react';
 import './App.css';
 
 import customTheme from './CustomTheme.js'
-import { ThemeProvider, CSSReset, Box } from '@chakra-ui/core'
+import { ThemeProvider, CSSReset, Box, Divider } from '@chakra-ui/core'
 
 import NavigationBar from './components/NavigationBar.js';
 import Profile from './containers/Profile.js';
+import Education from './containers/Education.js';
 
 function App() {
   const ref = {
@@ -29,7 +30,7 @@ function App() {
         <Profile/>
         <hr/>
         <div ref={ref['Education']}></div>
-        <h2>Education/Courseworks</h2>
+        <Education/>
         <hr/>
         <h2>Tech Proficiency</h2>
         <hr/>
