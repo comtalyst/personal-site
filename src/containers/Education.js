@@ -41,7 +41,7 @@ function Education() {
 
   return (
     <Flex w='100%' pb='3rem' pt='1rem' direction='column' bg='trans.gray'>
-      <Text w='100%' textAlign='center' fontSize='5xl'>
+      <Text w='100%' textAlign='center' fontSize='5xl' letterSpacing='wider' fontWeight='light'>
         Education
       </Text>
       {

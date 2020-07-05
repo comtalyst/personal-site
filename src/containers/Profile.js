@@ -5,7 +5,7 @@ import portrait from '../media/portrait.jpg';
 function Profile() {
   return (
     <Flex w='100%' pb='3rem' pt='1rem' direction='column'>
-      <Text w='100%' textAlign='center' fontSize='5xl'>
+      <Text w='100%' textAlign='center' fontSize='5xl' letterSpacing='wider' fontWeight='light'>
         Hello there!
       </Text>
       <Grid templateColumns={{ base: "1fr", md: "minmax(0px, 150px) minmax(300px, auto) minmax(300px, auto) minmax(0px, 150px)"}} columnGap='3.5rem'>
