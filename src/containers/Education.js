@@ -21,6 +21,14 @@ function Education() {
       year: '2018 - 2019',
       courses: ['Independent Study in Advanced Programming'],
       logo: gs_logo
+    },
+    {
+    name: 'Self-Study',
+      color: 'blue.100',
+      desc: 'The courses below are completed without guidance from formal institutions',
+      year: '',
+      courses: ['Deep Learning Specialization, by deeplearning.ai via Coursera', 'Machine Learning, by Stanford University Online via Coursera'],
+      logo: 'n/a'
     }
   ]
 
@@ -41,7 +49,11 @@ function Education() {
           const {name, color, desc, year, courses, logo} = school
           return (<Grid templateColumns={{ base: "1fr", md: "auto auto"}} columnGap='0px' pt='1.5rem'>
             <Flex mx='20px'>
-              <Image src={logo} alt='logo' size='100px' objectFit='contain' mr='10px'/>
+              {
+                logo === 'n/a'?
+                (<Box h='100px' w='100px' mr='10px'></Box>):
+                (<Image src={logo} alt='logo' size='100px' objectFit='contain' mr='10px'/>)
+              }
               <Flex direction='column'>
                 <Text fontSize='xl' lineHeight='tall' letterSpacing='wider' fontWeight='light' color={color}>
                   {name}
