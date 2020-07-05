@@ -4,7 +4,7 @@ import uw_logo from '../media/uw_logo.png';
 
 function Education() {
   return (
-    <Flex w='100%' pb='3rem' pt='1rem' direction='column' bg='#FF000010'>
+    <Flex w='100%' pb='3rem' pt='1rem' direction='column' bg='trans.gray'>
       <Text w='100%' textAlign='center' fontSize='5xl'>
         Education
       </Text>

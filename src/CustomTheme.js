@@ -6,6 +6,9 @@ const customTheme = {
   colors: {
     ...theme.colors,
     reactDark: '#20232a',
+    trans: {
+      gray: '#E2E8F020'
+    }
   },
   fonts: {
     body: "system-ui, sans-serif",
