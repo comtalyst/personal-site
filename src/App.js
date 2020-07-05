@@ -5,7 +5,7 @@ import customTheme from './CustomTheme.js'
 import { ThemeProvider, CSSReset, Box } from '@chakra-ui/core'
 
 import NavigationBar from './components/NavigationBar.js';
-import Profile from './components/Profile.js';
+import Profile from './containers/Profile.js';
 
 function App() {
   const ref = {
