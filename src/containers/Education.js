@@ -4,6 +4,8 @@ import { Button, Text, Box, Flex, Image, Grid, Collapse } from "@chakra-ui/core"
 import uw_logo from '../media/uw_logo.png';
 import gs_logo from '../media/gs_logo.png';
 
+import Title from '../components/Title.js';
+
 function Education() {
   const schools=[
     {
@@ -41,9 +43,7 @@ function Education() {
 
   return (
     <Flex w='100%' pb='3rem' pt='1rem' direction='column' bg='trans.gray'>
-      <Text w='100%' textAlign='center' fontSize='5xl' letterSpacing='wider' fontWeight='light'>
-        Education
-      </Text>
+      <Title text='Education'/>
       {
         schools.map((school, idx) => {
           const {name, color, desc, year, courses, logo} = school

@@ -2,12 +2,12 @@ import React from 'react';
 import { Button, Text, Box, Flex, Image, Grid } from "@chakra-ui/core";
 import portrait from '../media/portrait.jpg';
 
+import Title from '../components/Title.js';
+
 function Profile() {
   return (
     <Flex w='100%' pb='3rem' pt='1rem' direction='column'>
-      <Text w='100%' textAlign='center' fontSize='5xl' letterSpacing='wider' fontWeight='light'>
-        Hello there!
-      </Text>
+      <Title text='Hello There!'/>
       <Grid templateColumns={{ base: "1fr", md: "minmax(0px, 150px) minmax(300px, auto) minmax(300px, auto) minmax(0px, 150px)"}} columnGap='3.5rem'>
         <Box></Box>
         <Flex justifyContent='center'pt='1.5rem' mx='20px'>

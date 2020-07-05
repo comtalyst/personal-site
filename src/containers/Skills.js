@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button, Text, Box, Flex, Image, Grid, Collapse } from "@chakra-ui/core";
 
+import Title from '../components/Title.js';
+
 function Skills() {
 
   // customize frame color here
@@ -168,9 +170,7 @@ function Skills() {
 
   return (
     <Flex w='100%' pb='3rem' pt='1rem' direction='column'>
-      <Text w='100%' textAlign='center' fontSize='5xl' letterSpacing='wider' fontWeight='light'>
-        Tech Skills
-      </Text>
+      <Title text='Tech Skills'/>
       <Flex direction='column' px='20px'>
         {getSkillTitle('Languages')}
         {getSkillContainer(languages)}
