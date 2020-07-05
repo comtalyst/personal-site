@@ -58,13 +58,13 @@ class NavigationBar extends Component {
           alignItems='center' position='fixed'
         >
           <Flex ref={this.setTitleRef}>
-            <Text fontSize='xl' letterSpacing='widest' fontWeight='light'>
+            <Text fontSize='xl' letterSpacing='wide' fontWeight='light'>
               Rawin (
             </Text>
-            <Text fontSize='xl' letterSpacing='widest' fontWeight='bold' color='blue.400'>
+            <Text fontSize='xl' letterSpacing='wider' fontWeight='bold' color='blue.400'>
               Robin 
             </Text>
-            <Text fontSize='xl' letterSpacing='widest' fontWeight='light'>
+            <Text fontSize='xl' letterSpacing='wide' fontWeight='light'>
               ) Deeboonchai
             </Text>
           </Flex>
@@ -95,7 +95,7 @@ class NavigationBar extends Component {
                   _active={{ transform: 'scale(0.9)'}}
                   _focus={{ boxShadow: '0 0 0 0'}}
                 >
-                  Navigate
+                
                 </MenuButton>
                 <MenuList bg='reactDark' color='white' borderColor='#00000000'>
                 {
