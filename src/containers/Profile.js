@@ -8,7 +8,7 @@ function Profile() {
       <Text w='100%' textAlign='center' fontSize='5xl'>
         Hello there!
       </Text>
-      <Grid templateColumns={{ base: "1fr", md: "minmax(0px, 150px) minmax(300px, 540px) minmax(300px, 540px) minmax(0px, 150px)"}} columnGap='3.5rem'>
+      <Grid templateColumns={{ base: "1fr", md: "minmax(0px, 150px) minmax(300px, auto) minmax(300px, auto) minmax(0px, 150px)"}} columnGap='3.5rem'>
         <Box></Box>
         <Flex justifyContent='center' pt='3rem' mx='20px'>
           <Image src={portrait} alt='Portrait' size='500px' objectFit='cover' borderRadius='5px'/>
