@@ -9,8 +9,8 @@ function Education() {
         Education
       </Text>
       <Grid templateColumns={{ base: "1fr", md: "auto auto"}} columnGap='0px' pt='1.5rem'>
-        <Flex>
-          <Image src={uw_logo} alt='logo' size='100px' objectFit='contain' mx='20px'/>
+        <Flex mx='20px'>
+          <Image src={uw_logo} alt='logo' size='100px' objectFit='contain' mr='10px'/>
           <Text fontSize='xl' lineHeight='tall' letterSpacing='wider' fontWeight='light'>
             University of Wisconsin-Madison <br/>B.S. in Computer Science and Data Science
           </Text>
