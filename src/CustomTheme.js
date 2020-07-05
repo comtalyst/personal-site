@@ -7,7 +7,14 @@ const customTheme = {
     ...theme.colors,
     reactDark: '#20232a',
     trans: {
-      gray: '#E2E8F020'
+      gray: '#E2E8F020',
+      blue: {
+        300: '#63B3ED60',
+        400: '#4299E160',
+        500: '#3182CE60',
+        600: '#2A69AC60',
+        700: '#1E4E8C60'
+      }
     }
   },
   fonts: {
