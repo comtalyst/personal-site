@@ -6,6 +6,11 @@ import shootdown2 from '../media/shootdown2.png';
 import shootdown3 from '../media/shootdown3.png';
 import shootdown4 from '../media/shootdown4.png';
 import shootdown5 from '../media/shootdown5.png';
+import luminateer1 from '../media/luminateer1.png';
+import luminateer2 from '../media/luminateer2.png';
+import firex1 from '../media/firex1.png';
+import firex2 from '../media/firex2.png';
+import minesweepers1 from '../media/minesweepers1.PNG';
 
 import Title from '../components/Title.js';
 
@@ -55,23 +60,61 @@ function Projects() {
       link: 'https://play.google.com/store/apps/details?id=com.comtalyst.shootdown',
       source: 'n/a',
       extras: (<Flex justifyContent='center' mt='1rem' wrap='wrap'>
-                <Image src={shootdown1} alt='screenshot' h='300px' m='10px' borderRadius='5px'/>
-                <Image src={shootdown2} alt='screenshot' h='300px' m='10px' borderRadius='5px'/>
-                <Image src={shootdown3} alt='screenshot' h='300px' m='10px' borderRadius='5px'/>
-                <Image src={shootdown4} alt='screenshot' h='300px' m='10px' borderRadius='5px'/>
-                <Image src={shootdown5} alt='screenshot' h='300px' m='10px' borderRadius='5px'/>
+                <Image src={shootdown1} alt='screenshot' h='250px' m='10px' borderRadius='5px'/>
+                <Image src={shootdown2} alt='screenshot' h='250px' m='10px' borderRadius='5px'/>
+                <Image src={shootdown3} alt='screenshot' h='250px' m='10px' borderRadius='5px'/>
+                <Image src={shootdown4} alt='screenshot' h='250px' m='10px' borderRadius='5px'/>
+                <Image src={shootdown5} alt='screenshot' h='250px' m='10px' borderRadius='5px'/>
               </Flex>)
     },
     {
       name: 'Luminateer',
       color: 'blue.100',
-      desc: 'An Arduino-powered software that makes PattonRobotics OneBot follows the tricolor LED signal.',
+      desc: 'An Arduino-powered software that makes PattonRobotics OneBot follows the tricolor LED signal. A project for the Intensive Robotics course at George School.',
       year: 'Mar 2019 - May 2019',
       keywords: ['Robotics & Physical Computing', 'Arduino', 'C'],
       link: 'n/a',
       source: 'https://github.com/comtalyst/Luminateer',
+      extras: (<Flex justifyContent='center' mt='1rem' wrap='wrap'>
+                <Image src={luminateer1} alt='screenshot' h='200px' m='10px' borderRadius='5px'/>
+                <Image src={luminateer2} alt='screenshot' h='200px' m='10px' borderRadius='5px'/>
+              </Flex>)
+    },
+    {
+      name: 'Random Forestry',
+      color: 'blue.100',
+      desc: 'A project for the Independent Study in Advanced Programming course at George School. The technical objective of the project is to find and select "useful" features from the mass amount of predictable training data using Random Forest.',
+      year: 'Mar 2019 - May 2019',
+      keywords: ['Machine Learning', 'Random Forest', 'scikit-learn', 'Python'],
+      link: 'n/a',
+      source: 'https://github.com/comtalyst/Random_Forestry',
       extras: (<Box h='0' w='0'></Box>)
-    }
+    },
+    {
+      name: 'Firex',
+      color: 'blue.100',
+      desc: 'A firefighting robot created for Trinity College International Firefighting Robot Contest 2019 by 4 students from George School under the guidance of robotics teacher Chris: Robin (Maze traversal / pathfinding), Sam (Hardware and Fire extinguishing), Andrew (Hardware and Fire detection) and Ian (Hardware and Microphone).',
+      year: 'Mar 2019 - Apr 2019',
+      keywords: ['Robotics & Physical Computing', 'Arduino', 'C'],
+      link: 'n/a',
+      source: 'https://github.com/comtalyst/Firex',
+      extras: (<Flex justifyContent='center' mt='1rem' wrap='wrap'>
+                <Image src={firex1} alt='screenshot' h='200px' m='10px' borderRadius='5px'/>
+                <Image src={firex2} alt='screenshot' h='200px' m='10px' borderRadius='5px'/>
+              </Flex>)
+    },
+    {
+      name: 'Minesweepers',
+      color: 'blue.100',
+      desc: 'A project for the Independent Study in Advanced Programming course at George School. The technical objective of the project is to train the "Minesweeper" bots to correctly walk through the "mines" presented on a 2D plane using Genetic Algorithms and Neural Networks.',
+      year: 'Nov 2018 - Mar 2019',
+      keywords: ['Machine Learning', 'Neural Networks', 'Genetic Algorithms', 'Java'],
+      link: 'n/a',
+      source: 'https://github.com/comtalyst/Minesweepers',
+      extras: (<Flex justifyContent='center' mt='1rem' wrap='wrap'>
+                <Image src={minesweepers1} alt='screenshot' h='300px' m='10px' borderRadius='5px'/>
+              </Flex>)
+    },
   ]
 
   const [show, setShow] = React.useState(Array(projects.length).fill(false));        // collapsible project list state management
@@ -101,12 +144,12 @@ function Projects() {
                     <Text fontSize='xl' lineHeight='tall' letterSpacing='wider' fontWeight='light' color={color}>
                       {name}
                     </Text>
-                    <Text fontSize='xl' lineHeight='tall' letterSpacing='wider' fontWeight='light'>
+                    <Text fontSize='l' lineHeight='tall' letterSpacing='wider' fontWeight='light' maxW='1000px'>
                       {desc}
                     </Text>
                     <Flex alignItems='center'>
                       <Button
-                        variant='ghost' color='white'
+                        variant='ghost' color='gray.400'
                         _hover={{bg: '#FFFFFF10'}} rounded='3px'
                         _active={{ transform: 'scale(0.9)'}}
                         _focus={{ boxShadow: '0 0 0 0'}}
