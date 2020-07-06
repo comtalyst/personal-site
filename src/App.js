@@ -17,6 +17,7 @@ function App() {
     "Education": useRef(null),
     "Skills": useRef(null),
     "Projects": useRef(null),
+    "Honors": useRef(null),
   }
 
   const scrollTo = (compName) => {
