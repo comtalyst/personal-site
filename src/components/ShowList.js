@@ -61,7 +61,7 @@ function ShowList(props) {
               }
               <Flex alignItems='center'>
                 {
-                  collapseTitle !== null && collapseTitle !== undefined?
+                  collapseTitle !== null && collapseTitle !== undefined && keywords !== undefined && keywords !== null?
                   (<Button
                     variant='ghost' color='gray.400'
                     _hover={{bg: '#FFFFFF10'}} rounded='3px'
