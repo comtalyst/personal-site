@@ -1,115 +1,94 @@
 import React from 'react';
 import { Button, Text, Box, Flex, Image, Grid, Collapse, Link, Icon, Divider } from "@chakra-ui/core";
 
+import toi1 from '../media/toi1.png';
+import apio_logo from '../media/apio_logo.png';
+import icpc_logo from '../media/icpc_logo.png';
+import trinity_logo from '../media/trinity_logo.png';
+import toi_logo from '../media/toi_logo.png';
+import nsc_logo from '../media/nsc_logo.png';
+
 import Title from '../components/Title.js';
+import ShowList from '../components/ShowList.js';
 
 function Honors() {
-
-  // customize stack boxes here
-  const getBoxes = (skills) => {
-    return skills.map(skill => {
-      let color = 'gray.500'
-      let bgColor = color
-      return (<Box borderWidth='2px' px='5px' py='1px' borderRadius='5px' m='2px' borderColor={color} minWidth='fit-content' bg={bgColor}>
-        <Text fontSize='l' lineHeight='tall' letterSpacing='wider' fontWeight='light'>
-          {skill}
-        </Text>
-      </Box>)
-    })
-  }
-
-  // customize row of boxes here
-  const getSkillContainer = (skills) => {
-    return(
-      <Flex justifyContent='left' flexWrap='wrap'>
-        {
-          getBoxes(skills)
-        }
-      </Flex>
-    )
-  }
+  const gold = 'yellow.400'
+  const silver = 'gray.300'
+  const bronze = 'orange.200'
 
   const honors=[
     {
-      name: 'Gold Medal, Galactic Olympiad in Informatics 3020',
-      color: 'yellow.400',
-      desc: 'A formal competitive programming competition to qualify national representatives to the Intergalactic Olympiad in Informatics',
-      year: 'Jul 3020',
-      keywords: ['Competitive Programming', 'C/C++'],
-      link: 'https://comtalyst.com',
-      extras: (<Box h='0' w='0'></Box>)
+      name: '6th Place, ICPC 2019 North Central North America Regional Contest',
+      color: silver,
+      desc: 'A formal college-level programming competition to qualify regional representatives to the ICPC World Finals 2020. ' +
+      'Contestants from 178 teams have to solve most number of problems using data structure and algorithms, varied from basics to advanced, ' +
+      'in a limited time (this competition style is called \"Competitive Programming\")',
+      year: (<Flex justifyContent='flex-end' mt='1rem' wrap='wrap'>
+              <Image src={icpc_logo} alt='screenshot' h='80px' m='10px'/>
+              Nov 2019
+            </Flex>),
+      keywords: ['Teamed Competitive Programming', 'C/C++', 'Data Structure and Algorithms'],
+      link: 'https://icpc.global/',
+    },
+    {
+      name: 'North American Award (Level 3), Trinity College Int’l Firefighting Robot Contest 2019',
+      color: gold,
+      desc: 'A firefighting robotics competition: the robot must traverse the maze and extinguish the candle in a limited time. ' +
+      'Competed using the robot Firex along with teammates from George School: Sam, Andrew, and Ian under the guidance of robotics teacher Chris. ' + 
+      'Received the best performance award for teams from North America in the most advanced maze.',
+      year: (<Flex justifyContent='flex-end' mt='1rem' wrap='wrap'>
+              <Image src={trinity_logo} alt='screenshot' h='100px' m='10px' mx='30px'/>
+              Apr 2019
+            </Flex>),
+      keywords: ['Robotics & Physical Computing', 'Arduino', 'C'],
+      link: 'https://trinityrobotcontest.org/',
+    },
+    {
+      name: 'Royal Thai Olympiad Scholarship',
+      desc: 'A scholarship from Thai government to study computer sciences internationally up to Doctoral Degree ' +
+      'Awarded to students who reached the final qualification round in an academic Olympiad program (in my case, computer science Olympiad).',
+      year: 'Jun 2018',
+    },
+    {
+      name: 'National Representative, Asia-Pacific Informatics Olympiad (APIO) 2018',
+      desc: 'A formal high-school-level programming competition for national representatives from Asian-Pacific nations. ' + 
+      'Missed a medalist opportunity with a mistake I never forget...',
+      year: (<Flex justifyContent='flex-end' mt='1rem' wrap='wrap'>
+              <Image src={apio_logo} alt='screenshot' h='80px' m='10px'/>
+              May 2018
+            </Flex>),
+      keywords: ['Competitive Programming', 'C/C++', 'Data Structure and Algorithms'],
+      link: 'https://apio2018.ru/',
+    },
+    {
+      name: 'Participant, Thailand\'s National Software Contest 2018',
+      desc: 'A nation-wide software development competition. Competed using the Chatbot Amico along with teammates from ' +
+      'Suankularb Wittayalai School: Pete and Boss under the guidance of teacher Saowalak. ' + 
+      'Qualified to the first round and received development funds.',
+      year: (<Flex justifyContent='flex-end' mt='1rem' wrap='wrap'>
+              <Image src={nsc_logo} alt='screenshot' h='80px' m='10px' mx='30px'/>
+              Mar 2018
+            </Flex>),
+      keywords: ['Software Development', 'Chatbot', 'Machine Learning (Lite)', 'Python'],
+      link: 'http://www.nectec.or.th/nsc/',
+    },
+    {
+      name: 'Silver Medalist, 12th Thailand Olympiad in Informatics',
+      color: silver,
+      desc: 'A formal high-school-level nation-wide programming competition.',
+      year: 'Jun 2016',
+      keywords: ['Competitive Programming', 'C/C++', 'Data Structure and Algorithms'],
+      link: 'http://www.enews.psu.ac.th/index.php/education/28-the-12th-thailand-olympiad-in-informatics',
+      extras: (<Flex justifyContent='center' mt='1rem' wrap='wrap'>
+                <Image src={toi1} alt='screenshot' h='250px' m='10px' borderRadius='5px'/>
+              </Flex>)
     },
   ]
-
-  const [show, setShow] = React.useState(Array(honors.length).fill(false));        // collapsible project list state management
-  const handleToggle = (idx) => {
-    let nshow = Array.from(show)
-    nshow[idx] = !nshow[idx]
-    setShow(nshow)
-  }
 
   return (
     <Flex w='100%' pb='3rem' pt='1rem' direction='column' bg='trans.gray'>
       <Title text='Awards and Honors'/>
-      {
-        honors.map((honor, idx) => {
-          const {name, color, desc, year, keywords, link, extras} = honor
-          return (
-          <Box>
-            {               // Divider between project rows
-              idx !== 0? 
-              (<Divider border='2px solid' borderColor='gray.500' ml='30px' mr='20px' my='1.5rem'/>)
-              :(<Box h='0' w='0' my='1.5rem'></Box>)
-            }
-            <Flex direction='column'>
-              <Grid templateColumns={{ base: "1fr", md: "auto auto"}} columnGap='0px'>
-                <Flex mx='20px'>
-                  <Flex direction='column' ml='10px'>
-                    <Text fontSize='xl' lineHeight='tall' letterSpacing='wider' fontWeight='light' color={color}>
-                      {name}
-                    </Text>
-                    <Text fontSize='l' lineHeight='tall' letterSpacing='wider' fontWeight='light' maxW='1000px'>
-                      {desc}
-                    </Text>
-                    <Flex alignItems='center'>
-                      <Button
-                        variant='ghost' color='gray.400'
-                        _hover={{bg: '#FFFFFF10'}} rounded='3px'
-                        _active={{ transform: 'scale(0.9)'}}
-                        _focus={{ boxShadow: '0 0 0 0'}}
-                        rightIcon="chevron-down"
-                        w='fit-content'
-                        pl='0'
-                        pr = '2'
-                        onClick={() => handleToggle(idx)}
-                      >
-                        Aspects
-                      </Button>
-                      {
-                        link == 'n/a'?
-                        (<Box h='0' w='0'></Box>):
-                        (<Link href={link} isExternal mx='5px' color='blue.300'>
-                          Link <Icon name="external-link" mx="1px" />
-                        </Link>)
-                      }
-                    </Flex>
-                    <Collapse mt={1} isOpen={show[idx]}>
-                      {
-                        getSkillContainer(keywords)
-                      }
-                    </Collapse>
-                  </Flex>
-                </Flex>
-                <Text fontSize='xl' lineHeight='taller' letterSpacing='wider' fontWeight='light' mx='20px' textAlign='right'>
-                  {year}
-                </Text>
-              </Grid>
-              {extras}
-            </Flex>
-          </Box>
-          )
-        })
-      }
+      <ShowList rows={honors} collapseTitle='Aspects'/>
     </Flex>
   )
 }
