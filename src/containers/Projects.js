@@ -41,7 +41,6 @@ function Projects() {
       keywords: ['Front-End Development', 'React', 'JavaScript', 'HTML5 & CSS3', 'Chakra UI'],
       link: 'https://comtalyst.com',
       source: 'https://github.com/comtalyst/personal-site',
-      logo: 'n/a'
     },
     {
       name: 'Personal Portfolio Website',
@@ -51,7 +50,6 @@ function Projects() {
       keywords: ['Front-End Development', 'React', 'JavaScript', 'HTML5 & CSS3', 'Chakra UI'],
       link: 'https://comtalyst.com',
       source: 'https://github.com/comtalyst/personal-site',
-      logo: 'n/a'
     },
     {
       name: 'Personal Portfolio Website',
@@ -61,7 +59,6 @@ function Projects() {
       keywords: ['Front-End Development', 'React', 'JavaScript', 'HTML5 & CSS3', 'Chakra UI'],
       link: 'https://comtalyst.com',
       source: 'https://github.com/comtalyst/personal-site',
-      logo: 'n/a'
     }
   ]
 
@@ -77,7 +74,7 @@ function Projects() {
       <Title text='Projects'/>
       {
         projects.map((project, idx) => {
-          const {name, color, desc, year, keywords, link, source, logo} = project
+          const {name, color, desc, year, keywords, link, source} = project
           return (
           <Box>
             {               // Divider between project rows
@@ -87,12 +84,7 @@ function Projects() {
             }
             <Grid templateColumns={{ base: "1fr", md: "auto auto"}} columnGap='0px'>
               <Flex mx='20px'>
-                {
-                  logo === 'n/a'?
-                  (<Box h='0' w='0' mr='10px'></Box>):
-                  (<Image src={logo} alt='logo' size='100px' objectFit='contain' mr='10px'/>)
-                }
-                <Flex direction='column'>
+                <Flex direction='column' ml='10px'>
                   <Text fontSize='xl' lineHeight='tall' letterSpacing='wider' fontWeight='light' color={color}>
                     {name}
                   </Text>
