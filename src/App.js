@@ -2,7 +2,7 @@ import React, {useRef} from 'react';
 import './App.css';
 
 import customTheme from './CustomTheme.js'
-import { ThemeProvider, CSSReset, Box, Divider } from '@chakra-ui/core'
+import { ThemeProvider, CSSReset, Box, Image } from '@chakra-ui/core'
 
 import NavigationBar from './components/NavigationBar.js';
 import Profile from './containers/Profile.js';
@@ -12,6 +12,8 @@ import Projects from './containers/Projects.js';
 import Experiences from './containers/Experiences.js';
 import Honors from './containers/Honors.js';
 import Contact from './containers/Contact.js';
+
+import grad from './media/grad.png';
 
 function App() {
   const ref = {
@@ -27,10 +29,9 @@ function App() {
   const scrollTo = (compName) => {
     window.scrollTo(0, ref[compName].current.offsetTop - 64) 
   }
-
   return (
     <ThemeProvider theme={customTheme}>
-      <Box bg='gray.700' color='white'>
+      <Box bg='gray.700' color='white' bgImage={"url(" + grad + ")"} bgRepeat="no-repeat" bgSize='100% 100%'>
         <CSSReset />
         <NavigationBar scrollTo={scrollTo} names={['Profile', 'Education', 'Skills', 'Projects', 'Experiences', 'Honors', 'Contact']}/>
         <hr/>
