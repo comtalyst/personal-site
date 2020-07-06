@@ -34,7 +34,7 @@ function Skills() {
   const getBoxes = (skills) => {
     return skills.map(skill => {
       let color = levelToColor(skill.level)
-      let bgColor = 'trans.' + color
+      let bgColor = color
       return (<Box borderWidth='2px' px='5px' py='1px' borderRadius='5px' m='2px' borderColor={color} minWidth='fit-content' bg={bgColor}>
         <Text fontSize='xl' lineHeight='taller' letterSpacing='wider' fontWeight='light'>
           {skill.name}
