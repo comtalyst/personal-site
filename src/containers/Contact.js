@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button, Text, Box, Flex, Image, Grid, Collapse, Link } from "@chakra-ui/core";
-
 import { FaEnvelope, FaMapMarkerAlt, FaGithub, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
+
+import comtalyst_hidden from '../media/comtalyst_hidden.png';
 
 import Title from '../components/Title.js';
 
@@ -53,6 +54,9 @@ function Contact() {
           <Link isExternal href='https://github.com/comtalyst'><Box as={FaGithub} size='30px' mx='10px'/></Link>
           <Link isExternal href='https://www.instagram.com/pun_rawin'><Box as={FaInstagram} size='30px' mx='10px'/></Link>
           <Link isExternal href='https://www.linkedin.com/in/rawin-deeboonchai-41619a197/'><Box as={FaLinkedin} size='30px' mx='10px'/></Link>
+        </Flex>
+        <Flex pt='20px' mx='-20px' mb='-40px'>
+          <Link isExternal href='https://www.youtube.com/watch?v=hB8S6oKjiw8'><Image src={comtalyst_hidden} alt='logo' size='30px' mx='10px'/></Link>
         </Flex>
       </Flex>
     </Flex>
