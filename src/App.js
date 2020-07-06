@@ -8,12 +8,14 @@ import NavigationBar from './components/NavigationBar.js';
 import Profile from './containers/Profile.js';
 import Education from './containers/Education.js';
 import Skills from './containers/Skills.js';
+import Projects from './containers/Projects.js';
 
 function App() {
   const ref = {
     "Profile": useRef(null),
     "Education": useRef(null),
     "Skills": useRef(null),
+    "Projects": useRef(null),
   }
 
   const scrollTo = (compName) => {
@@ -37,7 +39,8 @@ function App() {
         <div ref={ref['Skills']}></div>
         <Skills/>
         <hr/>
-        <h2>Projects</h2>
+        <div ref={ref['Skills']}></div>
+        <Projects/>
         <hr/>
         <h2>Relevant Experiences</h2>
         <hr/>
