@@ -43,7 +43,7 @@ function App() {
         <div ref={ref['Skills']}></div>
         <Skills/>
         <hr/>
-        <div ref={ref['Skills']}></div>
+        <div ref={ref['Projects']}></div>
         <Projects/>
         <hr/>
         <div ref={ref['Experiences']}></div>
