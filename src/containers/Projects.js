@@ -115,6 +115,26 @@ function Projects() {
                 <Image src={minesweepers1} alt='screenshot' h='300px' m='10px' borderRadius='5px'/>
               </Flex>)
     },
+    {
+      name: 'Amico',
+      color: 'blue.100',
+      desc: 'A Chatbot web application to support people with depression. I mainly responsible for the bot part; while my teammate, Pete, is mainly responsible for launching it as a web application. Submitted as a part of Thailand\'s National Software Contest 2018.',
+      year: 'Jun 2017 - Mar 2018',
+      keywords: ['Chatbot', 'Machine Learning (Lite)', 'Python'],
+      link: 'n/a',
+      source: 'https://github.com/comtalyst/Amico-Bot',
+      extras: (<Box h='0' w='0'></Box>)
+    },
+    {
+      name: 'Auditial',
+      color: 'blue.100',
+      desc: 'An accounting android application.',
+      year: 'Jul 2016 - Aug 2016',
+      keywords: ['Android Studio', 'Java'],
+      link: 'n/a',
+      source: 'https://github.com/comtalyst/Auditial',
+      extras: (<Box h='0' w='0'></Box>)
+    },
   ]
 
   const [show, setShow] = React.useState(Array(projects.length).fill(false));        // collapsible project list state management
