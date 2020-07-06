@@ -3,7 +3,7 @@ import { Button, Text, Box, Flex, Image, Grid, Collapse, Link, Icon, Divider } f
 
 import shootdown1 from '../media/shootdown1.png';
 import shootdown2 from '../media/shootdown2.png';
-import shootdown3 from '../media/shootdown3.jpg';
+import shootdown3 from '../media/shootdown3.png';
 import shootdown4 from '../media/shootdown4.png';
 import shootdown5 from '../media/shootdown5.png';
 
@@ -54,7 +54,7 @@ function Projects() {
       keywords: ['Game Development', 'Object-Oriented Programming', 'Unity 2D', 'C#', 'Google Play Services'],
       link: 'https://play.google.com/store/apps/details?id=com.comtalyst.shootdown',
       source: 'n/a',
-      extras: (<Flex justifyContent='center' mt='1rem'>
+      extras: (<Flex justifyContent='center' mt='1rem' wrap='wrap'>
                 <Image src={shootdown1} alt='screenshot' h='300px' m='10px' borderRadius='5px'/>
                 <Image src={shootdown2} alt='screenshot' h='300px' m='10px' borderRadius='5px'/>
                 <Image src={shootdown3} alt='screenshot' h='300px' m='10px' borderRadius='5px'/>
