@@ -9,6 +9,7 @@ import Profile from './containers/Profile.js';
 import Education from './containers/Education.js';
 import Skills from './containers/Skills.js';
 import Projects from './containers/Projects.js';
+import Honors from './containers/Honors.js';
 
 function App() {
   const ref = {
@@ -44,7 +45,8 @@ function App() {
         <hr/>
         <h2>Relevant Experiences</h2>
         <hr/>
-        <h2>Honors</h2>
+        <div ref={ref['Honors']}></div>
+        <Honors/>
         <hr/>
         <h2>Contact</h2>
       </Box>
