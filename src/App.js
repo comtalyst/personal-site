@@ -9,6 +9,7 @@ import Profile from './containers/Profile.js';
 import Education from './containers/Education.js';
 import Skills from './containers/Skills.js';
 import Projects from './containers/Projects.js';
+import Experiences from './containers/Experiences.js';
 import Honors from './containers/Honors.js';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     "Education": useRef(null),
     "Skills": useRef(null),
     "Projects": useRef(null),
+    "Experiences": useRef(null),
     "Honors": useRef(null),
   }
 
@@ -44,7 +46,8 @@ function App() {
         <div ref={ref['Skills']}></div>
         <Projects/>
         <hr/>
-        <h2>Relevant Experiences</h2>
+        <div ref={ref['Experiences']}></div>
+        <Experiences/>
         <hr/>
         <div ref={ref['Honors']}></div>
         <Honors/>
