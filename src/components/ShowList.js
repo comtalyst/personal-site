@@ -49,7 +49,7 @@ function ShowList(props) {
         <Grid templateColumns={{ base: "1fr", md: "auto auto"}} columnGap='0px'>
           <Flex mx='20px'>
             <Flex direction='column' ml='10px'>
-              <Text fontSize='xl' lineHeight='tall' letterSpacing='wider' fontWeight='light' color={color !== null? color:defaultColor}>
+              <Text fontSize='xl' lineHeight='tall' letterSpacing='wider' fontWeight='light' color={color !== null && color !== undefined? color:defaultColor}>
                 {name}
               </Text>
               {
