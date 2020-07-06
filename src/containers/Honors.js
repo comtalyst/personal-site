@@ -37,7 +37,7 @@ function Honors() {
       'Competed using the robot Firex along with teammates from George School: Sam, Andrew, and Ian under the guidance of robotics teacher Chris. ' + 
       'Received the best performance award for teams from North America in the most advanced maze.',
       year: (<Flex justifyContent='flex-end' mt='1rem' wrap='wrap'>
-              <Image src={trinity_logo} alt='screenshot' h='100px' m='10px' mx='30px'/>
+              <Image src={trinity_logo} alt='screenshot' h='100px' m='10px' mx='25px'/>
               Apr 2019
             </Flex>),
       keywords: ['Robotics & Physical Computing', 'Arduino', 'C'],
@@ -46,7 +46,7 @@ function Honors() {
     {
       name: 'Royal Thai Olympiad Scholarship',
       desc: 'A scholarship from Thai government to study computer sciences internationally up to Doctoral Degree ' +
-      'Awarded to students who reached the final qualification round in an academic Olympiad program (in my case, computer science Olympiad).',
+      'Awarded to students who reached the final qualification round in an academic Olympiad program (in my case, informatics Olympiad).',
       year: 'Jun 2018',
     },
     {
