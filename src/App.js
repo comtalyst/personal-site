@@ -11,6 +11,7 @@ import Skills from './containers/Skills.js';
 import Projects from './containers/Projects.js';
 import Experiences from './containers/Experiences.js';
 import Honors from './containers/Honors.js';
+import Contact from './containers/Contact.js';
 
 function App() {
   const ref = {
@@ -20,6 +21,7 @@ function App() {
     "Projects": useRef(null),
     "Experiences": useRef(null),
     "Honors": useRef(null),
+    "Contact": useRef(null),
   }
 
   const scrollTo = (compName) => {
@@ -52,7 +54,8 @@ function App() {
         <div ref={ref['Honors']}></div>
         <Honors/>
         <hr/>
-        <h2>Contact</h2>
+        <div ref={ref['Contact']}></div>
+        <Contact/>
       </Box>
     </ThemeProvider>
   );
