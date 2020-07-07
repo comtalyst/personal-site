@@ -11,7 +11,7 @@ function Landing() {
     <Flex w='100%' h={window.innerHeight - 64} bgImage={"url(" + scene + ")"} bgRepeat="no-repeat" bgSize='cover'>
     <Flex w='100%' pb='3rem' pt='1rem' h='100%' direction='column' alignItems='center' justifyContent='center' bg='bgCover'>
       <Flex mx='20px' direction='column' justifyContent='center' h='100%'>
-        <Title text='Welcome!'/>
+        <Title text='Welcome! test'/>
         <Flex justifyContent='center' alignItems='center'>
           <Text fontSize='xl' lineHeight='taller' letterSpacing='widest' fontWeight='light' textAlign='center'>
             This is the portfolio of&nbsp;
