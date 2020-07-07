@@ -5,6 +5,7 @@ import customTheme from './CustomTheme.js'
 import { ThemeProvider, CSSReset, Box, Image } from '@chakra-ui/core'
 
 import NavigationBar from './components/NavigationBar.js';
+import Landing from './containers/Landing.js';
 import Profile from './containers/Profile.js';
 import Education from './containers/Education.js';
 import Skills from './containers/Skills.js';
@@ -34,8 +35,7 @@ function App() {
       <Box bg='gray.700' color='white' bgImage={"url(" + grad + ")"} bgRepeat="no-repeat" bgSize='100% 100%'>
         <CSSReset />
         <NavigationBar scrollTo={scrollTo} names={['Profile', 'Education', 'Skills', 'Projects', 'Experiences', 'Honors', 'Contact']}/>
-        <hr/>
-        <h2>TL;DR</h2>
+        <Landing/>
         <hr/>
         <div ref={ref['Profile']}></div>
         <Profile/>
