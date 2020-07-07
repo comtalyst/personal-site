@@ -44,7 +44,7 @@ function Honors() {
     },
     {
       name: 'Royal Thai Olympiad Scholarship',
-      desc: 'A scholarship from Thai government to study computer sciences internationally up to Doctoral Degree ' +
+      desc: 'A scholarship from the Thai government to study computer sciences internationally up to Doctoral Degree ' +
       'Awarded to students who reached the final qualification round in an academic Olympiad program (in my case, informatics Olympiad).',
       year: 'Jun 2018',
     },
@@ -74,7 +74,8 @@ function Honors() {
     {
       name: 'Silver Medalist, 12th Thailand Olympiad in Informatics',
       color: silver,
-      desc: 'A formal high-school-level nation-wide programming competition.',
+      desc: 'A formal high-school-level nation-wide programming competition organized by ' + 
+      'the Institute for the Promotion of Teaching Science and Technology, a government-sponsored organization.',
       year: 'Jun 2016',
       keywords: ['Competitive Programming', 'C/C++', 'Data Structure and Algorithms'],
       link: 'http://www.enews.psu.ac.th/index.php/education/28-the-12th-thailand-olympiad-in-informatics',
