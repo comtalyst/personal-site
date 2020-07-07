@@ -33,11 +33,11 @@ function Projects() {
       keywords: ['Game Development', 'Object-Oriented Programming', 'Unity 2D', 'C#', 'Google Play Services'],
       link: 'https://play.google.com/store/apps/details?id=com.comtalyst.shootdown',
       extras: (<Flex justifyContent='center' mt='1rem' wrap='wrap'>
-                <Image src={shootdown1} alt='screenshot' h='250px' m='10px' borderRadius='5px'/>
-                <Image src={shootdown2} alt='screenshot' h='250px' m='10px' borderRadius='5px'/>
-                <Image src={shootdown3} alt='screenshot' h='250px' m='10px' borderRadius='5px'/>
-                <Image src={shootdown4} alt='screenshot' h='250px' m='10px' borderRadius='5px'/>
-                <Image src={shootdown5} alt='screenshot' h='250px' m='10px' borderRadius='5px'/>
+                <Image src={shootdown1} alt='screenshot' h='250px' m='10px' borderRadius='5px' shadow='4px 4px #00000020'/>
+                <Image src={shootdown2} alt='screenshot' h='250px' m='10px' borderRadius='5px' shadow='4px 4px #00000020'/>
+                <Image src={shootdown3} alt='screenshot' h='250px' m='10px' borderRadius='5px' shadow='4px 4px #00000020'/>
+                <Image src={shootdown4} alt='screenshot' h='250px' m='10px' borderRadius='5px' shadow='4px 4px #00000020'/>
+                <Image src={shootdown5} alt='screenshot' h='250px' m='10px' borderRadius='5px' shadow='4px 4px #00000020'/>
               </Flex>)
     },
     {
@@ -47,8 +47,8 @@ function Projects() {
       keywords: ['Robotics & Physical Computing', 'Arduino', 'C'],
       source: 'https://github.com/comtalyst/Luminateer',
       extras: (<Flex justifyContent='center' mt='1rem' wrap='wrap'>
-                <Image src={luminateer1} alt='screenshot' h='200px' m='10px' borderRadius='5px'/>
-                <Image src={luminateer2} alt='screenshot' h='200px' m='10px' borderRadius='5px'/>
+                <Image src={luminateer1} alt='screenshot' h='200px' m='10px' borderRadius='5px' shadow='4px 4px #00000020'/>
+                <Image src={luminateer2} alt='screenshot' h='200px' m='10px' borderRadius='5px' shadow='4px 4px #00000020'/>
               </Flex>)
     },
     {
@@ -65,8 +65,8 @@ function Projects() {
       keywords: ['Robotics & Physical Computing', 'Arduino', 'C'],
       source: 'https://github.com/comtalyst/Firex',
       extras: (<Flex justifyContent='center' mt='1rem' wrap='wrap'>
-                <Image src={firex1} alt='screenshot' h='200px' m='10px' borderRadius='5px'/>
-                <Image src={firex2} alt='screenshot' h='200px' m='10px' borderRadius='5px'/>
+                <Image src={firex1} alt='screenshot' h='200px' m='10px' borderRadius='5px' shadow='4px 4px #00000020'/>
+                <Image src={firex2} alt='screenshot' h='200px' m='10px' borderRadius='5px' shadow='4px 4px #00000020'/>
               </Flex>)
     },
     {
@@ -76,7 +76,7 @@ function Projects() {
       keywords: ['Machine Learning', 'Neural Networks', 'Genetic Algorithms', 'Java'],
       source: 'https://github.com/comtalyst/Minesweepers',
       extras: (<Flex justifyContent='center' mt='1rem' wrap='wrap'>
-                <Image src={minesweepers1} alt='screenshot' h='300px' m='10px' borderRadius='5px'/>
+                <Image src={minesweepers1} alt='screenshot' h='300px' m='10px' borderRadius='5px' shadow='4px 4px #00000020'/>
               </Flex>)
     },
     {

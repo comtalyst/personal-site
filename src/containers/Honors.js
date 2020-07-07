@@ -80,7 +80,7 @@ function Honors() {
       keywords: ['Competitive Programming', 'C/C++', 'Data Structure and Algorithms'],
       link: 'http://www.enews.psu.ac.th/index.php/education/28-the-12th-thailand-olympiad-in-informatics',
       extras: (<Flex justifyContent='center' mt='1rem' wrap='wrap'>
-                <Image src={toi1} alt='screenshot' h='250px' m='10px' borderRadius='5px'/>
+                <Image src={toi1} alt='screenshot' h='250px' m='10px' borderRadius='5px'  shadow='4px 4px #00000020'/>
               </Flex>)
     },
   ]
