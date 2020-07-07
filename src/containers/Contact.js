@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Text, Box, Flex, Image, Grid, Collapse, Link } from "@chakra-ui/core";
+import {Text, Box, Flex, Image, Link } from "@chakra-ui/core";
 import { FaEnvelope, FaMapMarkerAlt, FaGithub, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 
 import comtalyst_hidden from '../media/comtalyst_hidden.png';
@@ -19,7 +19,7 @@ function Contact() {
           <Text fontSize='lg' lineHeight='taller' letterSpacing='widest' fontWeight='light' textAlign='center'>
             Mr. Rawin (Robin) Deeboonchai
           </Text>
-          <Text fontSize='lg' lineHeight='taller' letterSpacing='wider' fontWeight='light' textAlign='center' color='gray.400' fontWeight='b'>
+          <Text fontSize='lg' lineHeight='taller' letterSpacing='wider' fontWeight='b' textAlign='center' color='gray.400'>
             &nbsp;/&nbsp;
           </Text>
           <Text fontSize='lg' lineHeight='taller' letterSpacing='wider' fontWeight='light' textAlign='center'>
@@ -33,7 +33,7 @@ function Contact() {
               Bangkok, Thailand (Summer)
             </Text>
           </Flex>
-          <Text fontSize='lg' lineHeight='taller' letterSpacing='wider' fontWeight='light' textAlign='center' color='gray.400' fontWeight='b'>
+          <Text fontSize='lg' lineHeight='taller' letterSpacing='wider' fontWeight='b' textAlign='center' color='gray.400'>
             &nbsp;/&nbsp;
           </Text>
           <Flex alignItems='center'>

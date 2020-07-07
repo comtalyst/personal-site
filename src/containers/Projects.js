@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Text, Box, Flex, Image, Grid, Collapse, Link, Icon, Divider } from "@chakra-ui/core";
+import {Flex, Image} from "@chakra-ui/core";
 
 import shootdown1 from '../media/shootdown1.png';
 import shootdown2 from '../media/shootdown2.png';

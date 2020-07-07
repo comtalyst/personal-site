@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Text, Box, Flex, Image, Grid } from "@chakra-ui/core";
+import {Text, Box, Flex, Image, Grid } from "@chakra-ui/core";
 import portrait from '../media/portrait.png';
 
 import Title from '../components/Title.js';

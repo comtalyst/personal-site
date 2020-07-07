@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button, Text, Box, Flex, Image, Grid, Collapse, Link } from "@chakra-ui/core";
-import { FaEnvelope, FaMapMarkerAlt, FaGithub, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
+import { Text, Box, Flex, Link } from "@chakra-ui/core";
+import { FaGithub, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 
 import scene from '../media/scene1.jpg';
 

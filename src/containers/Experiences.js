@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Text, Box, Flex, Image, Grid, Collapse, Link, Icon, Divider } from "@chakra-ui/core";
+import { Flex } from "@chakra-ui/core";
 
 import Title from '../components/Title.js';
 import ShowList from '../components/ShowList.js';

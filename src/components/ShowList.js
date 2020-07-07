@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Text, Box, Flex, Image, Grid, Collapse, Link, Icon, Divider } from "@chakra-ui/core";
+import { Button, Text, Box, Flex, Grid, Collapse, Link, Icon, Divider } from "@chakra-ui/core";
 
 function ShowList(props) {
   const {rows, collapseTitle} = props
@@ -78,14 +78,14 @@ function ShowList(props) {
                   (<Box h='0' w='0'></Box>)
                 }
                 {
-                  link == null || link == undefined || link == 'n/a'?
+                  link === null || link === undefined || link === 'n/a'?
                   (<Box h='0' w='0'></Box>):
                   (<Link href={link} isExternal mx='5px' color='blue.300'>
                     Link <Icon name="external-link" mx="1px" />
                   </Link>)
                 }
                 {
-                  source == null || source == undefined || source == 'n/a'?
+                  source === null || source === undefined || source === 'n/a'?
                   (<Box h='0' w='0'></Box>):
                   (<Link href={source} isExternal mx='5px' color='blue.300'>
                     Source <Icon name="external-link" mx="1px" />

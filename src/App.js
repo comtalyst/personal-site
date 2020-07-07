@@ -2,7 +2,7 @@ import React, {useRef} from 'react';
 import './App.css';
 
 import customTheme from './CustomTheme.js'
-import { ThemeProvider, CSSReset, Box, Image } from '@chakra-ui/core'
+import { ThemeProvider, CSSReset, Box } from '@chakra-ui/core'
 
 import NavigationBar from './components/NavigationBar.js';
 import Landing from './containers/Landing.js';

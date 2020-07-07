@@ -1,11 +1,10 @@
 import React from 'react';
-import { Button, Text, Box, Flex, Image, Grid, Collapse, Link, Icon, Divider } from "@chakra-ui/core";
+import {Flex, Image} from "@chakra-ui/core";
 
 import toi1 from '../media/toi1.png';
 import apio_logo from '../media/apio_logo.png';
 import icpc_logo from '../media/icpc_logo.png';
 import trinity_logo from '../media/trinity_logo.png';
-import toi_logo from '../media/toi_logo.png';
 import nsc_logo from '../media/nsc_logo.png';
 
 import Title from '../components/Title.js';
@@ -22,7 +21,7 @@ function Honors() {
       color: silver,
       desc: 'A formal college-level programming competition to qualify regional representatives to the ICPC World Finals 2020. ' +
       'Contestants from 178 teams have to solve most number of problems using data structure and algorithms, varied from basics to advanced, ' +
-      'in a limited time (this competition style is called \"Competitive Programming\")',
+      'in a limited time (this competition style is called "Competitive Programming")',
       year: (<Flex justifyContent='flex-end' mt='1rem' wrap='wrap'>
               <Image src={icpc_logo} alt='screenshot' h='80px' m='10px'/>
               Nov 2019

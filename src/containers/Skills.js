@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Text, Box, Flex, Image, Grid, Collapse } from "@chakra-ui/core";
+import {Text, Box, Flex} from "@chakra-ui/core";
 
 import Title from '../components/Title.js';
 
