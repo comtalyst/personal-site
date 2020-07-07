@@ -3,6 +3,7 @@ import { Button, Text, Box, Flex, Image, Grid, Collapse } from "@chakra-ui/core"
 
 import uw_logo from '../media/uw_logo.png';
 import gs_logo from '../media/gs_logo.png';
+import sk_logo from '../media/sk_logo.png';
 
 import Title from '../components/Title.js';
 
@@ -19,10 +20,17 @@ function Education() {
     {
       name: 'George School, PA',
       color: 'green.100',
-      desc: 'Diploma with Honor Roll and Head of School’s List',
+      desc: 'Diploma with Honor Roll and Head of School’s List (Postgrad)',
       year: '2018 - 2019',
       courses: ['Independent Study in Advanced Programming'],
       logo: gs_logo
+    },
+    {
+      name: 'Suankularb Wittayalai School, Bangkok, Thailand',
+      color: 'pink.100',
+      desc: 'Science-Mathematics Program',
+      year: '2012 - 2018',
+      logo: sk_logo
     },
     {
     name: 'Self-Study',
@@ -61,23 +69,28 @@ function Education() {
                 <Text fontSize='xl' lineHeight='tall' letterSpacing='wider' fontWeight='light'>
                   {desc}
                 </Text>
-                <Button
-                  variant='ghost' color='white'
-                  _hover={{bg: '#FFFFFF10'}} rounded='3px'
-                  _active={{ transform: 'scale(0.9)'}}
-                  _focus={{ boxShadow: '0 0 0 0'}}
-                  rightIcon="chevron-down"
-                  w='fit-content'
-                  pl='0'
-                  onClick={() => handleToggle(idx)}
-                >
-                  Highlighted Courses
-                </Button>
-                <Collapse mt={1} isOpen={show[idx]}>
-                  {courses.map(course => (
-                    <Text fontSize='l' lineHeight='tall' letterSpacing='wider' fontWeight='light'><li>{course}</li></Text>
-                  ))}
-                </Collapse>
+                {
+                  courses !== undefined && courses !== null?
+                  (<Box><Button
+                    variant='ghost' color='white'
+                    _hover={{bg: '#FFFFFF10'}} rounded='3px'
+                    _active={{ transform: 'scale(0.9)'}}
+                    _focus={{ boxShadow: '0 0 0 0'}}
+                    rightIcon="chevron-down"
+                    w='fit-content'
+                    pl='0'
+                    onClick={() => handleToggle(idx)}
+                  >
+                    Highlighted Courses
+                  </Button>
+                  <Collapse mt={1} isOpen={show[idx]}>
+                    {courses.map(course => (
+                      <Text fontSize='l' lineHeight='tall' letterSpacing='wider' fontWeight='light'><li>{course}</li></Text>
+                    ))}
+                  </Collapse></Box>):
+                  (<Box h='0' w='0'></Box>)
+                }
+                
               </Flex>
             </Flex>
             <Text fontSize='xl' lineHeight='taller' letterSpacing='wider' fontWeight='light' mx='20px' textAlign='right'>
