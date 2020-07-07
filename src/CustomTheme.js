@@ -7,7 +7,7 @@ const customTheme = {
     ...theme.colors,
     reactDark: '#20232a',
     trans: {
-      gray: '#E2E8F020',
+      gray: '#A0AEC020',
       blue: {
         300: '#63B3ED60',
         400: '#4299E160',
