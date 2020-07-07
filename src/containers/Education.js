@@ -5,6 +5,8 @@ import uw_logo from '../media/uw_logo.png';
 import gs_logo from '../media/gs_logo.png';
 import sk_logo from '../media/sk_logo.png';
 
+import scene from '../media/scene3.jpg';
+
 import Title from '../components/Title.js';
 
 function Education() {
@@ -50,7 +52,8 @@ function Education() {
   }
 
   return (
-    <Flex w='100%' pb='3rem' pt='1rem' direction='column' bg='trans.gray'>
+    <Flex w='100%' bgImage={"url(" + scene + ")"} bgRepeat="no-repeat" bgSize='cover'>
+    <Flex w='100%' pb='3rem' pt='1rem' direction='column' bg='bgCover2'>
       <Title text='Education'/>
       {
         schools.map((school, idx) => {
@@ -99,7 +102,7 @@ function Education() {
           </Grid>)
         })
       }
-    </Flex>
+    </Flex></Flex>
   )
 }
 

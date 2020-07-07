@@ -2,11 +2,14 @@ import React from 'react';
 import { Button, Text, Box, Flex, Image, Grid, Collapse, Link } from "@chakra-ui/core";
 import { FaEnvelope, FaMapMarkerAlt, FaGithub, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 
+import scene from '../media/scene1.jpg';
+
 import Title from '../components/Title.js';
 
 function Landing() {
   return (
-    <Flex w='100%' pb='3rem' pt='1rem' direction='column' alignItems='center' justifyContent='center' h={window.innerHeight - 64} bg='trans.gray'>
+    <Flex w='100%' h={window.innerHeight - 64} bgImage={"url(" + scene + ")"} bgRepeat="no-repeat" bgSize='cover'>
+    <Flex w='100%' pb='3rem' pt='1rem' h='100%' direction='column' alignItems='center' justifyContent='center' bg='bgCover'>
       <Flex mx='20px' direction='column' justifyContent='center' h='100%'>
         <Title text='Welcome!'/>
         <Flex justifyContent='center' alignItems='center'>
@@ -33,7 +36,7 @@ function Landing() {
           Scroll down or use the navigation bar above to begin
         </Text>
       </Flex>
-    </Flex>
+    </Flex></Flex>
   )
 }
 

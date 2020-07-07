@@ -15,7 +15,9 @@ const customTheme = {
         600: '#2A69AC60',
         700: '#1E4E8C60'
       }
-    }
+    },
+    bgCover: '#1A202CBB',
+    bgCover2: '#1A202CDD'
   },
   fonts: {
     body: "system-ui, sans-serif",
