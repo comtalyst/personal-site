@@ -28,7 +28,7 @@ function Profile() {
               at the University of Wisconsin-Madison as a Sophomore.
             </Text>
             <Text lineHeight='taller' letterSpacing='wider' fontWeight='light' flexWrap='wrap' mt='1rem'>
-              My biggest passion and dreams always be around computer and digital technologies since I was very young.
+              My biggest passion and dreams always are around computing and digital technologies since I was very young.
               That prompts me to pursue my career in Computer Science and Data Science since years ago and from now on.
               Current specific interests of mine in those fields are Artificial Intelligence, Machine Learning, and Web Development.
             </Text>
