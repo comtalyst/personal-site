@@ -14,10 +14,25 @@ function Profile() {
           <Image src={portrait} alt='Portrait' size='500px' objectFit='cover' borderRadius='5px' shadow='5px 5px #00000030'/>
         </Flex>
         <Flex justifyContent='center' marginTop='-0.5rem' pt='1.5rem' mx='20px'>
-          <Text fontSize='xl' lineHeight='taller' letterSpacing='wider' fontWeight='light' maxW='500px'>
-          My name is Rawin Deeboonchai, nicknamed Pun. 
-          However, I usually let English speakers call me Robin for the sake of simplicity. 
-          </Text>
+          <Flex maxW='500px' wrap='wrap' direction='column'>
+            <Text lineHeight='taller' letterSpacing='wider' fontWeight='light' flexWrap='wrap'>
+              My name is Rawin Deeboonchai, nicknamed Pun.
+              But I usually let people call me <span style={{color: '#63B3ED', fontWeight:'bold'}}>Robin</span> for the sake of simplicity.<br/>
+            </Text>
+            <Text lineHeight='taller' letterSpacing='wider' fontWeight='light' flexWrap='wrap' mt='1rem'>
+              <span style={{color: '#2A69AC', fontWeight:'bold'}}>comtalyst</span> is my digital codename, originate from the word "computing" and "catalyst."
+            </Text>
+            <Text lineHeight='taller' letterSpacing='wider' fontWeight='light' flexWrap='wrap' mt='1rem'>
+              Bangkok, Thailand is my hometown. 
+              However, I am currently pursuing my undergraduate degree in the United States 
+              at the University of Wisconsin-Madison as a Sophomore.
+            </Text>
+            <Text lineHeight='taller' letterSpacing='wider' fontWeight='light' flexWrap='wrap' mt='1rem'>
+              My biggest passion and dreams always be around computer and digital technologies since I was very young.
+              That prompts me to pursue my career in Computer Science and Data Science since years ago and from now on.
+              Current specific interests of mine in those fields are Artificial Intelligence, Machine Learning, and Web Development.
+            </Text>
+          </Flex>
         </Flex>
         <Box></Box>
       </Grid>
