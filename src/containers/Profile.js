@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Text, Box, Flex, Image, Grid } from "@chakra-ui/core";
-import portrait from '../media/portrait.jpg';
+import portrait from '../media/portrait.png';
 
 import Title from '../components/Title.js';
 
@@ -15,8 +15,8 @@ function Profile() {
         </Flex>
         <Flex justifyContent='center' marginTop='-0.5rem' pt='1.5rem' mx='20px'>
           <Text fontSize='xl' lineHeight='taller' letterSpacing='wider' fontWeight='light' maxW='500px'>
-          Hooks are a more direct way to use the React features you already know — such as state, lifecycle, context, and refs. They don’t fundamentally change how React works, and your knowledge of components, props, and top-down data flow is just as relevant.
-          (This is dummy text, but in English)
+          My name is Rawin Deeboonchai, nicknamed Pun. 
+          However, I usually let English speakers call me Robin for the sake of simplicity. 
           </Text>
         </Flex>
         <Box></Box>
