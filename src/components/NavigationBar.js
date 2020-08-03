@@ -49,7 +49,7 @@ class NavigationBar extends Component {
   }
 
   render() {
-    const {scrollTo, names} = this.props
+    const {navClick, names} = this.props
     
     return (
       <Flex>
@@ -79,7 +79,7 @@ class NavigationBar extends Component {
                     _hover={{bg: '#FFFFFF10'}} rounded='1px' h='100%'
                     _active={{ transform: 'scale(0.9)'}}
                     _focus={{ boxShadow: '0 0 0 0'}}
-                    onClick={() => scrollTo(name)}
+                    onClick={() => navClick(name)}
                   >
                     {name}
                   </Button>
@@ -99,7 +99,7 @@ class NavigationBar extends Component {
                 </MenuButton>
                 <MenuList bg='reactDark' color='white' borderColor='#00000000'>
                 {
-                  names.map((name) => (<MenuItem _focus={{bg: '#FFFFFF10'}} onClick={() => scrollTo(name)}>{name}</MenuItem>))
+                  names.map((name) => (<MenuItem _focus={{bg: '#FFFFFF10'}} onClick={() => navClick(name)}>{name}</MenuItem>))
                 }
                 </MenuList>
               </Menu>

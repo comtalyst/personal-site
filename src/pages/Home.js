@@ -31,7 +31,7 @@ function Home() {
   return (
     <Box bg='gray.700' color='white' bgImage={"url(" + grad + ")"} bgRepeat="no-repeat" bgSize='100% 100%'>
       <CSSReset />
-      <NavigationBar scrollTo={scrollTo} names={['Profile', 'Education', 'Skills', 'Projects', 'Experiences', 'Honors', 'Contact']}/>
+      <NavigationBar navClick={scrollTo} names={['Profile', 'Education', 'Skills', 'Projects', 'Experiences', 'Honors', 'Contact']}/>
       <Landing/>
       <hr/>
       <div ref={ref['Profile']}></div>
