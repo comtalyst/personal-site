@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 
 import customTheme from './CustomTheme.js'
 import { ThemeProvider } from '@chakra-ui/core'
@@ -13,7 +13,8 @@ function App() {
     <ThemeProvider theme={customTheme}>
       <Router>
         <Switch>
-          <Route exact path={["/", "/home"]} component={Home}/>
+          <Route exact path="/home" component={Home}/>
+          <Route exact path={["/", "//"]}><Redirect to="/home"/></Route>
           <Route component={() => (<span>Page Not Found</span>)}/>
         </Switch>
       </Router>
