@@ -1,7 +1,7 @@
 import React from 'react';
 import { Flex } from "@chakra-ui/core";
 
-import Title from '../components/Title.js';
+import { Title } from '../components/Texts.js';
 import ShowList from '../components/ShowList.js';
 
 function Experiences() {
@@ -33,7 +33,7 @@ function Experiences() {
 
   return (
     <Flex w='100%' pb='3rem' pt='1rem' direction='column'>
-      <Title text='Experiences'/>
+      <Title>Experiences</Title>
       <ShowList rows={experiences} collapseTitle='Experiences'/>
     </Flex>
   )

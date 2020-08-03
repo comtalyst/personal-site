@@ -4,49 +4,49 @@ import { FaEnvelope, FaMapMarkerAlt, FaGithub, FaLinkedin, FaFacebook, FaInstagr
 
 import comtalyst_hidden from '../media/comtalyst_hidden.png';
 
-import Title from '../components/Title.js';
+import { Title, TextMedium } from '../components/Texts.js';
 
 function Contact() {
   return (
     <Flex w='100%' pb='3rem' pt='1rem' direction='column'>
-      <Title text='Contact'/>
+      <Title>Contact</Title>
       <Flex mx='20px' direction='column'>
-        <Text lineHeight='taller' letterSpacing='wider' fontWeight='light' textAlign='center' flexWrap='wrap'>
+        <TextMedium textAlign='center' flexWrap='wrap'>
           Want to know more? Want to proof those records? Comments and Criticism?<br/>All are welcome! Just contact me!
-        </Text>
+        </TextMedium>
         <br/>
         <Flex justifyContent='center' alignItems='center' wrap='wrap'>
-          <Text fontSize='lg' lineHeight='taller' letterSpacing='widest' fontWeight='light' textAlign='center'>
+          <TextMedium fontWeight='light' textAlign='center'>
             Mr. Rawin (Robin) Deeboonchai
-          </Text>
-          <Text fontSize='lg' lineHeight='taller' letterSpacing='wider' fontWeight='b' textAlign='center' color='gray.400'>
+          </TextMedium>
+          <TextMedium fontWeight='b' textAlign='center' color='gray.400'>
             &nbsp;/&nbsp;
-          </Text>
-          <Text fontSize='lg' lineHeight='taller' letterSpacing='wider' fontWeight='light' textAlign='center'>
+          </TextMedium>
+          <TextMedium fontWeight='light' textAlign='center'>
             นาย รวินท์ ดีบุญชัย
-          </Text>
+          </TextMedium>
         </Flex>
         <Flex justifyContent='center' alignItems='center' wrap='wrap'>
           <Flex alignItems='center'>
             <Box as={FaMapMarkerAlt} size='15px' mx='10px' />
-            <Text fontSize='lg' lineHeight='taller' letterSpacing='wider' fontWeight='light' textAlign='center'>
+            <TextMedium fontWeight='light' textAlign='center'>
               Bangkok, Thailand (Summer)
-            </Text>
+            </TextMedium>
           </Flex>
-          <Text fontSize='lg' lineHeight='taller' letterSpacing='wider' fontWeight='b' textAlign='center' color='gray.400'>
+          <TextMedium fontWeight='b' textAlign='center' color='gray.400'>
             &nbsp;/&nbsp;
-          </Text>
+          </TextMedium>
           <Flex alignItems='center'>
             <Box as={FaMapMarkerAlt} size='15px' mx='10px' ml='2px'/>
-            <Text fontSize='lg' lineHeight='taller' letterSpacing='wider' fontWeight='light' textAlign='center'>
+            <TextMedium fontWeight='light' textAlign='center'>
               Madison, WI, USA
-            </Text>
+            </TextMedium>
           </Flex>
         </Flex>
         <Flex justifyContent='center' alignItems='center'>
           <Box as={FaEnvelope} size='15px' mx='10px' mt='3px'/>
-          <Link fontSize='lg' lineHeight='taller' letterSpacing='wider' fontWeight='light' textAlign='center' isExternal href='mailto:rawin.dbc@outlook.com'>
-            rawin.dbc@outlook.com
+          <Link isExternal href='mailto:rawin.dbc@outlook.com'>
+            <TextMedium textAlign='center'>rawin.dbc@outlook.com</TextMedium>
           </Link>
         </Flex>
         <Flex justifyContent='center' alignItems='center' pt='30px'>

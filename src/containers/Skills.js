@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, Box, Flex} from "@chakra-ui/core";
 
-import Title from '../components/Title.js';
+import { Title, TextBig, HeaderBig } from '../components/Texts.js';
 
 function Skills() {
 
@@ -36,9 +36,9 @@ function Skills() {
       let color = levelToColor(skill.level)
       let bgColor = color
       return (<Box borderWidth='2px' px='5px' py='1px' borderRadius='5px' m='2px' borderColor={color} minWidth='fit-content' bg={bgColor}>
-        <Text fontSize='xl' lineHeight='taller' letterSpacing='wider' fontWeight='light'>
+        <TextBig my='5px'>
           {skill.name}
-        </Text>
+        </TextBig>
       </Box>)
     })
   }
@@ -56,9 +56,9 @@ function Skills() {
   // customize skill title text here
   const getSkillTitle = (skillName) => {
     return(
-      <Text fontSize='3xl' letterSpacing='wider' fontWeight='light' textAlign='center' pt='1rem'>
+      <HeaderBig textAlign='center' pt='1rem'>
         {skillName}
-      </Text>
+      </HeaderBig>
     )
   }
 
@@ -170,7 +170,7 @@ function Skills() {
 
   return (
     <Flex w='100%' pb='3rem' pt='1rem' direction='column'>
-      <Title text='Tech Skills'/>
+      <Title>Tech Skills</Title>
       <Flex direction='column' px='20px'>
         {getSkillTitle('Languages')}
         {getSkillContainer(languages)}

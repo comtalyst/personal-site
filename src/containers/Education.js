@@ -7,7 +7,7 @@ import sk_logo from '../media/sk_logo.png';
 
 import scene from '../media/scene3.jpg';
 
-import Title from '../components/Title.js';
+import { Title, TextBig, TextMedium } from '../components/Texts.js';
 
 function Education() {
   const schools=[
@@ -54,7 +54,7 @@ function Education() {
   return (
     <Flex w='100%' bgImage={"url(" + scene + ")"} bgRepeat="no-repeat" bgSize='cover'>
     <Flex w='100%' pb='3rem' pt='1rem' direction='column' bg='bgCover2'>
-      <Title text='Education'/>
+      <Title>Education</Title>
       {
         schools.map((school, idx) => {
           const {name, color, desc, year, courses, logo} = school
@@ -66,12 +66,12 @@ function Education() {
                 (<Image src={logo} alt='logo' size='100px' objectFit='contain' mr='10px'/>)
               }
               <Flex direction='column'>
-                <Text fontSize='xl' lineHeight='tall' letterSpacing='wider' fontWeight='light' color={color}>
+                <TextBig color={color}>
                   {name}
-                </Text>
-                <Text fontSize='xl' lineHeight='tall' letterSpacing='wider' fontWeight='light'>
+                </TextBig>
+                <TextBig>
                   {desc}
-                </Text>
+                </TextBig>
                 {
                   courses !== undefined && courses !== null?
                   (<Box><Button
@@ -88,7 +88,7 @@ function Education() {
                   </Button>
                   <Collapse mt={1} isOpen={show[idx]}>
                     {courses.map(course => (
-                      <Text fontSize='l' lineHeight='tall' letterSpacing='wider' fontWeight='light'><li>{course}</li></Text>
+                      <TextMedium><li>{course}</li></TextMedium>
                     ))}
                   </Collapse></Box>):
                   (<Box h='0' w='0'></Box>)
@@ -96,9 +96,9 @@ function Education() {
                 
               </Flex>
             </Flex>
-            <Text fontSize='xl' lineHeight='taller' letterSpacing='wider' fontWeight='light' mx='20px' textAlign='right'>
+            <TextBig mx='20px' textAlign='right'>
               {year}
-            </Text>
+            </TextBig>
           </Grid>)
         })
       }

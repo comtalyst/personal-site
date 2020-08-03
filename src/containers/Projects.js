@@ -12,7 +12,7 @@ import firex1 from '../media/firex1.png';
 import firex2 from '../media/firex2.png';
 import minesweepers1 from '../media/minesweepers1.PNG';
 
-import Title from '../components/Title.js';
+import { Title } from '../components/Texts.js';
 import ShowList from '../components/ShowList.js';
 
 function Projects() {
@@ -97,7 +97,7 @@ function Projects() {
 
   return (
     <Flex w='100%' pb='3rem' pt='1rem' direction='column' bg='trans.gray'>
-      <Title text='Projects'/>
+      <Title>Projects</Title>
       <ShowList rows={projects} collapseTitle='Technologies'/>
     </Flex>
   )

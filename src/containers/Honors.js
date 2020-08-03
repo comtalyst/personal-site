@@ -7,7 +7,7 @@ import icpc_logo from '../media/icpc_logo.png';
 import trinity_logo from '../media/trinity_logo.png';
 import nsc_logo from '../media/nsc_logo.png';
 
-import Title from '../components/Title.js';
+import { Title } from '../components/Texts.js';
 import ShowList from '../components/ShowList.js';
 
 function Honors() {
@@ -87,7 +87,7 @@ function Honors() {
 
   return (
     <Flex w='100%' pb='3rem' pt='1rem' direction='column' bg='trans.gray'>
-      <Title text='Awards and Honors'/>
+      <Title>Awards and Honors</Title>
       <ShowList rows={honors} collapseTitle='Aspects'/>
     </Flex>
   )

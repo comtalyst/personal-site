@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Text, Box, Flex, Grid, Collapse, Link, Icon, Divider } from "@chakra-ui/core";
+import { TextMedium, TextBig } from './Texts';
 
 function ShowList(props) {
   const {rows, collapseTitle} = props
@@ -11,9 +12,9 @@ function ShowList(props) {
       let color = 'gray.500'
       let bgColor = color
       return (<Box borderWidth='2px' px='5px' py='1px' borderRadius='5px' m='2px' borderColor={color} minWidth='fit-content' bg={bgColor}>
-        <Text fontSize='l' lineHeight='tall' letterSpacing='wider' fontWeight='light'>
+        <TextMedium>
           {skill}
-        </Text>
+        </TextMedium>
       </Box>)
     })
   }
@@ -49,14 +50,14 @@ function ShowList(props) {
         <Grid templateColumns={{ base: "1fr", md: "auto auto"}} columnGap='0px'>
           <Flex mx='20px'>
             <Flex direction='column' ml='10px'>
-              <Text fontSize='xl' lineHeight='tall' letterSpacing='wider' fontWeight='light' color={color !== null && color !== undefined? color:defaultColor}>
+              <TextBig color={color !== null && color !== undefined? color:defaultColor}>
                 {name}
-              </Text>
+              </TextBig>
               {
                 desc !== null && desc !== undefined?
-                (<Text fontSize='l' lineHeight='tall' letterSpacing='wider' fontWeight='light' maxW='1000px'>
+                (<TextMedium maxW='1000px'>
                   {desc}
-                </Text>):
+                </TextMedium>):
                 (<Box h='0' w='0'></Box>)
               }
               <Flex alignItems='center'>
@@ -103,9 +104,9 @@ function ShowList(props) {
           </Flex>
           {
             year !== null?
-            (<Text fontSize='xl' lineHeight='taller' letterSpacing='wider' fontWeight='light' mx='20px' textAlign='right'>
+            (<TextBig mx='20px' textAlign='right'>
               {year}
-            </Text>):
+            </TextBig>):
             (<Box h='0' w='0'></Box>)
           }
         </Grid>
