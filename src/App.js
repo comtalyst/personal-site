@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import customTheme from './CustomTheme.js'
 import { ThemeProvider } from '@chakra-ui/core'
 
@@ -9,7 +11,12 @@ import Home from './pages/Home.js';
 function App() {
   return (
     <ThemeProvider theme={customTheme}>
-     <Home/>
+      <Router>
+        <Switch>
+          <Route exact path={["/", "/home"]} component={Home}/>
+          <Route component={() => (<span>Page Not Found</span>)}/>
+        </Switch>
+      </Router>
     </ThemeProvider>
   );
 }
