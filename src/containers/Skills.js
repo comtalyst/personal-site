@@ -90,7 +90,7 @@ function Skills() {
   ]
   const frameworks = [
     {
-      name: 'tf.keras',
+      name: 'Keras',
       level: 3
     },
     {
