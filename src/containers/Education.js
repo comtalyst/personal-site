@@ -82,6 +82,7 @@ function Education() {
                     rightIcon="chevron-down"
                     w='fit-content'
                     pl='0'
+                    pr='2'
                     onClick={() => handleToggle(idx)}
                   >
                     Highlighted Courses

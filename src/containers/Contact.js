@@ -16,20 +16,20 @@ function Contact() {
         </TextMedium>
         <br/>
         <Flex justifyContent='center' alignItems='center' wrap='wrap'>
-          <TextMedium fontWeight='light' textAlign='center'>
+          <TextMedium textAlign='center'>
             Mr. Rawin (Robin) Deeboonchai
           </TextMedium>
           <TextMedium fontWeight='b' textAlign='center' color='gray.400'>
             &nbsp;/&nbsp;
           </TextMedium>
-          <TextMedium fontWeight='light' textAlign='center'>
+          <TextMedium textAlign='center'>
             นาย รวินท์ ดีบุญชัย
           </TextMedium>
         </Flex>
         <Flex justifyContent='center' alignItems='center' wrap='wrap'>
           <Flex alignItems='center'>
             <Box as={FaMapMarkerAlt} size='15px' mx='10px' />
-            <TextMedium fontWeight='light' textAlign='center'>
+            <TextMedium textAlign='center'>
               Bangkok, Thailand (Summer)
             </TextMedium>
           </Flex>
@@ -38,7 +38,7 @@ function Contact() {
           </TextMedium>
           <Flex alignItems='center'>
             <Box as={FaMapMarkerAlt} size='15px' mx='10px' ml='2px'/>
-            <TextMedium fontWeight='light' textAlign='center'>
+            <TextMedium textAlign='center'>
               Madison, WI, USA
             </TextMedium>
           </Flex>

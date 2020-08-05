@@ -30,34 +30,29 @@ function Skills() {
     return color
   }
 
-  // customize boxes here (will be called in getSkillContainer() to prevent code duplication from multiple skill types)
-  const getBoxes = (skills) => {
-    return skills.map(skill => {
-      let color = levelToColor(skill.level)
-      let bgColor = color
-      return (<Box borderWidth='2px' px='5px' py='1px' borderRadius='5px' m='2px' borderColor={color} minWidth='fit-content' bg={bgColor}>
-        <TextBig my='5px'>
-          {skill.name}
-        </TextBig>
-      </Box>)
-    })
-  }
-
-  // customize row of boxes here
-  const getSkillContainer = (skills) => {
+  // customize row boxes here
+  const SkillContainer = (props) => {
     return(
       <Flex pt='0.5rem' justifyContent='center' flexWrap='wrap'>
         {
-          getBoxes(skills)
+          props.skills.map(skill => {
+            let color = levelToColor(skill.level)
+            let bgColor = color
+            return (<Box borderWidth='2px' px='5px' py='1px' borderRadius='5px' m='2px' borderColor={color} minWidth='fit-content' bg={bgColor}>
+              <TextBig my='5px'>
+                {skill.name}
+              </TextBig>
+            </Box>)
+          })
         }
       </Flex>
     )
   }
   // customize skill title text here
-  const getSkillTitle = (skillName) => {
+  const SkillTitle = (props) => {
     return(
-      <HeaderBig textAlign='center' pt='1rem'>
-        {skillName}
+      <HeaderBig textAlign='center' pt='1rem' {...props}>
+        {props.children}
       </HeaderBig>
     )
   }
@@ -172,14 +167,14 @@ function Skills() {
     <Flex w='100%' pb='3rem' pt='1rem' direction='column'>
       <Title>Tech Skills</Title>
       <Flex direction='column' px='20px'>
-        {getSkillTitle('Languages')}
-        {getSkillContainer(languages)}
-        {getSkillTitle('Frameworks/Libraries')}
-        {getSkillContainer(frameworks)}
-        {getSkillTitle('Platforms')}
-        {getSkillContainer(platforms)}
-        {getSkillTitle('Specialties')}
-        {getSkillContainer(specialties)}
+        <SkillTitle>Languages</SkillTitle>
+        <SkillContainer skills={languages}/>
+        <SkillTitle>Frameworks/Libraries</SkillTitle>
+        <SkillContainer skills={frameworks}/>
+        <SkillTitle>Platforms</SkillTitle>
+        <SkillContainer skills={platforms}/>
+        <SkillTitle>Specialties</SkillTitle>
+        <SkillContainer skills={specialties}/>
       </Flex>
     </Flex>
   )
