@@ -10,13 +10,14 @@ import Home from './pages/Home.js';
 import GFC from './pages/GFC.js';
 
 function App() {
+  const pref = process.env.PUBLIC_URL
   return (
     <ThemeProvider theme={customTheme}>
       <Router>
         <Switch>
-          <Route exact path="/home" component={Home}/>
-          <Route exact path="/pages/GFC" component={GFC}/>
-          <Route exact path={["/", "//"]}><Redirect to="/home"/></Route>
+          <Route exact path={pref + "/home"} component={Home}/>
+          <Route exact path={pref + "/pages/GFC"} component={GFC}/>
+          <Route exact path={pref + ["/", "//"]}><Redirect to={pref + "/home"}/></Route>
           <Route component={() => (<span>Page Not Found</span>)}/>
         </Switch>
       </Router>
