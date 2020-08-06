@@ -12,7 +12,7 @@ import GFC from './pages/GFC.js';
 function App() {
   return (
     <ThemeProvider theme={customTheme}>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route exact path="/home" component={Home}/>
           <Route exact path="/pages/GFC" component={GFC}/>
