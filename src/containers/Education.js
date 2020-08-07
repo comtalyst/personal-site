@@ -53,17 +53,17 @@ function Education() {
 
   return (
     <Flex w='100%' bgImage={"url(" + scene + ")"} bgRepeat="no-repeat" bgSize='cover'>
-    <Flex w='100%' pb='3rem' pt='1rem' direction='column' bg='bgCover2'>
+    <Flex w='100%' pb='3rem' pt='1rem' direction='column' bg='bgCover2' alignItems='center'>
       <Title>Education</Title>
       {
         schools.map((school, idx) => {
           const {name, color, desc, year, courses, logo} = school
-          return (<Grid templateColumns={{ base: "1fr", md: "auto auto"}} columnGap='0px' pt='1.5rem'>
-            <Flex mx='20px'>
+          return (<Grid templateColumns={{ base: "1fr", md: "auto auto"}} columnGap='0px' pt='1.5rem' px='20px' w='100%' maxW='1200px'>
+            <Flex>
               {
                 logo === 'n/a'?
-                (<Box h='100px' w='100px' mr='10px'></Box>):
-                (<Image src={logo} alt='logo' size='100px' objectFit='contain' mr='10px'/>)
+                (<Box h='100px' w='100px' pr='10px'></Box>):
+                (<Image src={logo} alt='logo' size='100px' objectFit='contain' pr='10px'/>)
               }
               <Flex direction='column'>
                 <TextBig color={color}>
@@ -97,7 +97,7 @@ function Education() {
                 
               </Flex>
             </Flex>
-            <TextBig mx='20px' textAlign='right'>
+            <TextBig pl='20px' textAlign='right'>
               {year}
             </TextBig>
           </Grid>)
