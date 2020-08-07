@@ -30,7 +30,16 @@ export function TextBig(props) {
 
 export function HeaderBig(props) {
   return (
-    <Text fontSize='3xl' letterSpacing='wider' fontWeight='light' flexWrap='wrap'
+    <Text fontSize='3xl' lineHeight='tall' letterSpacing='wider' fontWeight='light' flexWrap='wrap'
+          {...props}>
+      {props.children}
+    </Text>
+  )
+}
+
+export function HeaderSmall(props) {
+  return (
+    <Text fontSize='xl' lineHeight='tall' letterSpacing='wider' fontWeight='semibold' flexWrap='wrap'
           {...props}>
       {props.children}
     </Text>

@@ -24,6 +24,10 @@ const customTheme = {
   },
   fontWeights: {
     light: 350,
+    normal: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
   },
   lineHeights: {
     normal: "normal",
