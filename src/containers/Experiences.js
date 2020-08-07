@@ -32,7 +32,7 @@ function Experiences() {
   ]
 
   return (
-    <Flex w='100%' pb='3rem' pt='1rem' direction='column'>
+    <Flex w='100%' pb='3rem' pt='1rem' direction='column' alignItems='center'>
       <Title>Experiences</Title>
       <ShowList rows={experiences} collapseTitle='Experiences'/>
     </Flex>

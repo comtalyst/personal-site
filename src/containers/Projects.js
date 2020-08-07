@@ -96,7 +96,7 @@ function Projects() {
   ]
 
   return (
-    <Flex w='100%' pb='3rem' pt='1rem' direction='column' bg='trans.gray'>
+    <Flex w='100%' pb='3rem' pt='1rem' direction='column' bg='trans.gray' alignItems='center'>
       <Title>Projects</Title>
       <ShowList rows={projects} collapseTitle='Technologies'/>
     </Flex>

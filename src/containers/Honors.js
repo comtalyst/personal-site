@@ -86,7 +86,7 @@ function Honors() {
   ]
 
   return (
-    <Flex w='100%' pb='3rem' pt='1rem' direction='column' bg='trans.gray'>
+    <Flex w='100%' pb='3rem' pt='1rem' direction='column' bg='trans.gray' alignItems='center'>
       <Title>Awards and Honors</Title>
       <ShowList rows={honors} collapseTitle='Aspects'/>
     </Flex>

@@ -19,13 +19,13 @@ function ShowList(props) {
   return rows.map((row, idx) => {
     const {name, color, desc, year, keywords, link, source, extras} = row
     return (
-      <Flex direction='column' mx='20px' ml='30px'>
+      <Flex direction='column' px='20px' pl='30px' w='100%' alignItems='center'>
         {               // Divider between row rows
           idx !== 0? 
-          <DividerBold/>
+          <DividerBold w='100%' maxW='1200px'/>
           :<Empty my='1.5rem'/>
         }
-        <Grid templateColumns={{ base: "1fr", md: "auto auto"}} columnGap='0px'>
+        <Grid templateColumns={{ base: "1fr", md: "auto auto"}} columnGap='0px' w='100%' maxW='1200px'>
           <Flex direction='column'>
             <TextBig color={color !== null && color !== undefined? color:'blue.100'}>
               {name}
