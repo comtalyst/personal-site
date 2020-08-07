@@ -56,7 +56,7 @@ function Contact() {
           <Link isExternal href='https://www.linkedin.com/in/rawin-deeboonchai-41619a197/'><Box as={FaLinkedin} size='30px' mx='10px'/></Link>
         </Flex>
         <Flex pt='20px' mx='-20px' mb='-40px'>
-          <Link isExternal href='https://www.youtube.com/watch?v=hB8S6oKjiw8'><Image src={comtalyst_hidden} alt='logo' size='30px' mx='10px'/></Link>
+          <Link isExternal href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'><Image src={comtalyst_hidden} alt='logo' size='30px' mx='10px'/></Link>
         </Flex>
       </Flex>
     </Flex>
