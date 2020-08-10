@@ -4,7 +4,7 @@ import { Flex } from "@chakra-ui/core";
 import { Title } from '../components/Texts.js';
 import ShowList from '../components/ShowList.js';
 
-function Experiences() {
+function Experiences(props) {
   const experiences=[
     {
       name: 'Member, UW-Madison 2019 ICPC Team',
@@ -32,7 +32,7 @@ function Experiences() {
   ]
 
   return (
-    <Flex w='100%' pb='3rem' pt='1rem' direction='column' alignItems='center'>
+    <Flex w='100%' pb='3rem' pt='1rem' direction='column' alignItems='center' {...props}>
       <Title>Experiences</Title>
       <ShowList rows={experiences} collapseTitle='Experiences'/>
     </Flex>

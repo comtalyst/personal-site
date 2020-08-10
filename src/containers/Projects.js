@@ -15,7 +15,7 @@ import minesweepers1 from '../media/minesweepers1.PNG';
 import { Title } from '../components/Texts.js';
 import ShowList from '../components/ShowList.js';
 
-function Projects() {
+function Projects(props) {
 
   const projects=[
     {
@@ -96,7 +96,7 @@ function Projects() {
   ]
 
   return (
-    <Flex w='100%' pb='3rem' pt='1rem' direction='column' bg='trans.gray' alignItems='center'>
+    <Flex w='100%' pb='3rem' pt='1rem' direction='column' alignItems='center' {...props}>
       <Title>Projects</Title>
       <ShowList rows={projects} collapseTitle='Technologies'/>
     </Flex>

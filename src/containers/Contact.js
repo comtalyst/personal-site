@@ -6,9 +6,9 @@ import comtalyst_hidden from '../media/comtalyst_hidden.png';
 
 import { Title, TextMedium } from '../components/Texts.js';
 
-function Contact() {
+function Contact(props) {
   return (
-    <Flex w='100%' pb='3rem' pt='1rem' direction='column'>
+    <Flex w='100%' pb='3rem' pt='1rem' direction='column' {...props}>
       <Title>Contact</Title>
       <Flex mx='20px' direction='column'>
         <TextMedium textAlign='center' flexWrap='wrap'>

@@ -4,9 +4,9 @@ import portrait from '../media/portrait.png';
 
 import { Title, TextMedium } from '../components/Texts.js';
 
-function Profile() {
+function Profile(props) {
   return (
-    <Flex w='100%' pb='3rem' pt='1rem' direction='column'>
+    <Flex w='100%' pb='3rem' pt='1rem' direction='column' {...props}>
       <Title>Hello There!</Title>
       <Grid templateColumns={{ base: "1fr", md: "minmax(0px, 150px) minmax(300px, auto) minmax(300px, auto) minmax(0px, 150px)"}} columnGap='3.5rem'>
         <Box></Box>

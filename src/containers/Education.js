@@ -9,7 +9,7 @@ import scene from '../media/scene3.jpg';
 
 import { Title, TextBig, TextMedium } from '../components/Texts.js';
 
-function Education() {
+function Education(props) {
   const schools=[
     {
       name: 'University of Wisconsin-Madison',
@@ -52,7 +52,7 @@ function Education() {
   }
 
   return (
-    <Flex w='100%' bgImage={"url(" + scene + ")"} bgRepeat="no-repeat" bgSize='cover'>
+    <Flex w='100%' bgImage={"url(" + scene + ")"} bgRepeat="no-repeat" bgSize='cover' {...props}>
     <Flex w='100%' pb='3rem' pt='1rem' direction='column' bg='bgCover2' alignItems='center'>
       <Title>Education</Title>
       {

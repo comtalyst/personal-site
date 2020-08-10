@@ -3,7 +3,7 @@ import {Text, Box, Flex} from "@chakra-ui/core";
 
 import { Title, TextBig, HeaderBig } from '../components/Texts.js';
 
-function Skills() {
+function Skills(props) {
 
   // customize frame color here
   const levelToColor = (level) => {
@@ -164,7 +164,7 @@ function Skills() {
   ]
 
   return (
-    <Flex w='100%' pb='3rem' pt='1rem' direction='column'>
+    <Flex w='100%' pb='3rem' pt='1rem' direction='column' {...props}>
       <Title>Tech Skills</Title>
       <Flex direction='column' px='20px'>
         <SkillTitle>Languages</SkillTitle>

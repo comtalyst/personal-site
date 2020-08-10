@@ -10,7 +10,7 @@ import nsc_logo from '../media/nsc_logo.png';
 import { Title } from '../components/Texts.js';
 import ShowList from '../components/ShowList.js';
 
-function Honors() {
+function Honors(props) {
   const gold = 'yellow.400'
   const silver = 'gray.300'
   const bronze = 'orange.200'
@@ -86,7 +86,7 @@ function Honors() {
   ]
 
   return (
-    <Flex w='100%' pb='3rem' pt='1rem' direction='column' bg='trans.gray' alignItems='center'>
+    <Flex w='100%' pb='3rem' pt='1rem' direction='column' alignItems='center' {...props}>
       <Title>Awards and Honors</Title>
       <ShowList rows={honors} collapseTitle='Aspects'/>
     </Flex>

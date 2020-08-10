@@ -6,9 +6,9 @@ import scene from '../media/scene1.jpg';
 
 import { Title, TextBig, TextMedium } from '../components/Texts.js';
 
-function Landing() {
+function Landing(props) {
   return (
-    <Flex w='100%' h={window.innerHeight - 64} bgImage={"url(" + scene + ")"} bgRepeat="no-repeat" bgSize='cover'>
+    <Flex w='100%' h={window.innerHeight - 64} bgImage={"url(" + scene + ")"} bgRepeat="no-repeat" bgSize='cover' {...props}>
     <Flex w='100%' pb='3rem' pt='1rem' h='100%' direction='column' alignItems='center' justifyContent='center' bg='bgCover'>
       <Flex mx='10px' direction='column' justifyContent='center' h='100%'>
         <Title>Welcome!</Title>
