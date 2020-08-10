@@ -7,6 +7,14 @@ import ShowList from '../components/ShowList.js';
 function Experiences(props) {
   const experiences=[
     {
+      name: 'Participant, AIS Young Digital Talent Camp 2020',
+      desc: 'Being trained in the practical startup training program and competition organized by AIS (Thailand) and Stanford University. ' +
+            'Currently developing business ideas for a possible online modern reading platform—ReadOut—along with 3 other team members.',
+      year: 'July 2020 ---',
+      keywords: ['Businesses and Startups', 'Design Thinking', 'Market Research', 'Leadership and Communication'],
+      link: 'https://www.aydtcamp.com/',
+    },
+    {
       name: 'Member, UW-Madison 2019 ICPC Team',
       desc: 'Trained in preparation for ICPC 2019 North Central NA Regional Contest along with two other teammates.',
       year: 'Sep 2019 - Nov 2019',
@@ -16,7 +24,7 @@ function Experiences(props) {
     {
       name: 'Finalist, Thailand International Olympiad in Informatics Team',
       desc: 'Participated in a series of training camps and programming contests to select 4 national representatives to the IOI. ' + 
-      'Ranked 5th place in the final stage (That\'s right, I was almost there).',
+      'Ranked 5th place in the final stage (That\'s right, I was literally almost there).',
       year: 'Jun 2015 - May 2018',
       keywords: ['Competitive Programming', 'C/C++', 'Data Structures & Algorithms', 'Computer Science Theory'],
       link: 'http://pages.cs.wisc.edu/~dieter/ICPC/',

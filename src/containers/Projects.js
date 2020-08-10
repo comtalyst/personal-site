@@ -19,9 +19,18 @@ function Projects(props) {
 
   const projects=[
     {
+      name: 'Generative Facial Cosmetics',
+      desc: 'Using Generative Adversarial Networks (GAN) to to apply various facial makeup products ' +
+            'to the input face automatically and smoothly. More details are coming soon.',
+      year: 'Jul 2020 ---',
+      keywords: ['Machine Learning', 'Computer Vision', 'Generative Adversarial Networks', 'Tensorflow', 'Keras', 'OpenCV', 'Dlib', 'Python'],
+      link: 'n/a',
+      source: 'n/a',
+    },
+    {
       name: 'Personal Portfolio Website',
       desc: 'The website you are currently viewing!',
-      year: 'Jul 2020',
+      year: 'Jul 2020 ---',
       keywords: ['Front-End Development', 'React', 'JavaScript', 'HTML5 & CSS3', 'Chakra UI'],
       link: 'https://comtalyst.com',
       source: 'https://github.com/comtalyst/personal-site',
