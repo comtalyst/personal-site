@@ -20,8 +20,8 @@ function Projects(props) {
   const projects=[
     {
       name: 'Generative Facial Cosmetics',
-      desc: 'Using Generative Adversarial Networks (GAN) to to apply various facial makeup products ' +
-            'to the input face automatically and smoothly. More details are in the link below.',
+      desc: 'Using Generative Adversarial Networks (GAN) to apply various facial makeup products ' +
+            'to the input face automatically and smoothly. More details are in the link provided.',
       year: 'Jul 2020 ---',
       keywords: ['Machine Learning', 'Computer Vision', 'Generative Adversarial Networks', 'Tensorflow', 'Keras', 'OpenCV', 'Dlib', 'Python'],
       link: '#/pages/GFC',
