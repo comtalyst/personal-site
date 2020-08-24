@@ -9,7 +9,7 @@ function Experiences(props) {
     {
       name: 'Participant, AIS Young Digital Talent Camp 2020',
       desc: 'Being trained in the practical startup training program and competition organized by AIS (Thailand) and Stanford University. ' +
-            'Currently developing business ideas for a possible online modern reading platform—ReadOut—along with 3 other team members.',
+            'Developed and did market research on several tech startup ideas along with 3 other team members.',
       year: 'July 2020 ---',
       keywords: ['Businesses and Startups', 'Design Thinking', 'Market Research', 'Leadership and Communication'],
       link: 'https://www.aydtcamp.com/',

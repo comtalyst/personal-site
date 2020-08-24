@@ -162,6 +162,16 @@ function Skills(props) {
       level: 2
     },
   ]
+  const business = [
+    {
+      name: 'Team Leadership',
+      level: 2
+    },
+    {
+      name: 'Market Research',
+      level: 1
+    },
+  ]
 
   return (
     <Flex w='100%' pb='3rem' pt='1rem' direction='column' {...props}>
@@ -175,6 +185,8 @@ function Skills(props) {
         <SkillContainer skills={platforms}/>
         <SkillTitle>Specialties</SkillTitle>
         <SkillContainer skills={specialties}/>
+        <SkillTitle>Business</SkillTitle>
+        <SkillContainer skills={business}/>
       </Flex>
     </Flex>
   )
