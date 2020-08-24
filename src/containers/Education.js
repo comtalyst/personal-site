@@ -39,7 +39,7 @@ function Education(props) {
       color: 'blue.100',
       desc: 'The courses below are completed without guidance from formal institutions',
       year: '',
-      courses: ['Deep Learning Specialization, by deeplearning.ai via Coursera', 'Machine Learning, by Stanford University Online via Coursera'],
+      courses: ['Deep Learning Specialization, by deeplearning.ai via Coursera, 2020', 'Machine Learning, by Stanford University Online via Coursera, 2018'],
       logo: 'n/a'
     }
   ]
