@@ -39,6 +39,11 @@ function BlogPage(props) {
   );
 }
 
+export const TopBar = (props) => {
+  return (<Flex justifyContent='center' alignItems='center' pt='10px' mb='-20px' {...props}>
+    {props.children}
+  </Flex>)
+}
 export const Block = (props) => {
   return (
     <Flex direction='column' mt='30px' px='20px' w='100%' maxW='1200px' {...props}>

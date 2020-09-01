@@ -27,7 +27,7 @@ function Projects(props) {
       year: 'Jul 2020 ---',
       keywords: ['Machine Learning', 'Computer Vision', 'Generative Adversarial Networks', 'Tensorflow', 'Keras', 'OpenCV', 'Dlib', 'Python'],
       link: '#/pages/GFC',
-      source: 'n/a',
+      source: 'https://github.com/comtalyst/generative-facial-cosmetics',
     },
     {
       name: 'Personal Portfolio Website',

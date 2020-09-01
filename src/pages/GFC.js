@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Flex } from "@chakra-ui/core";
+import { Flex, Link, Box } from "@chakra-ui/core";
+import { FaGithub } from "react-icons/fa";
 
 import { Title, HeaderBig, TextMedium, HeaderSmall } from '../components/Texts.js';
 import { TagBoxes } from '../components/Layouts.js';
@@ -9,12 +10,15 @@ import { LinkOut } from '../components/Buttons.js';
 import musk_landmarked from './GFC/musk_landmarked.png';
 import musk_lips_cropped from './GFC/musk_lips_cropped.png'
 import example from './GFC/example.png'
-import BlogPage, {Block, SubBlock, Image_, Paragraph, BulletPoint, Bold} from '../containers/BlogPage.js';
+import BlogPage, { TopBar, Block, SubBlock, Image_, Paragraph, BulletPoint, Bold} from '../containers/BlogPage.js';
 
 function GFC() {
   return (
     <BlogPage>
       <Title>Generative Facial Cosmetics</Title>
+      <TopBar>
+        <Link isExternal href='https://github.com/comtalyst/generative-facial-cosmetics'><Box as={FaGithub} size='30px' mx='10px'/></Link>
+      </TopBar>
       <Block>
         <HeaderBig>
           People Involved
