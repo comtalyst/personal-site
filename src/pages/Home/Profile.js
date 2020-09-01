@@ -3,10 +3,11 @@ import {Text, Box, Flex, Image, Grid } from "@chakra-ui/core";
 import portrait from './media/portrait.png';
 
 import { Title, TextMedium } from '../../components/Texts.js';
+import ShowBlock from '../../containers/ShowBlock.js';
 
 function Profile(props) {
   return (
-    <Flex w='100%' pb='3rem' pt='1rem' direction='column' {...props}>
+    <ShowBlock {...props}>
       <Title>Hello There!</Title>
       <Grid templateColumns={{ base: "1fr", md: "minmax(0px, 150px) minmax(300px, auto) minmax(300px, auto) minmax(0px, 150px)"}} columnGap='3.5rem'>
         <Box></Box>
@@ -36,7 +37,7 @@ function Profile(props) {
         </Flex>
         <Box></Box>
       </Grid>
-    </Flex>
+    </ShowBlock>
   )
 }
 

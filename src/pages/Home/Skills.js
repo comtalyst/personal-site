@@ -2,6 +2,7 @@ import React from 'react';
 import {Text, Box, Flex} from "@chakra-ui/core";
 
 import { Title, TextBig, HeaderBig } from '../../components/Texts.js';
+import ShowBlock from '../../containers/ShowBlock.js';
 
 function Skills(props) {
 
@@ -174,7 +175,7 @@ function Skills(props) {
   ]
 
   return (
-    <Flex w='100%' pb='3rem' pt='1rem' direction='column' {...props}>
+    <ShowBlock {...props}>
       <Title>Tech Skills</Title>
       <Flex direction='column' px='20px'>
         <SkillTitle>Languages</SkillTitle>
@@ -188,7 +189,7 @@ function Skills(props) {
         <SkillTitle>Business</SkillTitle>
         <SkillContainer skills={business}/>
       </Flex>
-    </Flex>
+    </ShowBlock>
   )
 }
 
