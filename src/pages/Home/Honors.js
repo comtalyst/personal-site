@@ -1,14 +1,15 @@
 import React from 'react';
 import {Flex, Image} from "@chakra-ui/core";
 
-import toi1 from '../media/toi1.png';
-import apio_logo from '../media/apio_logo.png';
-import icpc_logo from '../media/icpc_logo.png';
-import trinity_logo from '../media/trinity_logo.png';
-import nsc_logo from '../media/nsc_logo.png';
+import toi1 from './media/toi1.png';
+import apio_logo from './media/apio_logo.png';
+import icpc_logo from './media/icpc_logo.png';
+import trinity_logo from './media/trinity_logo.png';
+import nsc_logo from './media/nsc_logo.png';
 
-import { Title } from '../components/Texts.js';
-import ShowList from '../components/ShowList.js';
+import { Title } from '../../components/Texts.js';
+import ShowList from '../../containers/ShowList.js';
+import ShowBlock from '../../containers/ShowBlock';
 
 function Honors(props) {
   const gold = 'yellow.400'
@@ -86,10 +87,10 @@ function Honors(props) {
   ]
 
   return (
-    <Flex w='100%' pb='3rem' pt='1rem' direction='column' alignItems='center' {...props}>
+    <ShowBlock {...props}>
       <Title>Awards and Honors</Title>
       <ShowList rows={honors} collapseTitle='Aspects'/>
-    </Flex>
+    </ShowBlock>
   )
 }
 

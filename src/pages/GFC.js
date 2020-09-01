@@ -2,10 +2,10 @@ import React, {useRef} from 'react';
 
 import { useHistory } from "react-router-dom";
 
-import { CSSReset, Text, Box, Flex, Image, Link, Grid } from "@chakra-ui/core";
+import { Box, Flex, Image } from "@chakra-ui/core";
 
-import NavigationBar from '../components/NavigationBar.js';
-import Contact from '../containers/Contact.js';
+import NavigationBar from './global/NavigationBar.js';
+import Contact from './global/Contact.js';
 import { Title, HeaderBig, TextMedium, HeaderSmall } from '../components/Texts.js';
 import { TagBoxes } from '../components/Layouts.js';
 import { LinkOut } from '../components/Buttons.js';
@@ -79,7 +79,6 @@ function Home() {
 
   return (
     <Box bg='gray.700' color='white' bgImage={"url(" + grad + ")"} bgRepeat="no-repeat" bgSize='100% 100%'>
-      <CSSReset />
       <NavigationBar navClick={navClick} names={['Profile', 'Education', 'Skills', 'Projects', 'Experiences', 'Honors', 'Contact']}/>
       <Flex w='100%' pb='3rem' pt='1rem' direction='column' alignItems='center'>
         <Title>Generative Facial Cosmetics</Title>

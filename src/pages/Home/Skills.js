@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, Box, Flex} from "@chakra-ui/core";
 
-import { Title, TextBig, HeaderBig } from '../components/Texts.js';
+import { Title, TextBig, HeaderBig } from '../../components/Texts.js';
 
 function Skills(props) {
 

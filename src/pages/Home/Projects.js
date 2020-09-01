@@ -1,19 +1,20 @@
 import React from 'react';
 import {Flex, Image} from "@chakra-ui/core";
 
-import shootdown1 from '../media/shootdown1.png';
-import shootdown2 from '../media/shootdown2.png';
-import shootdown3 from '../media/shootdown3.png';
-import shootdown4 from '../media/shootdown4.png';
-import shootdown5 from '../media/shootdown5.png';
-import luminateer1 from '../media/luminateer1.png';
-import luminateer2 from '../media/luminateer2.png';
-import firex1 from '../media/firex1.png';
-import firex2 from '../media/firex2.png';
-import minesweepers1 from '../media/minesweepers1.PNG';
+import shootdown1 from './media/shootdown1.png';
+import shootdown2 from './media/shootdown2.png';
+import shootdown3 from './media/shootdown3.png';
+import shootdown4 from './media/shootdown4.png';
+import shootdown5 from './media/shootdown5.png';
+import luminateer1 from './media/luminateer1.png';
+import luminateer2 from './media/luminateer2.png';
+import firex1 from './media/firex1.png';
+import firex2 from './media/firex2.png';
+import minesweepers1 from './media/minesweepers1.PNG';
 
-import { Title } from '../components/Texts.js';
-import ShowList from '../components/ShowList.js';
+import { Title } from '../../components/Texts.js';
+import ShowList from '../../containers/ShowList.js';
+import ShowBlock from '../../containers/ShowBlock';
 
 function Projects(props) {
 
@@ -105,10 +106,10 @@ function Projects(props) {
   ]
 
   return (
-    <Flex w='100%' pb='3rem' pt='1rem' direction='column' alignItems='center' {...props}>
+    <ShowBlock {...props}>
       <Title>Projects</Title>
       <ShowList rows={projects} collapseTitle='Technologies'/>
-    </Flex>
+    </ShowBlock>
   )
 }
 

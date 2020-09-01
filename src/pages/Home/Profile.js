@@ -1,8 +1,8 @@
 import React from 'react';
 import {Text, Box, Flex, Image, Grid } from "@chakra-ui/core";
-import portrait from '../media/portrait.png';
+import portrait from './media/portrait.png';
 
-import { Title, TextMedium } from '../components/Texts.js';
+import { Title, TextMedium } from '../../components/Texts.js';
 
 function Profile(props) {
   return (

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Flex } from "@chakra-ui/core";
 
-import { Title } from '../components/Texts.js';
-import ShowList from '../components/ShowList.js';
+import { Title } from '../../components/Texts.js';
+import ShowList from '../../containers/ShowList.js';
+import ShowBlock from '../../containers/ShowBlock.js';
 
 function Experiences(props) {
   const experiences=[
@@ -40,10 +40,10 @@ function Experiences(props) {
   ]
 
   return (
-    <Flex w='100%' pb='3rem' pt='1rem' direction='column' alignItems='center' {...props}>
+    <ShowBlock {...props}>
       <Title>Experiences</Title>
       <ShowList rows={experiences} collapseTitle='Experiences'/>
-    </Flex>
+    </ShowBlock>
   )
 }
 

@@ -2,9 +2,9 @@ import React from 'react';
 import { Text, Box, Flex, Link } from "@chakra-ui/core";
 import { FaGithub, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 
-import scene from '../media/scene1.jpg';
+import scene from '../../media/scene1.jpg';
 
-import { Title, TextBig, TextMedium } from '../components/Texts.js';
+import { Title, TextBig, TextMedium } from '../../components/Texts.js';
 
 function Landing(props) {
   return (

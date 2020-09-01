@@ -2,9 +2,9 @@ import React from 'react';
 import {Text, Box, Flex, Image, Link } from "@chakra-ui/core";
 import { FaEnvelope, FaMapMarkerAlt, FaGithub, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 
-import comtalyst_hidden from '../media/comtalyst_hidden.png';
+import comtalyst_hidden from '../../media/comtalyst_hidden.png';
 
-import { Title, TextMedium } from '../components/Texts.js';
+import { Title, TextMedium } from '../../components/Texts.js';
 
 function Contact(props) {
   return (

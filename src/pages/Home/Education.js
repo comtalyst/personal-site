@@ -1,13 +1,14 @@
 import React from 'react';
 import { Button, Text, Box, Flex, Image, Grid, Collapse } from "@chakra-ui/core";
 
-import uw_logo from '../media/uw_logo.png';
-import gs_logo from '../media/gs_logo.png';
-import sk_logo from '../media/sk_logo.png';
+import uw_logo from './media/uw_logo.png';
+import gs_logo from './media/gs_logo.png';
+import sk_logo from './media/sk_logo.png';
 
-import scene from '../media/scene3.jpg';
+import scene from '../../media/scene3.jpg';
 
-import { Title, TextBig, TextMedium } from '../components/Texts.js';
+import { Title, TextBig, TextMedium } from '../../components/Texts.js';
+import ShowBlock from '../../containers/ShowBlock';
 
 function Education(props) {
   const schools=[
@@ -53,7 +54,7 @@ function Education(props) {
 
   return (
     <Flex w='100%' bgImage={"url(" + scene + ")"} bgRepeat="no-repeat" bgSize='cover' {...props}>
-    <Flex w='100%' pb='3rem' pt='1rem' direction='column' bg='bgCover2' alignItems='center'>
+    <ShowBlock bg='bgCover2'>
       <Title>Education</Title>
       {
         schools.map((school, idx) => {
@@ -103,7 +104,7 @@ function Education(props) {
           </Grid>)
         })
       }
-    </Flex></Flex>
+    </ShowBlock></Flex>
   )
 }
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Button, Text, Box, Flex, Grid, Collapse, Link, Icon, Divider } from "@chakra-ui/core";
-import { TextMedium, TextBig } from './Texts';
-import { ButtonCollapse, LinkOut } from './Buttons';
-import { Empty, TagBoxes } from './Layouts';
+import { TextMedium, TextBig } from '../components/Texts';
+import { ButtonCollapse, LinkOut } from '../components/Buttons';
+import { Empty, TagBoxes } from '../components/Layouts';
 import { exist } from '../utils';
-import { DividerBold } from './Decors';
+import { DividerBold } from '../components/Decors';
 
 function ShowList(props) {
   const {rows, collapseTitle} = props

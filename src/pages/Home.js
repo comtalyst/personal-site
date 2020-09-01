@@ -1,16 +1,16 @@
 import React, {useRef} from 'react';
 
-import { CSSReset, Box } from '@chakra-ui/core'
+import { Box } from '@chakra-ui/core'
 
-import NavigationBar from '../components/NavigationBar.js';
-import Landing from '../containers/Landing.js';
-import Profile from '../containers/Profile.js';
-import Education from '../containers/Education.js';
-import Skills from '../containers/Skills.js';
-import Projects from '../containers/Projects.js';
-import Experiences from '../containers/Experiences.js';
-import Honors from '../containers/Honors.js';
-import Contact from '../containers/Contact.js';
+import NavigationBar from './global/NavigationBar.js';
+import Landing from './Home/Landing.js';
+import Profile from './Home/Profile.js';
+import Education from './Home/Education.js';
+import Skills from './Home/Skills.js';
+import Projects from './Home/Projects.js';
+import Experiences from './Home/Experiences.js';
+import Honors from './Home/Honors.js';
+import Contact from './global/Contact.js';
 
 import grad from '../media/grad.png';
 
@@ -29,8 +29,7 @@ function Home() {
     window.scrollTo(0, ref[compName].current.offsetTop - 64) 
   }
   return (
-    <Box bg='gray.700' color='white' bgImage={"url(" + grad + ")"} bgRepeat="no-repeat" bgSize='100% 100%'>
-      <CSSReset />
+    <Box bg='gray.700' color='white' bgImage={"url(" + grad + ")"} bgRepeat="no-repeat" bgSize='100% 100%'> 
       <NavigationBar navClick={scrollTo} names={['Profile', 'Education', 'Skills', 'Projects', 'Experiences', 'Honors', 'Contact']}/>
       <Landing/>
       <hr/>
