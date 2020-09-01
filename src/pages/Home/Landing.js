@@ -6,10 +6,11 @@ import scene from '../../media/scene1.jpg';
 
 import { Title, TextBig, TextMedium } from '../../components/Texts.js';
 import ShowBlock from '../../containers/ShowBlock';
+import {barHeight} from '../../containers/NavigationBar';
 
 function Landing(props) {
   return (
-    <Flex w='100%' h={window.innerHeight - 64} bgImage={"url(" + scene + ")"} bgRepeat="no-repeat" bgSize='cover' {...props}>
+    <Flex w='100%' h={window.innerHeight - barHeight} bgImage={"url(" + scene + ")"} bgRepeat="no-repeat" bgSize='cover' {...props}>
     <ShowBlock h='100%' justifyContent='center' bg='bgCover'>
       <Flex mx='10px' direction='column' justifyContent='center' h='100%'>
         <Title>Welcome!</Title>

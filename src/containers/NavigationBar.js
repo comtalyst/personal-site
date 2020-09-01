@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Button, Text, Flex, Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/core";
 
 const clashRange = 80                         // additional constant for title-buttons clash measurement
+export const barHeight = 64
 
 class NavigationBar extends Component {
   constructor(){
@@ -53,7 +54,7 @@ class NavigationBar extends Component {
     
     return (
       <Flex>
-        <Flex h='64px'></Flex>
+        <Flex h={barHeight + 'px'}></Flex>
         <Flex bg='reactDark' w='100%' color='white' py='0' justifyContent='space-between' px='1.5rem' h='64px' 
           alignItems='center' position='fixed' zIndex={100}
         >
