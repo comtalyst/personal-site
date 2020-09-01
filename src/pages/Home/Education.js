@@ -10,6 +10,16 @@ import scene from '../../media/scene3.jpg';
 import { Title, TextBig, TextMedium } from '../../components/Texts.js';
 import ShowBlock from '../../containers/ShowBlock';
 
+/*
+NOTE:
+
+TEMPLATE/STRUCTURE OF THIS BLOCK CONTAINER FILE IS THE OLD VERSION, 
+WHICH IS MORE UNORGANIZED COMPARED TO OTHER BLOCK CONTAINER FILES.
+
+SINCE VISUAL CHANGES AND REUSAGE IS NOT FREQUENT, 
+STRUCTURAL REVISIONING IS NOT EXPECTED IN THE MEANTIME.
+*/
+
 function Education(props) {
   const schools=[
     {

@@ -15,6 +15,11 @@ function Honors(props) {
   const gold = 'yellow.400'
   const silver = 'gray.300'
   const bronze = 'orange.200'
+  const LogoYearCombo = (props) => {
+    return (<Flex justifyContent='flex-end' mt='1rem' wrap='wrap'>
+      {props.children}
+    </Flex>)
+  }
 
   const honors=[
     {
@@ -23,10 +28,10 @@ function Honors(props) {
       desc: 'A formal college-level programming competition to qualify regional representatives to the ICPC World Finals 2020. ' +
       'Contestants from 178 teams have to solve most number of problems using data structure and algorithms, varied from basics to advanced, ' +
       'in a limited time (this competition style is called "Competitive Programming")',
-      year: (<Flex justifyContent='flex-end' mt='1rem' wrap='wrap'>
+      year: (<LogoYearCombo>
               <Image src={icpc_logo} alt='screenshot' h='80px' m='10px'/>
               Nov 2019
-            </Flex>),
+            </LogoYearCombo>),
       keywords: ['Teamed Competitive Programming', 'C/C++', 'Data Structure and Algorithms'],
       link: 'https://icpc.global/',
     },
@@ -36,10 +41,10 @@ function Honors(props) {
       desc: 'A firefighting robotics competition: the robot must traverse the maze and extinguish the candle in a limited time. ' +
       'Competed using the robot Firex along with teammates from George School: Sam, Andrew, and Ian under the guidance of robotics teacher Chris. ' + 
       'Received the best performance award for teams from North America in the most advanced maze.',
-      year: (<Flex justifyContent='flex-end' mt='1rem' wrap='wrap'>
+      year: (<LogoYearCombo>
               <Image src={trinity_logo} alt='screenshot' h='100px' m='10px' mx='25px'/>
               Apr 2019
-            </Flex>),
+            </LogoYearCombo>),
       keywords: ['Robotics & Physical Computing', 'Arduino', 'C'],
       link: 'https://trinityrobotcontest.org/',
     },
@@ -53,10 +58,10 @@ function Honors(props) {
       name: 'National Representative, Asia-Pacific Informatics Olympiad (APIO) 2018',
       desc: 'A formal high-school-level programming competition for national representatives from Asian-Pacific nations. ' + 
       'Missed a medalist opportunity with a mistake I never forget...',
-      year: (<Flex justifyContent='flex-end' mt='1rem' wrap='wrap'>
+      year: (<LogoYearCombo>
               <Image src={apio_logo} alt='screenshot' h='80px' m='10px'/>
               May 2018
-            </Flex>),
+            </LogoYearCombo>),
       keywords: ['Competitive Programming', 'C/C++', 'Data Structure and Algorithms'],
       link: 'https://apio2018.ru/',
     },
@@ -65,10 +70,10 @@ function Honors(props) {
       desc: 'A nation-wide software development competition. Competed using the Chatbot Amico along with teammates from ' +
       'Suankularb Wittayalai School: Pete and Boss under the guidance of teacher Saowalak. ' + 
       'Qualified to the first round and received development funds.',
-      year: (<Flex justifyContent='flex-end' mt='1rem' wrap='wrap'>
+      year: (<LogoYearCombo>
               <Image src={nsc_logo} alt='screenshot' h='80px' m='10px' mx='30px'/>
               Mar 2018
-            </Flex>),
+            </LogoYearCombo>),
       keywords: ['Software Development', 'Chatbot', 'Machine Learning (Lite)', 'Python'],
       link: 'http://www.nectec.or.th/nsc/',
     },
