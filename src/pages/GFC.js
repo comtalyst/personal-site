@@ -14,6 +14,7 @@ import grad from '../media/grad.png';
 import musk_landmarked from './GFC/musk_landmarked.png';
 import musk_lips_cropped from './GFC/musk_lips_cropped.png'
 import example from './GFC/example.png'
+import ShowBlock from '../containers/ShowBlock.js';
 
 function Home() {
   const history = useHistory()
@@ -79,8 +80,8 @@ function Home() {
 
   return (
     <Box bg='gray.700' color='white' bgImage={"url(" + grad + ")"} bgRepeat="no-repeat" bgSize='100% 100%'>
-      <NavigationBar navClick={navClick} names={['Profile', 'Education', 'Skills', 'Projects', 'Experiences', 'Honors', 'Contact']}/>
-      <Flex w='100%' pb='3rem' pt='1rem' direction='column' alignItems='center'>
+      <NavigationBar navClick={navClick} names={['Home', 'Contact']}/>
+      <ShowBlock>
         <Title>Generative Facial Cosmetics</Title>
         <Block>
           <HeaderBig>
@@ -477,7 +478,7 @@ function Home() {
             <BulletPoint>Use other architectures where encoding is not needed to prevent feature loss</BulletPoint>
           </Paragraph>
         </Block>
-      </Flex>
+      </ShowBlock>
       <hr/>
       <div ref={ref['Contact']}></div>
       <Contact bg='trans.gray'/>
