@@ -2,7 +2,7 @@ import React, {useRef} from 'react';
 
 import { Box } from '@chakra-ui/core'
 
-import NavigationBar from './global/NavigationBar.js';
+import NavigationBar from '../containers/NavigationBar.js';
 import Landing from './Home/Landing.js';
 import Profile from './Home/Profile.js';
 import Education from './Home/Education.js';

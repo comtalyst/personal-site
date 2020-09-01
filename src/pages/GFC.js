@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 
 import { Box, Flex, Image } from "@chakra-ui/core";
 
-import NavigationBar from './global/NavigationBar.js';
+import NavigationBar from '../containers/NavigationBar.js';
 import Contact from './global/Contact.js';
 import { Title, HeaderBig, TextMedium, HeaderSmall } from '../components/Texts.js';
 import { TagBoxes } from '../components/Layouts.js';
@@ -16,7 +16,7 @@ import musk_lips_cropped from './GFC/musk_lips_cropped.png'
 import example from './GFC/example.png'
 import ShowBlock from '../containers/ShowBlock.js';
 
-function Home() {
+function GFC() {
   const history = useHistory()
 
   const ref = {
@@ -486,4 +486,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default GFC;
