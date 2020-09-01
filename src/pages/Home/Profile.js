@@ -7,6 +7,7 @@ import ShowBlock from '../../containers/ShowBlock.js';
 
 function Profile(props) {
   return (
+    // might componentize this image-paragraphs template soon
     <ShowBlock {...props}>
       <Title>Hello There!</Title>
       <Grid templateColumns={{ base: "1fr", md: "minmax(0px, 150px) minmax(300px, auto) minmax(300px, auto) minmax(0px, 150px)"}} columnGap='3.5rem'>
