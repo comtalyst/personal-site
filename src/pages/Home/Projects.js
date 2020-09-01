@@ -18,6 +18,7 @@ import ShowBlock from '../../containers/ShowBlock';
 
 function Projects(props) {
 
+  // these data may need to stay here instead of JSON since we are making use of component tags directly
   const projects=[
     {
       name: 'Generative Facial Cosmetics',

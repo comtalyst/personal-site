@@ -21,6 +21,7 @@ function Honors(props) {
     </Flex>)
   }
 
+  // these data may need to stay here instead of JSON since we are making use of component tags directly
   const honors=[
     {
       name: '6th Place, ICPC 2019 North Central North America Regional Contest',

@@ -5,6 +5,7 @@ import ShowList from '../../containers/ShowList.js';
 import ShowBlock from '../../containers/ShowBlock.js';
 
 function Experiences(props) {
+  // these data may need to stay here instead of JSON since we are making use of component tags directly
   const experiences=[
     {
       name: 'Participant, AIS Young Digital Talent Camp 2020',
