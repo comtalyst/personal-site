@@ -9,6 +9,7 @@ import scene from '../../media/scene3.jpg';
 
 import { Title, TextBig, TextMedium } from '../../components/Texts.js';
 import ShowBlock from '../../containers/ShowBlock';
+import BackgroundContainer from '../../containers/BackgroundContainer';
 
 /*
 NOTE:
@@ -63,7 +64,7 @@ function Education(props) {
   }
 
   return (
-    <Flex w='100%' bgImage={"url(" + scene + ")"} bgRepeat="no-repeat" bgSize='cover' {...props}>
+    <BackgroundContainer bg={scene} {...props}>
     <ShowBlock bg='bgCover2'>
       <Title>Education</Title>
       {
@@ -114,7 +115,7 @@ function Education(props) {
           </Grid>)
         })
       }
-    </ShowBlock></Flex>
+    </ShowBlock></BackgroundContainer>
   )
 }
 

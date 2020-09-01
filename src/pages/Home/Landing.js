@@ -7,11 +7,13 @@ import scene from '../../media/scene1.jpg';
 import { Title, TextBig, TextMedium } from '../../components/Texts.js';
 import ShowBlock from '../../containers/ShowBlock';
 import {barHeight} from '../../containers/NavigationBar';
+import BackgroundContainer from '../../containers/BackgroundContainer';
 
 function Landing(props) {
   return (
-    <Flex w='100%' h={window.innerHeight - barHeight} bgImage={"url(" + scene + ")"} bgRepeat="no-repeat" bgSize='cover' {...props}>
-    <ShowBlock h='100%' justifyContent='center' bg='bgCover'>
+    // expect to use with NavBar
+    <BackgroundContainer bg={scene} h={window.innerHeight - barHeight} {...props}>
+    <ShowBlock justifyContent='center' bg='bgCover'>
       <Flex mx='10px' direction='column' justifyContent='center' h='100%'>
         <Title>Welcome!</Title>
         <TextBig letterSpacing='widest' lineHeight='taller' textAlign='center'>
@@ -28,7 +30,7 @@ function Landing(props) {
       <TextMedium letterSpacing='widest' textAlign='center' color='gray.400' mx='10px'>
         Scroll down or use the navigation bar above to begin
       </TextMedium>
-    </ShowBlock></Flex>
+    </ShowBlock></BackgroundContainer>
   )
 }
 
