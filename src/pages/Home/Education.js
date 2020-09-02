@@ -28,7 +28,9 @@ function Education(props) {
       color: 'red.100',
       desc: 'B.S. in Computer Science and Data Science',
       year: '2019 - 2023',
-      courses: ['Calculus - Functions of Several Variables', 'Data Programming I', 'Elementary Matrix and Linear Algebra'],
+      courses: ['Calculus - Functions of Several Variables', 'Data Programming II', 'Elementary Matrix and Linear Algebra',
+               'Introduction to Artificial Intelligence', 'Introduction to Computer Engineering', 'Introduction to Data Modelling', 
+               'Introduction to Theory and Methods of Mathematical Statistics I'],
       logo: uw_logo
     },
     {
