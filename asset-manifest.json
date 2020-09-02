@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.da1ab53f.chunk.css",
-    "main.js": "/static/js/main.7e36fdf9.chunk.js",
-    "main.js.map": "/static/js/main.7e36fdf9.chunk.js.map",
+    "main.js": "/static/js/main.72b8357d.chunk.js",
+    "main.js.map": "/static/js/main.72b8357d.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.0128b0c7.js",
     "runtime-main.js.map": "/static/js/runtime-main.0128b0c7.js.map",
-    "static/js/2.d8251b90.chunk.js": "/static/js/2.d8251b90.chunk.js",
-    "static/js/2.d8251b90.chunk.js.map": "/static/js/2.d8251b90.chunk.js.map",
+    "static/js/2.358ec95b.chunk.js": "/static/js/2.358ec95b.chunk.js",
+    "static/js/2.358ec95b.chunk.js.map": "/static/js/2.358ec95b.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.1cee7edc37e895c297c3b3b18ded8200.js": "/precache-manifest.1cee7edc37e895c297c3b3b18ded8200.js",
+    "precache-manifest.c7230220a9d71f986cc5b8b62e029a5f.js": "/precache-manifest.c7230220a9d71f986cc5b8b62e029a5f.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.da1ab53f.chunk.css.map": "/static/css/main.da1ab53f.chunk.css.map",
-    "static/js/2.d8251b90.chunk.js.LICENSE.txt": "/static/js/2.d8251b90.chunk.js.LICENSE.txt",
+    "static/js/2.358ec95b.chunk.js.LICENSE.txt": "/static/js/2.358ec95b.chunk.js.LICENSE.txt",
     "static/media/apio_logo.png": "/static/media/apio_logo.753153dc.png",
     "static/media/comtalyst_hidden.png": "/static/media/comtalyst_hidden.29a6db59.png",
     "static/media/example.png": "/static/media/example.2edff082.png",
@@ -41,8 +41,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.0128b0c7.js",
-    "static/js/2.d8251b90.chunk.js",
+    "static/js/2.358ec95b.chunk.js",
     "static/css/main.da1ab53f.chunk.css",
-    "static/js/main.7e36fdf9.chunk.js"
+    "static/js/main.72b8357d.chunk.js"
   ]
 }
