@@ -9,9 +9,9 @@ import ShowBlock from '../../containers/ShowBlock';
 import {barHeight} from '../../containers/NavigationBar';
 import BackgroundContainer from '../../containers/BackgroundContainer';
 
+ // expect to use with NavBar
 function Landing(props) {
   return (
-    // expect to use with NavBar
     <BackgroundContainer bg={scene} h={window.innerHeight - barHeight} {...props}>
     <ShowBlock justifyContent='center' bg='bgCover'>
       <Flex mx='10px' direction='column' justifyContent='center' h='100%'>
