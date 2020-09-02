@@ -2,7 +2,7 @@ import React, {useRef} from 'react';
 
 import { Box } from '@chakra-ui/core'
 
-import NavigationBar from '../containers/NavigationBar.js';
+import NavigationBar, { barHeight } from '../containers/NavigationBar.js';
 import Landing from './Home/Landing.js';
 import Profile from './Home/Profile.js';
 import Education from './Home/Education.js';
@@ -26,7 +26,7 @@ function Home() {
   }
 
   const scrollTo = (compName) => {
-    window.scrollTo(0, ref[compName].current.offsetTop - 64) 
+    window.scrollTo(0, ref[compName].current.offsetTop - barHeight) 
   }
   return (
     <Box bg='gray.700' color='white' bgImage={"url(" + grad + ")"} bgRepeat="no-repeat" bgSize='100% 100%'> 

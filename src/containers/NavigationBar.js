@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Button, Text, Flex, Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/core";
+import { TextMedium } from '../components/Texts';
 
 const clashRange = 80                         // additional constant for title-buttons clash measurement
 export const barHeight = 64
@@ -55,7 +56,7 @@ class NavigationBar extends Component {
     return (
       <Flex>
         <Flex h={barHeight + 'px'}></Flex>
-        <Flex bg='reactDark' w='100%' color='white' py='0' justifyContent='space-between' px='1.5rem' h='64px' 
+        <Flex bg='reactDark' w='100%' color='white' py='0' justifyContent='space-between' px='1.5rem' h={barHeight + 'px'}
           alignItems='center' position='fixed' zIndex={100}
         >
           <Flex ref={this.setTitleRef}>
@@ -81,8 +82,11 @@ class NavigationBar extends Component {
                     _active={{ transform: 'scale(0.9)'}}
                     _focus={{ boxShadow: '0 0 0 0'}}
                     onClick={() => navClick(name)}
+                    px='20px'
                   >
-                    {name}
+                    <TextMedium>
+                      {name}
+                    </TextMedium>
                   </Button>
                 ))
               }
@@ -100,7 +104,7 @@ class NavigationBar extends Component {
                 </MenuButton>
                 <MenuList bg='reactDark' color='white' borderColor='#00000000'>
                 {
-                  names.map((name) => (<MenuItem _focus={{bg: '#FFFFFF10'}} onClick={() => navClick(name)}>{name}</MenuItem>))
+                  names.map((name) => (<MenuItem _focus={{bg: '#FFFFFF10'}} onClick={() => navClick(name)}><TextMedium>{name}</TextMedium></MenuItem>))
                 }
                 </MenuList>
               </Menu>
