@@ -4,11 +4,14 @@ import portrait from './media/portrait.png';
 
 import { Title, TextMedium } from '../../components/Texts.js';
 import ShowBlock from '../../containers/ShowBlock.js';
+import BackgroundContainer from '../../containers/BackgroundContainer';
+import scene from '../../media/scene4.jpg';
 
 // might componentize this image-paragraphs template soon
 function Profile(props) {
   return (
-    <ShowBlock {...props}>
+    <BackgroundContainer bg={scene} {...props}>
+    <ShowBlock bg='bgCover2'>
       <Title>Hello There!</Title>
       <Grid templateColumns={{ base: "1fr", md: "minmax(0px, 150px) minmax(300px, auto) minmax(300px, auto) minmax(0px, 150px)"}} columnGap='3.5rem'>
         <Box></Box>
@@ -38,7 +41,7 @@ function Profile(props) {
         </Flex>
         <Box></Box>
       </Grid>
-    </ShowBlock>
+    </ShowBlock></BackgroundContainer>
   )
 }
 
