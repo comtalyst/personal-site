@@ -188,6 +188,11 @@ function GFC() {
             the lips are out of bounds. This will probably help the network deals with blurry input images. We also
             apply small random rotations to the images to fix the issue from the previous model where improperly aligned faces were inputted.
           </Paragraph>
+          <Paragraph>
+            The dataset we are currently using is the <LinkOut href='https://github.com/NVlabs/ffhq-dataset'>FFHQ Dataset</LinkOut>,
+            which is the same dataset used to train StyleGan in the original paper. However, we do expect differences in performances 
+            due to different use of data. No additional data preprocessing is needed for this dataset.
+          </Paragraph>
         </SubBlock>
         <SubBlock>
           <HeaderSmall>
@@ -347,6 +352,14 @@ function GFC() {
             which is the expected batch size. Each TFRecord also stores image IDs, 
             which helps identify the images. Each TFRecord is also kept in parallel with a JSON file of the same name, 
             storing landmark coordinates of the images stored by the TFRecord.
+          </Paragraph>
+        </SubBlock>
+        <SubBlock>
+          <HeaderSmall>
+            Data Storage
+          </HeaderSmall>
+          <Paragraph>
+            The TFRecord files are stored in a storage bucket of <Bold>Google Cloud Platform</Bold>. 
           </Paragraph>
         </SubBlock>
         <SubBlock>
