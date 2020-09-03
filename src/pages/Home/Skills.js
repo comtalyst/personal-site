@@ -147,6 +147,10 @@ function Skills(props) {
       level: 4
     },
     {
+      name: 'Competitive Programming',
+      level: 4
+    },
+    {
       name: 'Deep & Machine Learning',
       level: 3
     },
@@ -177,7 +181,7 @@ function Skills(props) {
   return (
     <ShowBlock {...props}>
       <Title>Tech Skills</Title>
-      <Flex direction='column' px='20px'>
+      <Flex direction='column' px='20px' maxW='1200px'>
         <SkillTitle>Languages</SkillTitle>
         <SkillContainer skills={languages}/>
         <SkillTitle>Frameworks/Libraries</SkillTitle>
