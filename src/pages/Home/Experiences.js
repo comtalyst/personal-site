@@ -24,12 +24,12 @@ function Experiences(props) {
       link: 'http://pages.cs.wisc.edu/~dieter/ICPC/',
     },
     {
-      name: 'Finalist, Thailand International Olympiad in Informatics Team',
+      name: 'Finalist, Thailand national team of the International Olympiad in Informatics',
       desc: 'Participated in a series of training camps and programming contests to select 4 national representatives to the IOI. ' + 
       'Ranked 5th place in the final stage (That\'s right, I was literally almost there).',
       year: 'Jun 2015 - May 2018',
       keywords: ['Competitive Programming', 'C/C++', 'Data Structures & Algorithms', 'Computer Science Theory'],
-      link: 'http://pages.cs.wisc.edu/~dieter/ICPC/',
+      link: 'n/a',
     },
     {
       name: 'Executive Board, Suankularb Wittayalai School Computer Club',
