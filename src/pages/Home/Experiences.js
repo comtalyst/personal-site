@@ -12,7 +12,7 @@ function Experiences(props) {
       desc: 'Participated in the practical startup building program and competition organized by AIS (Thailand) and Stanford University. ' +
             'Formed and conducted market research on several tech startup ideas along with 3 other team members. ' +
             'The qualified finalists will have a chance to deliver a pitch of their final product to several venture capitalists and the AIS Corporation executives.',
-      year: 'Jul 2020 --- Sep 2020',
+      year: 'Jul 2020 - Sep 2020',
       keywords: ['Businesses and Startups', 'Design Thinking', 'Market Research', 'Leadership and Communication'],
       link: 'https://www.aydtcamp.com/',
     },
