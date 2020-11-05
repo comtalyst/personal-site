@@ -38,9 +38,9 @@ function GFC() {
           Abstract
         </HeaderBig>
         <Paragraph>
-          Our task is to apply various facial makeup products to the input face automatically and smoothly.
+          The objective is to apply various facial makeup products to the input face automatically and smoothly.
           Instead of placing the predefined layer of makeup on top of the face image, we are going to approach this task
-          by regenerating the resulting image using <Bold>Nvidia StyleGAN</Bold> to apply the makeups smoothly. 
+          by regenerating the merged image of face and makeups using <Bold>Nvidia StyleGAN</Bold>. 
         </Paragraph>
         <Flex direction='column' alignItems='center' mt='1rem'>
           <Flex justifyContent='center' wrap='wrap'>
@@ -49,8 +49,9 @@ function GFC() {
           <Paragraph fontStyle='italic' color='gray.300'>Like this, but without any photo editing software</Paragraph>
         </Flex>
         <Paragraph>
-          Currently, only lipstick applying is being worked on. Other features (e.g. eyeliners) are coming soon.
-          We do not expect the overall process to change entirely, but some minor details are likely to change.
+          The scope of this project will only include the application of lipstick.
+          Other features (e.g. eyeliners) might be worked on some time in the future.
+          We do not expect the key process to change entirely for other features, but some minor details are likely to change.
         </Paragraph>
       </Block>
       <Block>
@@ -240,9 +241,15 @@ function GFC() {
             We mainly use <Bold>Google Colaboratory</Bold> with 8-cores TPU to train our model. The batch size we use for this device is 128.
           </Paragraph>
           <Paragraph>
-            Each generation of the model is trained using Adam optimizer with the
-            learning rate of 1e-4. The number of epochs per generation increases as the model progresses. The fade-in algorithm
+            Each generation of the model is trained using Adam optimizer. The loss function used is minimax loss. 
+            Learning rates are varied by situation at the training time, but they are usually be in [1e-4, 1e-3].
+            The number of epochs per generation increases as the model progresses. The fade-in algorithm
             converges after roughly half of the total epochs before normal training resumes for the rest of each generation. 
+          </Paragraph>
+          <Paragraph>
+            Due to limited availability of training hardwares, we decided to train the generator only up to the resolution of 90x90, which will be used on tryout.
+            The higher resolution generator might be worked on some time in the future.
+            According to current results, we do not expect the training process to change.
           </Paragraph>
         </SubBlock>
         <SubBlock>
@@ -252,8 +259,13 @@ function GFC() {
           <Paragraph>
             We trained a model where the latent size is smaller (256) and the data is augmented only using random zooming.
             However, both the randomly generated and regenerated-from-encoded-latent images were not that accurate.
-            Therefore, we decided to increase the latent space size and add more augmentation to see if 
-            the model can improve.
+            Therefore, we decided to increase the latent space size and add more augmentation to see if the model can improve.
+          </Paragraph>
+          <Paragraph>
+            We also trained a more complex version of the model with 512 latent size. The main difference in this version is that
+            there are more dense layers at the end and there are filters on each layer. However, the generator loss failed to converge, 
+            causing it to repeatedly generate blank images most of the time. After months-long optimization, research, and tuning, we reduced
+            the complexity of the model to the current version where the training process is going healthy.
           </Paragraph>
         </SubBlock>
       </Block>
@@ -385,7 +397,7 @@ function GFC() {
           Reflections
         </HeaderBig>
         <Paragraph>
-          This is the first "practical" project I did since I start to be confident of my skills in the
+          This is the first "practical" machine learning project I did since I start to be confident of my skills in the
           foundational aspects of deep learning after completing Andrew Ng's specialization on Coursera.
           At this point, I realize that the world of machine learning is much bigger than what I saw while
           I was in the course, both on theoretical and implementation aspects. Here is the rough summary of what I have learned: 
@@ -408,6 +420,7 @@ function GFC() {
           <BulletPoint>I spent a long time finding the best method to qualify and normalize the lips from faces,
           only to realize that I could just use data augmentation to generalize all of them except obvious anomalies
           (or maybe this is my another mistake?)</BulletPoint>
+          <BulletPoint>The images should be resized to 2^n * 2^n to ease the progressive learning processs</BulletPoint>
         </Paragraph>
         <Paragraph>
           It is possible that there are uncovered mistakes still looming under my work. However, I hope 
@@ -424,7 +437,9 @@ function GFC() {
         </Paragraph>
         <Paragraph>
           <BulletPoint>Using face segmentation instead of landmark polygonal cropping to smoothen the edges</BulletPoint>
-          <BulletPoint>Use other architectures where encoding is not needed to prevent feature loss</BulletPoint>
+          <BulletPoint>Using other architectures where encoding is not needed to prevent feature loss</BulletPoint>
+          <BulletPoint>Increasing the output image size to the commercially practical resolution</BulletPoint>
+          <BulletPoint>Applying the technique to other facial cosmetics</BulletPoint>
         </Paragraph>
       </Block>
     </BlogPage>
