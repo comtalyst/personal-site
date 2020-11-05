@@ -29,7 +29,7 @@ function Education(props) {
       desc: 'B.S. in Computer Science and Data Science',
       year: '2019 - 2023',
       courses: ['Calculus - Functions of Several Variables', 'Data Programming II', 'Elementary Matrix and Linear Algebra',
-               'Introduction to Artificial Intelligence', 'Introduction to Computer Engineering', 'Introduction to Data Modelling', 
+               'Introduction to Artificial Intelligence', 'Introduction to Computer Engineering', 'Introduction to Data Modelling I', 
                'Introduction to Theory and Methods of Mathematical Statistics I'],
       logo: uw_logo
     },
@@ -53,7 +53,7 @@ function Education(props) {
       color: 'blue.100',
       desc: 'The courses below are completed without guidance from formal institutions',
       year: '',
-      courses: ['Deep Learning Specialization, by deeplearning.ai via Coursera, 2020', 'Machine Learning, by Stanford University Online via Coursera, 2018'],
+      courses: ['Deep Learning Specialization, by deeplearning.ai via Coursera, 2020', 'Full-Stack Web Development, via Udemy, 2020', 'Machine Learning, by Stanford University Online via Coursera, 2018'],
       logo: 'n/a'
     }
   ]

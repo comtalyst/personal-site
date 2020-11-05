@@ -9,10 +9,10 @@ function Experiences(props) {
   const experiences=[
     {
       name: 'Participant / Trainee Startup Co-Founder, AIS Young Digital Talent Camp 2020',
-      desc: 'Being trained in the practical startup training program and competition organized by AIS Corporation (Thailand) and Stanford University. ' +
-            'Developed and did market research on several tech startup ideas along with 3 other team members. ' +
+      desc: 'Participated in the practical startup building program and competition organized by AIS (Thailand) and Stanford University. ' +
+            'Formed and conducted market research on several tech startup ideas along with 3 other team members. ' +
             'The qualified finalists will have a chance to deliver a pitch of their final product to several venture capitalists and the AIS Corporation executives.',
-      year: 'Jul 2020 ---',
+      year: 'Jul 2020 --- Sep 2020',
       keywords: ['Businesses and Startups', 'Design Thinking', 'Market Research', 'Leadership and Communication'],
       link: 'https://www.aydtcamp.com/',
     },
@@ -24,8 +24,8 @@ function Experiences(props) {
       link: 'http://pages.cs.wisc.edu/~dieter/ICPC/',
     },
     {
-      name: 'Finalist, Thailand national team of the International Olympiad in Informatics',
-      desc: 'Participated in a series of training camps and programming contests to select 4 national representatives to the IOI. ' + 
+      name: 'Finalist, Thailand national team of the International Olympiad in Informatics (IOI)',
+      desc: 'Competed in a series of training camps and programming contests to select 4 national representatives to the IOI. ' + 
       'Ranked 5th place in the final stage (That\'s right, I was literally almost there).',
       year: 'Jun 2015 - May 2018',
       keywords: ['Competitive Programming', 'C/C++', 'Data Structures & Algorithms', 'Computer Science Theory'],

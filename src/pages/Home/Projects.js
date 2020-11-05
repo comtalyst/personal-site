@@ -22,8 +22,8 @@ function Projects(props) {
   const projects=[
     {
       name: 'Generative Facial Cosmetics',
-      desc: 'Using Generative Adversarial Networks (GAN) to apply various facial makeup products ' +
-            'to the input face automatically and smoothly. More details are in the link provided.',
+      desc: 'Apply various facial makeup products to the input face automatically and smoothly using machine learning techniques. ' +
+            'More details and tryout (coming soon!) are in the link provided. ',
       year: 'Jul 2020 ---',
       keywords: ['Machine Learning', 'Computer Vision', 'Generative Adversarial Networks', 'Tensorflow', 'Keras', 'OpenCV', 'Dlib', 'Python'],
       link: '#/pages/GFC',
@@ -39,7 +39,7 @@ function Projects(props) {
     },
     {
       name: 'Shootdown',
-      desc: 'A mobile arcade/abstract tap-to-shoot game; developed with educational objectives.',
+      desc: 'A mobile arcade/abstract tap-to-shoot game. Made available on Google Play. ',
       year: 'Jun 2019 - Jan 2020',
       keywords: ['Game Development', 'Object-Oriented Programming', 'Unity 2D', 'C#', 'Google Play Services'],
       link: 'https://play.google.com/store/apps/details?id=com.comtalyst.shootdown',

@@ -77,21 +77,25 @@ function Skills(props) {
       level: 3
     },
     {
-      name: 'SQL',
-      level: 2
+      name: 'C#',
+      level: 3
     },
     {
-      name: 'C#',
+      name: 'SQL',
       level: 2
     },
     {
       name: 'HTML5 & CSS3',
       level: 2
     },
+    {
+      name: 'R',
+      level: 2
+    },
   ]
   const frameworks = [
     {
-      name: 'Keras',
+      name: 'Tensorflow',
       level: 3
     },
     {
@@ -111,7 +115,7 @@ function Skills(props) {
       level: 2
     },
     {
-      name: 'Tensorflow',
+      name: 'Flask',
       level: 2
     },
     {
@@ -125,7 +129,7 @@ function Skills(props) {
       level: 4
     },
     {
-      name: 'GitHub',
+      name: 'Git & GitHub',
       level: 3
     },
     {
@@ -133,11 +137,11 @@ function Skills(props) {
       level: 3
     },
     {
-      name: 'Android Studio',
+      name: 'PostgreSQL',
       level: 2
     },
     {
-      name: 'PostgreSQL',
+      name: 'Android Studio',
       level: 2
     },
   ]
