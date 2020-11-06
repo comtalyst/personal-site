@@ -14,7 +14,7 @@ export function TagBoxes(props) {
     <Flex justifyContent='left' flexWrap='wrap'
           {...props}>
       {props.keywords.map(keyword => {
-        let bgColor = 'gray.500'          // default
+        let bgColor = 'gray.600'          // default
         if(exist(props.boxColor)){
           bgColor = props.boxColor
         }

@@ -29,7 +29,7 @@ function Home() {
     window.scrollTo(0, ref[compName].current.offsetTop - barHeight) 
   }
   return (
-    <Box bg='gray.700' color='white' bgImage={"url(" + grad + ")"} bgRepeat="no-repeat" bgSize='100% 100%'> 
+    <Box bg='matte.bg' color='white' bgRepeat="no-repeat" bgSize='100% 100%'> 
       <NavigationBar navClick={scrollTo} names={['Profile', 'Education', 'Skills', 'Projects', 'Experiences', 'Honors', 'Contact']}/>
       <Landing/>
       <hr/>

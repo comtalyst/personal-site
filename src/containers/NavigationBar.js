@@ -61,13 +61,13 @@ class NavigationBar extends Component {
         >
           <Flex ref={this.setTitleRef}>
             <Text fontSize='xl' letterSpacing='wide' fontWeight='light'>
-              Rawin (
+              Rawin&nbsp;
             </Text>
-            <Text fontSize='xl' letterSpacing='wider' fontWeight='bold' color='blue.400'>
-              Robin 
+            <Text fontSize='xl' letterSpacing='wider' color='blue.400'>
+              (Robin) 
             </Text>
             <Text fontSize='xl' letterSpacing='wide' fontWeight='light'>
-              ) Deeboonchai
+              &nbsp;Deeboonchai
             </Text>
           </Flex>
           {

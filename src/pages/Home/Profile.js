@@ -25,7 +25,7 @@ function Profile(props) {
               But I usually let people call me <span style={{color: '#63B3ED', fontWeight:'bold'}}>Robin</span> for the sake of simplicity.<br/>
             </TextMedium>
             <TextMedium mt='1rem'>
-              <span style={{color: '#2A69AC', fontWeight:'bold'}}>comtalyst</span> is my digital codename, originate from the word "computing" and "catalyst."
+              <span style={{color: '#63B3ED', fontWeight:'bold'}}>comtalyst</span> is my digital codename, originate from the word "computing" and "catalyst."
             </TextMedium>
             <TextMedium mt='1rem'>
               Bangkok, Thailand is my hometown. 

@@ -27,7 +27,7 @@ function ShowList(props) {
         }
         <Grid templateColumns={{ base: "1fr", md: "auto auto"}} columnGap='0px' w='100%' maxW='1200px'>
           <Flex direction='column'>
-            <TextBig color={color !== null && color !== undefined? color:'blue.100'}>
+            <TextBig color={color !== null && color !== undefined? color:'blue.200'}>
               {name}
             </TextBig>
             {

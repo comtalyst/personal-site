@@ -27,7 +27,8 @@ function BlogPage(props) {
   }
 
   return (
-    <Box bg='gray.700' color='white' bgImage={"url(" + grad + ")"} bgRepeat="no-repeat" bgSize='100% 100%' {...props}>
+    <Box bg='matte.bg'>
+    <Box bg='trans.gray' color='white' bgRepeat="no-repeat" bgSize='100% 100%' {...props}>
       <NavigationBar navClick={navClick} names={['Home', 'Contact']}/>
       <ShowBlock>
         {props.children}
@@ -35,6 +36,7 @@ function BlogPage(props) {
       <hr/>
       <div ref={ref['Contact']}></div>
       <Contact bg='trans.gray'/>
+    </Box>
     </Box>
   );
 }

@@ -17,7 +17,14 @@ const customTheme = {
       }
     },
     bgCover: '#1A202CBB',
-    bgCover2: '#1A202CDD'
+    bgCover2: '#1A202CDD',
+    matte: {
+      bg: '#26272B',
+      1: '#293556',
+      2: '#2E4583',
+      3: '#3E60C1',
+      4: '#5983FC'
+    }
   },
   fonts: {
     body: "system-ui, sans-serif",
