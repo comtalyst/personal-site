@@ -143,6 +143,7 @@ function GFC() {
             The injecting image shall be processed through the same pipeline as the input image: detecting landmarks, 
             cropping and padding, and encoding. Then, we can inject the encoded image to the network, generating
             a new feature image that is similar to the user's input but has a style of the chosen makeup.
+            In our current version of the model, the injecting image will be injected at the last layer, where its responsibility is coloring.
           </Paragraph>
         </SubBlock>
         <SubBlock>
@@ -169,9 +170,8 @@ function GFC() {
           <LinkOut href='https://nanonets.com/blog/stylegan-got/'>this</LinkOut> easy-to-understand tutorial.
         </Paragraph>
         <Paragraph>
-          The generator will take a latent vector with a size of 512 as an input and output an image of size 360x360.
+          The generator will take a latent vector with a size of 256 as an input and output an image of size 360x360.
           The discriminator will take an image of the same size and output the decision value to validate the input image.
-          The full architecture we use will be posted soon.
         </Paragraph>
       </Block>
       <Block>
@@ -242,14 +242,9 @@ function GFC() {
           </Paragraph>
           <Paragraph>
             Each generation of the model is trained using Adam optimizer. The loss function used is minimax loss. 
-            Learning rates are varied by situation at the training time, but they are usually be in [1e-4, 1e-3].
+            Learning rates are varied by situation at the training time, but they are usually be in [1e-5, 1e-3].
             The number of epochs per generation increases as the model progresses. The fade-in algorithm
             converges after roughly half of the total epochs before normal training resumes for the rest of each generation. 
-          </Paragraph>
-          <Paragraph>
-            Due to limited availability of training hardwares, we decided to train the generator only up to the resolution of 90x90, which will be used on tryout.
-            The higher resolution generator might be worked on some time in the future.
-            According to current results, we do not expect the training process to change.
           </Paragraph>
         </SubBlock>
         <SubBlock>
@@ -257,15 +252,16 @@ function GFC() {
             Historical Experiments
           </HeaderSmall>
           <Paragraph>
-            We trained a model where the latent size is smaller (256) and the data is augmented only using random zooming.
-            However, both the randomly generated and regenerated-from-encoded-latent images were not that accurate.
-            Therefore, we decided to increase the latent space size and add more augmentation to see if the model can improve.
+            We trained a model where the latent size is larger (512).
+            However, the generator suffers from a light mode collapse in the middle generation.
+            Since the training in the later generations is going to be much more computationally costly,
+            we decided to use the earlier version (the current one), which has achieved a decent accuracy.
           </Paragraph>
           <Paragraph>
             We also trained a more complex version of the model with 512 latent size. The main difference in this version is that
             there are more dense layers at the end and there are filters on each layer. However, the generator loss failed to converge, 
             causing it to repeatedly generate blank images most of the time. After months-long optimization, research, and tuning, we reduced
-            the complexity of the model to the current version where the training process is going healthy.
+            the complexity of the model and decided to head back to the current version.
           </Paragraph>
         </SubBlock>
       </Block>
@@ -275,7 +271,6 @@ function GFC() {
         </HeaderBig>
         <Paragraph>
           We trained a VGG-16-like regression model that converts a 4-channel image into an encoded latent vector. 
-          The full architecture will be posted soon.
         </Paragraph>
       </Block>
       <Block>
@@ -326,7 +321,12 @@ function GFC() {
             Results
           </HeaderSmall>
           <Paragraph>
-            We are currently training and optimizing the model.
+            The encoder does not perfectly encode the images as latent loss is still relatively high during the time of convergence.
+            However, the generated loss does learn pretty quickly and converges to almost zero after few epochs.
+            As a result, the regenerated image is very similar to the original virtual image in terms of shape, but somewhat more pale in terms of color.
+            We counter this issue by having the injecting latent space on the last layer multiplied by a constant (2).
+            Note that in our generator, the earlier layers tend to determine the shape, while the later layers tend to determine the colors.
+            This method also applies when we are injecting two different encodings (injecting style image on the last layer, original face image on every other layers).
           </Paragraph>
         </SubBlock>
         <SubBlock>
@@ -340,12 +340,7 @@ function GFC() {
             We then train a newly built model for 4-channel images with the finite dataset and latent loss. This time, 
             the model is learning, but validation loss diverges away since the first epoch. After using the infinite dataset,
             and let it runs for a night, the model still cannot generalize and the loss does not decrease.
-            Fortunately, after integrating the generated loss, the model starts to learn properly. However,
-            it is observable that the latent loss part still does not learn much, while the generated loss learns
-            quickly and converges at some point. The result images regenerated from the encoder look similar 
-            to the original in terms of shapes for the most testing data. However, coloring is usually paler than 
-            the original. We hope building a better generator and integrating a real dataset rather than the randomly generated 
-            dataset on training would cure this problem.
+            Fortunately, after integrating the generated loss, the model starts to learn properly as described above.
           </Paragraph>
         </SubBlock>
       </Block>
@@ -438,7 +433,6 @@ function GFC() {
         <Paragraph>
           <BulletPoint>Using face segmentation instead of landmark polygonal cropping to smoothen the edges</BulletPoint>
           <BulletPoint>Using other architectures where encoding is not needed to prevent feature loss</BulletPoint>
-          <BulletPoint>Increasing the output image size to the commercially practical resolution</BulletPoint>
           <BulletPoint>Applying the technique to other facial cosmetics</BulletPoint>
         </Paragraph>
       </Block>
