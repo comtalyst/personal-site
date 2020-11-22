@@ -384,7 +384,12 @@ function GFC() {
           Summary
         </HeaderBig>
         <Paragraph>
-          At this time, our model is being trained and optimized. It shows a promising result in generating lips from the generator.
+          As discussed in the encoder training part, our model is able to transfer lips style from one image to another.
+          However, the smoothness is still to low for to model to be used commercially. Nevertheless, the main objective of
+          the project is satisfied with opportunities of improvement.
+        </Paragraph>
+        <Paragraph>
+          We expect the tryout to be released in the next few weeks.
         </Paragraph>
       </Block>
       <Block>
