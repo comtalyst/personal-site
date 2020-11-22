@@ -6,6 +6,7 @@ import apio_logo from './media/apio_logo.png';
 import icpc_logo from './media/icpc_logo.png';
 import trinity_logo from './media/trinity_logo.png';
 import nsc_logo from './media/nsc_logo.png';
+import csgcc_logo from './media/csgcc_logo.jpg';
 
 import { Title } from '../../components/Texts.js';
 import ShowList from '../../containers/ShowList.js';
@@ -24,10 +25,24 @@ function Honors(props) {
   // these data may need to stay here instead of JSON since we are making use of component tags directly
   const honors=[
     {
+      name: '1st Place (USA & Canada) / 13th Place (Global), Credit Suisse Global Coding Challenge 2020',
+      color: gold,
+      desc: 'An annual college-level programming competition organized by Credit Suisse. ' +
+      'Over 17784 contestants from around the world, with 566 from the United States and Canada, ' +
+      'have to solve the most number of problems using proper data structure and algorithms using the most optimal solutions ' +
+      'in 3 weeks. As of November 22, the official results is still not released yet, but no changes are expected.',
+      year: (<LogoYearCombo>
+              <Image src={csgcc_logo} alt='screenshot' h='80px' m='10px' mx='30px'/>
+              Nov 2020
+            </LogoYearCombo>),
+      keywords: ['Competitive Programming', 'C/C++', 'Python', 'Data Structure and Algorithms'],
+      link: 'https://www.credit-suisse.com/pwp/hr/en/codingchallenge/',
+    },
+    {
       name: '6th Place, ICPC 2019 North Central North America Regional Contest',
       color: silver,
       desc: 'A formal college-level programming competition to qualify regional representatives to the ICPC World Finals 2020. ' +
-      'Contestants from 178 teams have to solve most number of problems using data structure and algorithms, varied from basics to advanced, ' +
+      'Contestants from 178 teams have to solve the most number of problems using proper data structure and algorithms, varied from basics to advanced, ' +
       'in a limited time (this competition style is called "Competitive Programming")',
       year: (<LogoYearCombo>
               <Image src={icpc_logo} alt='screenshot' h='80px' m='10px'/>
