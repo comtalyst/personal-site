@@ -10,9 +10,9 @@ import ShowBlock from '../../containers/ShowBlock.js';
 class ImageSelector extends PureComponent {
   state = {
     img: null,      // current image
-    crop: {         // current crop
+    crop: {         // current crop (init)
       unit: '%',
-      width: 30,
+      width: 100,
       aspect: 1
     }
   }
@@ -61,6 +61,40 @@ class ImageSelector extends PureComponent {
 
   getCroppedImage(image, crop, fileName) {
     const canvas = document.createElement('canvas')
+    canvas.width = image.naturalWidth * (crop.width/image.width)      // canvas size should be scale to the original size
+    canvas.height = image.naturalHeight * (crop.height/image.height) 
+    const context = canvas.getContext('2d')
+
+    const scaleX = image.naturalWidth / image.width
+    const scaleY = image.naturalHeight / image.height
+
+    // draw cropped image
+    // doc: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage
+    context.drawImage(
+      image,
+      // using the same scale as full image to crop properly
+      crop.x * scaleX, crop.y * scaleY,
+      crop.width * scaleX, crop.height * scaleY,
+      0, 0,
+      crop.width * scaleX, crop.height * scaleY     // keep the original size
+    )
+
+    return new Promise((resolve, reject) => {
+      canvas.toBlob(blob => {
+        if(!blob){
+          console.error('Canvas is empty')
+          return
+        }
+        blob.name = fileName
+        window.URL.revokeObjectURL(this.fileURL)
+        this.fileURL = window.URL.createObjectURL(blob)
+        resolve(this.fileURL)
+      }, 'image/png')
+    })
+  }
+
+  getCroppedImageRaw(image, crop, fileName) {
+    const canvas = document.createElement('canvas')
     canvas.width = crop.width
     canvas.height = crop.height
     const context = canvas.getContext('2d')
@@ -71,7 +105,7 @@ class ImageSelector extends PureComponent {
     // draw cropped image
     context.drawImage(
       image,
-      // we are using the same scale as full image
+      // using the same scale as full image to crop properly
       crop.x * scaleX, crop.y * scaleY,
       crop.width * scaleX, crop.height * scaleY,
       0, 0,
@@ -97,7 +131,7 @@ class ImageSelector extends PureComponent {
     const {crop, croppedImageUrl, img} = this.state
 
     return (
-      <Flex direction='column' py='10px' {...props}>
+      <Flex direction='column' my='10px' mx='10px' w='100%' alignItems='center' {...props}>
         <Input type="file" accept="image/*" onChange={this.onSelectFile}/>
         {img && (
           <ReactCrop
@@ -110,7 +144,7 @@ class ImageSelector extends PureComponent {
           />
         )}
         {croppedImageUrl && (
-          <Image alt="N/A" w="100%" h="100%" src={croppedImageUrl}/>
+          <Image maxH='100%' maxW='100%' my='10px' alt="N/A" src={croppedImageUrl}/>
         )}
       </Flex>
     )
@@ -123,7 +157,7 @@ class GFCInterface extends Component {
     return (
       <ShowBlock {...props} bg='trans.gray'>
         <Title>Try it out!</Title>
-        <Flex direction='column' px='20px' maxW='1200px'>
+        <Flex direction='row' px='20px' maxW='1200px'>
           <ImageSelector id='0' />
           <ImageSelector id='1' />
         </Flex>
