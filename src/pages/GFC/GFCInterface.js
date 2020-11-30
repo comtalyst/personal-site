@@ -93,39 +93,6 @@ class ImageSelector extends PureComponent {
     })
   }
 
-  getCroppedImageRaw(image, crop, fileName) {
-    const canvas = document.createElement('canvas')
-    canvas.width = crop.width
-    canvas.height = crop.height
-    const context = canvas.getContext('2d')
-
-    const scaleX = image.naturalWidth / image.width
-    const scaleY = image.naturalHeight / image.height
-
-    // draw cropped image
-    context.drawImage(
-      image,
-      // using the same scale as full image to crop properly
-      crop.x * scaleX, crop.y * scaleY,
-      crop.width * scaleX, crop.height * scaleY,
-      0, 0,
-      crop.width, crop.height
-    )
-
-    return new Promise((resolve, reject) => {
-      canvas.toBlob(blob => {
-        if(!blob){
-          console.error('Canvas is empty')
-          return
-        }
-        blob.name = fileName
-        window.URL.revokeObjectURL(this.fileURL)
-        this.fileURL = window.URL.createObjectURL(blob)
-        resolve(this.fileURL)
-      }, 'image/png')
-    })
-  }
-
   render(){
     let props = this.props
     const {crop, croppedImageUrl, img} = this.state
