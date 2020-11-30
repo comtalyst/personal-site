@@ -51,6 +51,7 @@ class ImageSelector extends PureComponent {
         crop,
         'cropped' + this.props.id + '.png'
       )
+      this.props.setCropped(croppedImageUrl)
       this.setState({croppedImageUrl})
     }
   }
