@@ -33,7 +33,7 @@ function GFC() {
         <HeaderBig>
           Technologies
         </HeaderBig>
-        <TagBoxes keywords={['Machine Learning', 'Computer Vision', 'Generative Adversarial Networks', 'Tensorflow', 'Keras', 'OpenCV', 'Dlib', 'Python']}/>
+        <TagBoxes keywords={['Machine Learning', 'Computer Vision', 'Back-End Development', 'Generative Adversarial Networks', 'API', 'Flask', 'TensorFlow', 'Keras', 'OpenCV', 'Dlib', 'Python']}/>
       </Block>
       <Block>
         <HeaderBig>
@@ -42,7 +42,7 @@ function GFC() {
         <Paragraph>
           The objective is to apply various facial makeup products to the input face automatically and smoothly.
           Instead of placing the predefined layer of makeup on top of the face image, we are going to approach this task
-          by regenerating the merged image of face and makeups using <Bold>Nvidia StyleGAN</Bold>. 
+          by regenerating the merged image of the face and the makeups using <Bold>Nvidia StyleGAN</Bold>. 
         </Paragraph>
         <Flex direction='column' alignItems='center' mt='1rem'>
           <Flex justifyContent='center' wrap='wrap'>
@@ -94,7 +94,7 @@ function GFC() {
             We add some paddings to the polygonal space formed by landmark points of 
             the to-be-modified feature (in this case, lips) since landmark detection might mistakenly cut
             some corner parts of the feature, hurting the regeneration accuracy later on. Then, we crop the part
-            as a polygon and place it in transparent image space.
+            as a polygon and place it in a transparent image space.
           </Paragraph>
           <Flex direction='column' alignItems='center' mt='1rem'>
             <Flex justifyContent='center' wrap='wrap'>
@@ -122,7 +122,7 @@ function GFC() {
             Encoding
           </HeaderSmall>
           <Paragraph>
-            We use a trained convolutional network to convert a 4-channel cropped parts into an encoded latent vector.
+            We train and use a convolutional network to convert a 4-channel cropped parts into an encoded latent vector.
             With this latent vector, we can regenerate an image from it using the generator in the next step.
           </Paragraph>
         </SubBlock>
@@ -143,7 +143,7 @@ function GFC() {
           </Paragraph>
           <Paragraph>
             The injecting image shall be processed through the same pipeline as the input image: detecting landmarks, 
-            cropping and padding, and encoding. Then, we can inject the encoded image to the network, generating
+            cropping and padding, and encoding. Then, we can inject the encoded image into the network, generating
             a new feature image that is similar to the user's input but has a style of the chosen makeup.
             In our current version of the model, the injecting image will be injected at the last layer, where its responsibility is coloring.
           </Paragraph>
@@ -154,8 +154,7 @@ function GFC() {
           </HeaderSmall>
           <Paragraph>
             At this point, we now have an image of a certain face feature with the makeup applied. We can proceed to put 
-            this piece on top of the full input face at the same position prior to cropping. We expect to blur the edges 
-            or fade-in alpha layer near the edges in order to smoothen the replacement.
+            this piece on top of the full input face at the same position prior to cropping. 
           </Paragraph>
           <Paragraph>
             Finally, we got the entire face provided by the user with the makeup applied.
@@ -185,7 +184,7 @@ function GFC() {
             Dataset
           </HeaderSmall>
           <Paragraph>
-            Our training data are in the same format the expected user input. It goes through the mentioned pipeline up to
+            Our training data are in the same format as the expected user input. It goes through the mentioned pipeline up to
             the point where the specified feature was cropped off. We then use those cropped pieces to train the unsupervised <Bold>GAN</Bold>.
             In addition, we augment the training images by randomly zoom-in/out them while making sure that no parts of
             the lips are out of bounds. This will probably help the network deals with blurry input images. We also
@@ -244,7 +243,7 @@ function GFC() {
           </Paragraph>
           <Paragraph>
             Each generation of the model is trained using Adam optimizer. The loss function used is minimax loss. 
-            Learning rates are varied by situation at the training time, but they are usually be in [1e-5, 1e-3].
+            Learning rates are varied by the situation at the training time, but they are usually in [1e-5, 1e-3].
             The number of epochs per generation increases as the model progresses. The fade-in algorithm
             converges after roughly half of the total epochs before normal training resumes for the rest of each generation. 
           </Paragraph>
@@ -260,7 +259,7 @@ function GFC() {
             we decided to use the earlier version (the current one), which has achieved a decent accuracy.
           </Paragraph>
           <Paragraph>
-            We also trained a more complex version of the model with 512 latent size. The main difference in this version is that
+            We also trained a more complex version of the model with latent size = 512. The main difference in this version is that
             there are more dense layers at the end and there are filters on each layer. However, the generator loss failed to converge, 
             causing it to repeatedly generate blank images most of the time. After months-long optimization, research, and tuning, we reduced
             the complexity of the model and decided to head back to the current version.
@@ -311,11 +310,11 @@ function GFC() {
           </HeaderSmall>
           <Paragraph>
             We mainly use <Bold>Google Colaboratory</Bold> with 8-cores TPU to train our model. The batch size we use for this device is 128.
-            However, we sometimes use the standard CPU instead if the colab TPU usage limit is reached. The batch size is 32. 
+            However, we sometimes use the standard CPU instead if the Colab TPU usage limit is reached. The batch size is 32. 
             We do not expect a significant difference in accuracy from this.
           </Paragraph>
           <Paragraph>
-            The model is trained using Adam optimizer with the learning rate of 1e-4 for most of the time.
+            The model is trained using Adam optimizer with a learning rate of 1e-4 for most of the time.
           </Paragraph>
         </SubBlock>
         <SubBlock>
@@ -323,12 +322,12 @@ function GFC() {
             Results
           </HeaderSmall>
           <Paragraph>
-            The encoder does not perfectly encode the images as latent loss is still relatively high during the time of convergence.
-            However, the generated loss does learn pretty quickly and converges to almost zero after few epochs.
-            As a result, the regenerated image is very similar to the original virtual image in terms of shape, but somewhat more pale in terms of color.
+            The encoder does not perfectly encode the images as the latent loss is still relatively high during the time of convergence.
+            However, the generated loss does learn pretty quickly and converges to almost zero after a few epochs.
+            As a result, the regenerated image is usually similar to the original virtual image in terms of shape, but somewhat more pale in terms of color.
             We counter this issue by having the injecting latent space on the last layer multiplied by a constant (2).
             Note that in our generator, the earlier layers tend to determine the shape, while the later layers tend to determine the colors.
-            This method also applies when we are injecting two different encodings (injecting style image on the last layer, original face image on every other layers).
+            This method also applies when we are injecting two different encodings (injecting style image on the last layer, original face image on every other layer).
           </Paragraph>
         </SubBlock>
         <SubBlock>
@@ -376,19 +375,43 @@ function GFC() {
             Model Building and Training
           </HeaderSmall>
           <Paragraph>
-            We mainly use <Bold>Tensorflow</Bold> and <Bold>Keras Functional API</Bold> to build and train the model.
+            We mainly use <Bold>TensorFlow</Bold> and <Bold>Keras Functional API</Bold> to build and train the model.
             We also define the training step manually and optimize the training using <Bold>@tf.function</Bold>.
+          </Paragraph>
+        </SubBlock>
+        <SubBlock>
+          <HeaderSmall>
+            Tryout and API
+          </HeaderSmall>
+          <Paragraph>
+            The tryout section earlier in this page is a component in <Bold>React</Bold> which connects to the API on the back-end side.
+          </Paragraph>
+          <Paragraph>
+            The API is created using <Bold>Flask</Bold> to utilize the model with TensorFlow and OpenCV according to our pipeline.
+            The architecture used is inspired by <Bold>Model-view-controller (MVC)</Bold> architecture but without the usage of views.
+            Usage history will be recorded in <Bold>PostgreSQL</Bold> in case they will be used to improve the model in the future.
+            For more implementation details, please visit the repository.
           </Paragraph>
         </SubBlock>
       </Block>
       <Block>
         <HeaderBig>
-          Summary
+          Discussion and Summary
         </HeaderBig>
         <Paragraph>
-          As discussed in the encoder training part, our model is able to transfer lips style from one image to another.
-          However, the smoothness is still to low for to model to be used commercially. Nevertheless, the main objective of
-          the project is satisfied with opportunities of improvement.
+          For accuracy, the regenerated lips sometimes do not match the original lips if they are not horizontally aligned or too wide.
+          Two more factors that might have reduced the regeneration accuracy might be the lack of variety in the training dataset 
+          and a light mode collapse in the trained model. In further studies, more dataset augmentation might be suggested to solve the first issue,
+          as well as improving the model to solve the second issue.
+          Furthermore, regeneration limitations might also cause the failure to smoothen the corner of the lips and the base face. As this small detail is 
+          much more sophisticated than the others, the generator and the encoder will have to be much more complex to be able to regenerate this part accurately.
+          Instead, I suggest using more accurate cropping methods, edge smoothening algorithms, or regenerating the entire face instead of cropping-and-paste one part.
+        </Paragraph>
+        <Paragraph>
+          To summarize, the space between the lips and the base image in the background may not be sophisticatedly smoothened and the lips should be aligned horizontally
+          and closed in order for the regeneration to work properly.
+          Nevertheless, the overall model is able to regenerate a realistic lip that can be matched to the base image, as long as it is properly aligned.
+          Considering current performance, the model might not perform well enough to be used commercially, but the educational objectives of the project are fulfilled.
         </Paragraph>
       </Block>
       <Block>
@@ -402,14 +425,15 @@ function GFC() {
           I was in the course, both on theoretical and implementation aspects. Here is the rough summary of what I have learned: 
         </Paragraph>
         <Paragraph tab={false}>
-          <BulletPoint>I have learned more on preprocessing and analyzing a big dataset 
+          <BulletPoint>I have learned more about preprocessing and analyzing a big dataset 
           and building an efficient data pipeline</BulletPoint>
           <BulletPoint>I have a chance to discover new kinds of neural networks that are recently
           invented such as <Bold>GAN</Bold> and its variants, as well as other techniques used in building those architectures</BulletPoint>
-          <BulletPoint>I have learned more about the mechanics of Tensorflow and Keras, as well as becoming more fluent in 
+          <BulletPoint>I have learned more about the mechanics of TensorFlow and Keras, as well as becoming more fluent in 
           utilizing them on machine learning projects</BulletPoint>
-          <BulletPoint>I have learned to integrate Tensorflow and distributed external accelerators like TPU and GPU</BulletPoint>    
+          <BulletPoint>I have learned to integrate TensorFlow and distributed external accelerators like TPU and GPU</BulletPoint>    
           <BulletPoint>I now have hands-on experience in optimizing and babysitting machine learning models</BulletPoint>
+          <BulletPoint>I now have more understanding of the role of dataset in generative models</BulletPoint>
         </Paragraph>
         <Paragraph>
           Also, I have experienced unexpected mistakes throughout the work:
@@ -418,8 +442,9 @@ function GFC() {
           <BulletPoint>Neglecting Fade-in transition in progressive learning devolve the learning progress</BulletPoint>
           <BulletPoint>I spent a long time finding the best method to qualify and normalize the lips from faces,
           only to realize that I could just use data augmentation to generalize all of them except obvious anomalies
-          (or maybe this is my another mistake?)</BulletPoint>
-          <BulletPoint>The images should be resized to 2^n * 2^n to ease the progressive learning processs</BulletPoint>
+          (or maybe this is another mistake?)</BulletPoint>
+          <BulletPoint>The images should be resized to 2^n * 2^n to ease the progressive learning process</BulletPoint>
+          <BulletPoint>I should focus more on the understanding of data in order to meaningfully augmented and preprocess them</BulletPoint>
         </Paragraph>
         <Paragraph>
           It is possible that there are uncovered mistakes still looming under my work. However, I hope 
@@ -436,8 +461,10 @@ function GFC() {
         </Paragraph>
         <Paragraph>
           <BulletPoint>Using face segmentation instead of landmark polygonal cropping to smoothen the edges</BulletPoint>
+          <BulletPoint>Using image processing techniques like blurring or fading to smoothen the edges</BulletPoint>
           <BulletPoint>Using other architectures where encoding is not needed to prevent feature loss</BulletPoint>
           <BulletPoint>Applying the technique to other facial cosmetics</BulletPoint>
+          <BulletPoint>Gathering/using a dataset with more varied lips configuration</BulletPoint>
         </Paragraph>
       </Block>
     </BlogPage>
