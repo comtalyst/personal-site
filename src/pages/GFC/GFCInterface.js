@@ -1,30 +1,77 @@
 import React, {Component} from 'react';
-import {Text, Box, Flex, Input, Image, Button} from "@chakra-ui/core";
+import {Text, Box, Flex, Input, Button, Image as CKImage} from "@chakra-ui/core";
 import 'react-image-crop/dist/ReactCrop.css';
 
 import ImageSelector from '../../components/ImageSelector.js';
 import { Title, TextBig, HeaderBig, TextMedium} from '../../components/Texts.js';
 import ShowBlock from '../../containers/ShowBlock.js';
 
+
+
 class GFCInterface extends Component {
+  API_URL = "http://localhost:5000"
   state = {
     noImagesError: false,
     croppedURL1: null,
-    croppedURL2: null
+    croppedURL2: null,
+    resultURL: null,
   }
 
   constructor(){
     super()
-    //this.setCropped1 = this.setCropped1.bind(this)
+    //this.setCropped1 = this.setCropped1.bind(this)      // alternate method, if want to pass func instead of (...) => func(...)
     //this.setCropped2 = this.setCropped2.bind(this)
   }
 
+  getBase64Image(img_url) {
+    let img = new Image()
+    img.src = img_url
+    var canvas = document.createElement("canvas");
+    canvas.width = img.width;
+    canvas.height = img.height;
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0);
+    var dataURL = canvas.toDataURL("image/png");
+    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+  }
+
   submitImages() {
+    // check current state
     if(this.state.croppedURL1 == null || this.state.croppedURL2 == null){
       this.setState({noImagesError: true})
       return
     }
     this.setState({noImagesError: false})
+
+    // transform image to base64
+    let img1_b64 = this.getBase64Image(this.state.croppedURL1)
+    let img2_b64 = this.getBase64Image(this.state.croppedURL2)
+
+    // construct query
+    const queryUrl = this.API_URL + '/mix'
+    const queryProps = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        base_img: ""+img1_b64,
+        style_img: ""+img2_b64
+      })
+    }
+
+    // submit query
+    fetch(queryUrl, queryProps)
+    .then(res => res.json())
+    .then(data => {
+      this.showResult(data.result_img)
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+  }
+
+  // display resulting image of mix
+  showResult(resultImageB64) {
+    this.setState({resultURL: 'data:image/png;base64,' + resultImageB64})
   }
 
   setCropped1(croppedURL){
@@ -57,6 +104,9 @@ class GFCInterface extends Component {
             Submit
           </TextMedium>
         </Button>
+        {this.state.resultURL && (
+          <CKImage maxH='100%' maxW='100%' my='10px' alt="N/A" src={this.state.resultURL}/>
+        )}
       </ShowBlock>
     )
   }
