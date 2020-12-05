@@ -15,7 +15,8 @@ class GFCInterface extends Component {
     croppedURL1: null,
     croppedURL2: null,
     resultURL: null,
-    resultError: null
+    resultError: null,
+    isLoading: false
   }
 
   constructor(){
@@ -43,6 +44,7 @@ class GFCInterface extends Component {
       return
     }
     this.setState({noImagesError: false})
+    this.setState({isLoading: true})
 
     // transform image to base64
     let img1_b64 = this.getBase64Image(this.state.croppedURL1)
@@ -65,11 +67,11 @@ class GFCInterface extends Component {
       const data = await res.json()
       if(!res.ok){
         if(data && data.message){
-          this.setState({resultError: data.message})
+          this.showError(data.message)
           console.error("Error: " + data.message)
         }
         else{
-          this.setState({resultError: "Unknown error, please try again later"})
+          this.showError()
           console.error("Error: Unknown")
         }
       }
@@ -81,11 +83,19 @@ class GFCInterface extends Component {
       this.setState({resultError: err.toString()})
       console.error("Unknown error ", err.toString())
     })
+    .finally(() => {
+      this.setState({isLoading: false})
+    })
   }
 
   // display resulting image of mix
   showResult(resultImageB64) {
     this.setState({resultURL: 'data:image/png;base64,' + resultImageB64, resultError: null})
+  }
+
+  // display error message
+  showError(message="Unknown error, please try again later") {
+    this.setState({resultError: message})
   }
 
   setCropped1(croppedURL){
@@ -105,9 +115,15 @@ class GFCInterface extends Component {
           <ImageSelector id='1' setCropped={(croppedURL) => this.setCropped1(croppedURL)}/>
           <ImageSelector id='2' setCropped={(croppedURL) => this.setCropped2(croppedURL)}/>
         </Flex>
-        {this.state.noImagesError?(
+        {this.state.noImagesError && (
           <TextMedium color='#FF2222'>Please select both images</TextMedium>
-        ):<Box/>}
+        )}
+        {this.state.isLoading && (
+          <TextMedium>Processing images...</TextMedium>
+        )}
+        {this.state.resultError && (
+          <TextMedium color='#FF2222'>{this.state.resultError}</TextMedium>
+        )}
         <Button
           bg = 'gray.600' color='white'
           _hover={{bg: 'gray.500'}} rounded='1px' h='100%'
@@ -118,9 +134,6 @@ class GFCInterface extends Component {
             Submit
           </TextMedium>
         </Button>
-        {this.state.resultError && (
-          <TextMedium color='#FF2222'>{this.state.resultError}</TextMedium>
-        )}
         {this.state.resultURL && (
           <CKImage maxH='100%' maxW='100%' my='10px' alt="N/A" src={this.state.resultURL}/>
         )}
