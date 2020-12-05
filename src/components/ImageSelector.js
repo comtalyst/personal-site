@@ -4,6 +4,7 @@ import {Flex, Input, Image} from "@chakra-ui/core";
 import 'react-image-crop/dist/ReactCrop.css';
 
 class ImageSelector extends PureComponent {
+  fileSizeLimit = 10485760     // 10 megabytes
   state = {
     img: null,      // current image
     crop: {         // current crop (init)
@@ -15,8 +16,12 @@ class ImageSelector extends PureComponent {
 
   // upload image; passed to Input component
   onSelectFile = (e) => {
-    // if file is valid, bring it on
     if(e.target.files && e.target.files.length > 0) {
+      // skip too large file
+      if(e.target.files[0].size > this.fileSizeLimit){
+        alert("File size is too large; it should not exceed 10MB.")
+        return
+      }
       const reader = new FileReader()
       // if loaded, set the state of current image
       reader.addEventListener('load', () =>
