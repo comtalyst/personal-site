@@ -11,6 +11,7 @@ import musk_landmarked from './GFC/musk_landmarked.png';
 import musk_lips_cropped from './GFC/musk_lips_cropped.png'
 import example from './GFC/example.png'
 import BlogPage, { TopBar, Block, SubBlock, Image_, Paragraph, BulletPoint, Bold} from '../containers/BlogPage.js';
+import GFCInterface from './GFC/GFCInterface.js';
 
 function GFC() {
   return (
@@ -19,6 +20,7 @@ function GFC() {
       <TopBar>
         <Link isExternal href='https://github.com/comtalyst/generative-facial-cosmetics'><Box as={FaGithub} size='30px' mx='10px'/></Link>
       </TopBar>
+      <GFCInterface/>
       <Block>
         <HeaderBig>
           People Involved
@@ -387,9 +389,6 @@ function GFC() {
           As discussed in the encoder training part, our model is able to transfer lips style from one image to another.
           However, the smoothness is still to low for to model to be used commercially. Nevertheless, the main objective of
           the project is satisfied with opportunities of improvement.
-        </Paragraph>
-        <Paragraph>
-          We expect the tryout to be released in the next few weeks.
         </Paragraph>
       </Block>
       <Block>

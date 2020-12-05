@@ -129,7 +129,7 @@ class GFCInterface extends Component {
           <TextMedium color='#FF2222'>{this.state.resultError}</TextMedium>
         )}
         <Button
-          bg = 'gray.600' color='white'
+          bg = 'gray.500' color='white'
           _hover={{bg: 'gray.500'}} rounded='1px' h='100%'
           onClick={() => this.submitImages()}
           px='20px' py='5px'

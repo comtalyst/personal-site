@@ -42,7 +42,7 @@ function BlogPage(props) {
 }
 
 export const TopBar = (props) => {
-  return (<Flex justifyContent='center' alignItems='center' pt='10px' mb='-20px' {...props}>
+  return (<Flex justifyContent='center' alignItems='center' pt='10px' mb='20px' {...props}>
     {props.children}
   </Flex>)
 }
