@@ -15,6 +15,7 @@ class GFCInterface extends Component {
     croppedURL1: null,
     croppedURL2: null,
     resultURL: null,
+    resultError: null
   }
 
   constructor(){
@@ -60,18 +61,31 @@ class GFCInterface extends Component {
 
     // submit query
     fetch(queryUrl, queryProps)
-    .then(res => res.json())
-    .then(data => {
-      this.showResult(data.result_img)
+    .then(async res => {
+      const data = await res.json()
+      if(!res.ok){
+        if(data && data.message){
+          this.setState({resultError: data.message})
+          console.error("Error: " + data.message)
+        }
+        else{
+          this.setState({resultError: "Unknown error, please try again later"})
+          console.error("Error: Unknown")
+        }
+      }
+      else{
+        this.showResult(data.result_img)
+      }
     })
     .catch((err) => {
-      console.log(err)
+      this.setState({resultError: err.toString()})
+      console.error("Unknown error ", err.toString())
     })
   }
 
   // display resulting image of mix
   showResult(resultImageB64) {
-    this.setState({resultURL: 'data:image/png;base64,' + resultImageB64})
+    this.setState({resultURL: 'data:image/png;base64,' + resultImageB64, resultError: null})
   }
 
   setCropped1(croppedURL){
@@ -104,6 +118,9 @@ class GFCInterface extends Component {
             Submit
           </TextMedium>
         </Button>
+        {this.state.resultError && (
+          <TextMedium color='#FF2222'>{this.state.resultError}</TextMedium>
+        )}
         {this.state.resultURL && (
           <CKImage maxH='100%' maxW='100%' my='10px' alt="N/A" src={this.state.resultURL}/>
         )}
