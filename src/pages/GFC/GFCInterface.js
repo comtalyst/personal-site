@@ -11,12 +11,12 @@ import ShowBlock from '../../containers/ShowBlock.js';
 class GFCInterface extends Component {
   API_URL = "http://localhost:5000"
   state = {
-    noImagesError: false,
-    croppedURL1: null,
-    croppedURL2: null,
-    resultURL: null,
-    resultError: null,
-    isLoading: false
+    noImagesError: false,     // images not uploaded?
+    croppedURL1: null,        // URL of cropped image 1
+    croppedURL2: null,        // same
+    resultURL: null,          // URL of mixed image
+    resultError: null,        // error message from the API
+    isLoading: false          // currently processing?
   }
 
   constructor(){
@@ -64,7 +64,8 @@ class GFCInterface extends Component {
     // submit query
     fetch(queryUrl, queryProps)
     .then(async res => {
-      const data = await res.json()
+      const data = await res.json()     // convert to json
+      // if error
       if(!res.ok){
         if(data && data.message){
           this.showError(data.message)
@@ -75,14 +76,17 @@ class GFCInterface extends Component {
           console.error("Error: Unknown")
         }
       }
+      // if normal
       else{
         this.showResult(data.result_img)
       }
     })
+    // if network error
     .catch((err) => {
       this.setState({resultError: err.toString()})
       console.error("Unknown error ", err.toString())
     })
+    // after completion tasks
     .finally(() => {
       this.setState({isLoading: false})
     })
