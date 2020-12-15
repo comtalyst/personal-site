@@ -45,6 +45,7 @@ class GFCInterface extends Component {
     }
     this.setState({noImagesError: false})
     this.setState({isLoading: true})
+    this.setState({resultError: null})
 
     // transform image to base64
     let img1_b64 = this.getBase64Image(this.state.croppedURL1)
@@ -94,7 +95,7 @@ class GFCInterface extends Component {
 
   // display resulting image of mix
   showResult(resultImageB64) {
-    this.setState({resultURL: 'data:image/png;base64,' + resultImageB64, resultError: null})
+    this.setState({resultURL: 'data:image/png;base64,' + resultImageB64})
   }
 
   // display error message
