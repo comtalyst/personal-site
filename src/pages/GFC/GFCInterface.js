@@ -9,7 +9,7 @@ import ShowBlock from '../../containers/ShowBlock.js';
 
 
 class GFCInterface extends Component {
-  API_URL = "http://localhost:5000"
+  API_URL = "https://gfc-api-3ckuqw4tia-uc.a.run.app/"
   state = {
     noImagesError: false,     // images not uploaded?
     croppedURL1: null,        // URL of cropped image 1
