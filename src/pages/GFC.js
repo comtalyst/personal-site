@@ -33,7 +33,7 @@ function GFC() {
         <HeaderBig>
           Technologies
         </HeaderBig>
-        <TagBoxes keywords={['Machine Learning', 'Computer Vision', 'Back-End Development', 'Generative Adversarial Networks', 'API', 'Flask', 'TensorFlow', 'Keras', 'OpenCV', 'Dlib', 'Python']}/>
+        <TagBoxes keywords={['Machine Learning', 'Computer Vision', 'Back-End Development', 'Generative Adversarial Networks', 'API', 'Flask', 'PostgreSQL', 'TensorFlow', 'Keras', 'OpenCV', 'Dlib', 'Google Cloud Services', 'Python']}/>
       </Block>
       <Block>
         <HeaderBig>

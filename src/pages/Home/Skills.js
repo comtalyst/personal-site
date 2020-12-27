@@ -107,15 +107,19 @@ function Skills(props) {
       level: 3
     },
     {
-      name: 'React-Redux',
+      name: 'Flask',
       level: 3
+    },
+    {
+      name: 'Redux',
+      level: 2
     },
     {
       name: 'Express.js & Node.js',
       level: 2
     },
     {
-      name: 'Flask',
+      name: 'Scikit-learn',
       level: 2
     },
     {
@@ -135,6 +139,10 @@ function Skills(props) {
     {
       name: 'Linux',
       level: 3
+    },
+    {
+      name: 'Google Cloud Platform',
+      level: 2
     },
     {
       name: 'PostgreSQL',
@@ -163,7 +171,7 @@ function Skills(props) {
       level: 3
     },
     {
-      name: 'Web Development',
+      name: 'Full-Stack Web Development',
       level: 3
     },
     {

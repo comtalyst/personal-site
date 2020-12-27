@@ -21,21 +21,21 @@ function Projects(props) {
   // these data may need to stay here instead of JSON since we are making use of component tags directly
   const projects=[
     {
-      name: 'Generative Facial Cosmetics',
-      desc: 'Apply various facial makeup products to the input face automatically and smoothly using machine learning techniques. ' +
-            'More details and tryout (coming soon!) are in the link provided. ',
-      year: 'Jul 2020 ---',
-      keywords: ['Machine Learning', 'Computer Vision', 'Generative Adversarial Networks', 'Tensorflow', 'Keras', 'OpenCV', 'Dlib', 'Python'],
-      link: '#/pages/GFC',
-      source: 'https://github.com/comtalyst/generative-facial-cosmetics',
-    },
-    {
       name: 'Personal Portfolio Website',
       desc: 'The website you are currently viewing!',
       year: 'Jul 2020 ---',
       keywords: ['Front-End Development', 'React', 'JavaScript', 'HTML5 & CSS3', 'Chakra UI'],
       link: 'https://comtalyst.com',
       source: 'https://github.com/comtalyst/personal-site',
+    },
+    {
+      name: 'Generative Facial Cosmetics',
+      desc: 'Apply various facial makeup products to the input face automatically and smoothly using machine learning techniques. ' +
+            'More details and live tryout are in the link provided. ',
+      year: 'Jul 2020 - Dec 2020',
+      keywords: ['Machine Learning', 'Computer Vision', 'Back-End Development', 'Generative Adversarial Networks', 'API', 'Flask', 'PostgreSQL', 'TensorFlow', 'Keras', 'OpenCV', 'Dlib', 'Google Cloud Services', 'Python'],
+      link: '#/pages/GFC',
+      source: 'https://github.com/comtalyst/generative-facial-cosmetics',
     },
     {
       name: 'Shootdown',
