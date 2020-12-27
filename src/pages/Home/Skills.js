@@ -111,6 +111,10 @@ function Skills(props) {
       level: 3
     },
     {
+      name: 'PyTorch',
+      level: 2
+    },
+    {
       name: 'Redux',
       level: 2
     },
