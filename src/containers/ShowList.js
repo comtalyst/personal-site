@@ -19,7 +19,7 @@ function ShowList(props) {
   return rows.map((row, idx) => {
     const {name, color, desc, year, keywords, link, source, extras} = row
     return (
-      <Flex direction='column' px='20px' pl='30px' w='100%' alignItems='center'>
+      <Flex direction='column' px='20px' pl='30px' w='100%' pt='30px' alignItems='center'>
         {               // Divider between row rows
           idx !== 0? 
           <DividerBold w='100%' maxW='1200px'/>
