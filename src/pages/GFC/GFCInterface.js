@@ -62,7 +62,11 @@ class GFCInterface extends Component {
       })
     }
 
-    // submit query
+    // submit query [DISABLED]
+    let errstr = "Sorry, the application system is currently offline (my Google Cloud Services is not yet renewed). Please try again later ;("
+    this.setState({resultError: errstr})
+    this.setState({isLoading: false})
+    /*
     fetch(queryUrl, queryProps)
     .then(async res => {
       const data = await res.json()     // convert to json
@@ -91,6 +95,7 @@ class GFCInterface extends Component {
     .finally(() => {
       this.setState({isLoading: false})
     })
+    */
   }
 
   // display resulting image of mix
