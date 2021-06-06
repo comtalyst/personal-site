@@ -1,31 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7a068291c055c2d33f34b9af932b994d",
+    "revision": "e57a57ecef6f75a2031e8eadf3da5652",
     "url": "/index.html"
   },
   {
-    "revision": "e257c8046d3cd4d6c91f",
+    "revision": "6c80886c108096b8d0f7",
     "url": "/static/css/2.1bce3852.chunk.css"
   },
   {
-    "revision": "b340c9d651982dd5cc91",
-    "url": "/static/css/main.38dd8b86.chunk.css"
+    "revision": "91f2bb7cc4a2247d1ba0",
+    "url": "/static/css/main.4de7ec58.chunk.css"
   },
   {
-    "revision": "e257c8046d3cd4d6c91f",
-    "url": "/static/js/2.b8f2f2d9.chunk.js"
+    "revision": "6c80886c108096b8d0f7",
+    "url": "/static/js/2.3d78cb1f.chunk.js"
   },
   {
     "revision": "d2966845b94a3318bf32eecc7af8015d",
-    "url": "/static/js/2.b8f2f2d9.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.3d78cb1f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b340c9d651982dd5cc91",
-    "url": "/static/js/main.fe524f7b.chunk.js"
+    "revision": "91f2bb7cc4a2247d1ba0",
+    "url": "/static/js/main.145a3e73.chunk.js"
   },
   {
     "revision": "766df7dbb5392e1314ed",
     "url": "/static/js/runtime-main.9c9c41ef.js"
+  },
+  {
+    "revision": "4b71876fcb44750d1fea8d4a3b17dd02",
+    "url": "/static/media/agoda_logo.4b71876f.png"
   },
   {
     "revision": "753153dc49605623a00b97ea3141bf03",
