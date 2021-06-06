@@ -37,6 +37,16 @@ function GFC() {
       </Block>
       <Block>
         <HeaderBig>
+          TL;DR
+        </HeaderBig>
+        <Paragraph>
+          <BulletPoint>A web application that transfer facial makeups using Generative Adversarial Networks with TensorFlow</BulletPoint>
+          <BulletPoint>Accelerated the model training from a large dataset (80GB) using Tensor Processing Unit (TPU) on Google Colab</BulletPoint>
+          <BulletPoint>Implemented a RESTful API for the model using Flask and store usage data in PostgreSQL</BulletPoint>
+          <BulletPoint>Deployed the API as a Docker image and the database using Google Cloud Platform</BulletPoint>
+          <BulletPoint>Implemented a front-end interface using React above</BulletPoint>
+        </Paragraph>
+        <HeaderBig>
           Abstract
         </HeaderBig>
         <Paragraph>
