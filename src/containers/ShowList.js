@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Text, Box, Flex, Grid, Collapse, Link, Icon, Divider } from "@chakra-ui/core";
+import { Image, Text, Box, Flex, Grid, Collapse, Link, Icon, Divider } from "@chakra-ui/core";
 import { TextMedium, TextBig } from '../components/Texts';
 import { ButtonCollapse, LinkOut } from '../components/Buttons';
 import { Empty, TagBoxes } from '../components/Layouts';
@@ -17,15 +17,21 @@ function ShowList(props) {
   }
 
   return rows.map((row, idx) => {
-    const {name, color, desc, year, keywords, link, source, extras} = row
+    const {name, color, desc, year, keywords, link, source, extras, logo} = row
     return (
-      <Flex direction='column' px='20px' pl='30px' w='100%' pt='30px' alignItems='center'>
+      <Flex direction='column' pt='20px' px='20px' pl='30px' w='100%' alignItems='center'>
         {               // Divider between row rows
           idx !== 0? 
           <DividerBold w='100%' maxW='1200px'/>
           :<Empty my='1.5rem'/>
         }
         <Grid templateColumns={{ base: "1fr", md: "auto auto"}} columnGap='0px' w='100%' maxW='1200px'>
+          <Flex direction='row' align='flex-start'>
+          {
+            logo == null?
+            (<Box/>):
+            (<Image src={logo} alt='logo' w='120px' objectFit='contain' pt='10px' pr='30px'/>)
+          }
           <Flex direction='column'>
             <TextBig color={color !== null && color !== undefined? color:'blue.200'}>
               {name}
@@ -67,6 +73,7 @@ function ShowList(props) {
                 <Empty/>
               }
             </Collapse>
+          </Flex>
           </Flex>
           {
             exist(year)?
