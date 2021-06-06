@@ -27,10 +27,12 @@ function Education(props) {
       name: 'University of Wisconsin-Madison',
       color: 'red.100',
       desc: 'B.S. in Computer Science and Data Science',
-      year: '2019 - 2023',
+      year: '2019 - May 2023',
       courses: ['Calculus - Functions of Several Variables', 'Data Programming II', 'Elementary Matrix and Linear Algebra',
-               'Introduction to Artificial Intelligence', 'Introduction to Computer Engineering', 'Introduction to Data Modelling I', 
-               'Introduction to Theory and Methods of Mathematical Statistics I'],
+               'Introduction to Artificial Intelligence', 'Introduction to Computer Engineering', 'Introduction to Data Modelling I, II',
+               'Introduction to Database Management Systems', 'Introduction to Operating Systems', 
+               'Introduction to Theory and Methods of Mathematical Statistics I', 'Machine Learning (Graduate Course) (Expected)',
+               'Machine Organization and Programming'],
       logo: uw_logo
     },
     {

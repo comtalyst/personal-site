@@ -61,7 +61,7 @@ function Skills(props) {
   // your skills here
   const languages = [
     {
-      name: 'C/C++',
+      name: 'Python',
       level: 4
     },
     {
@@ -69,11 +69,15 @@ function Skills(props) {
       level: 4
     },
     {
-      name: 'Python',
+      name: 'JavaScript',
       level: 4
     },
     {
-      name: 'JavaScript',
+      name: 'Scala',
+      level: 3
+    },
+    {
+      name: 'C/C++',
       level: 3
     },
     {
@@ -82,7 +86,7 @@ function Skills(props) {
     },
     {
       name: 'SQL',
-      level: 2
+      level: 3
     },
     {
       name: 'HTML5 & CSS3',
@@ -95,15 +99,7 @@ function Skills(props) {
   ]
   const frameworks = [
     {
-      name: 'Tensorflow',
-      level: 3
-    },
-    {
-      name: 'Pandas',
-      level: 3
-    },
-    {
-      name: 'React',
+      name: 'Node.js & Express.js',
       level: 3
     },
     {
@@ -111,25 +107,33 @@ function Skills(props) {
       level: 3
     },
     {
-      name: 'PyTorch',
-      level: 2
+      name: 'React',
+      level: 3
+    }, 
+    {
+      name: 'TensorFlow',
+      level: 3
+    },
+    {
+      name: 'Pandas',
+      level: 3
     },
     {
       name: 'Redux',
       level: 2
     },
     {
-      name: 'Express.js & Node.js',
+      name: 'Jest',
+      level: 2
+    },
+    {
+      name: 'PyTorch',
       level: 2
     },
     {
       name: 'Scikit-learn',
       level: 2
-    },
-    {
-      name: 'Unity 2D',
-      level: 2
-    },
+    }
   ]
   const platforms = [
     {
@@ -137,7 +141,7 @@ function Skills(props) {
       level: 4
     },
     {
-      name: 'Git & GitHub',
+      name: 'Git',
       level: 3
     },
     {
@@ -145,11 +149,27 @@ function Skills(props) {
       level: 3
     },
     {
+      name: 'MongoDB',
+      level: 3
+    },
+    {
+      name: 'Docker',
+      level: 2
+    },
+    {
+      name: 'Redis',
+      level: 2
+    },
+    {
       name: 'Google Cloud Platform',
       level: 2
     },
     {
       name: 'PostgreSQL',
+      level: 2
+    },
+    {
+      name: 'Unity 2D',
       level: 2
     },
     {
@@ -167,6 +187,10 @@ function Skills(props) {
       level: 4
     },
     {
+      name: 'Full-Stack Web Development',
+      level: 3
+    },
+    {
       name: 'Deep & Machine Learning',
       level: 3
     },
@@ -175,8 +199,8 @@ function Skills(props) {
       level: 3
     },
     {
-      name: 'Full-Stack Web Development',
-      level: 3
+      name: 'Event-Driven Programming',
+      level: 2
     },
     {
       name: 'Game Development',

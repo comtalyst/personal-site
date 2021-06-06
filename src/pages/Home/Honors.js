@@ -30,7 +30,7 @@ function Honors(props) {
       desc: 'An annual college-level programming competition organized by Credit Suisse. ' +
       'Over 17784 contestants from around the world, with 566 from the United States and Canada, ' +
       'have to solve the most number of problems using proper data structure and algorithms using the most optimal solutions ' +
-      'in 3 weeks.',
+      'in 3 weeks. Also received an iPhone 12 Pro as a winning prize.',
       year: (<LogoYearCombo>
               <Image src={csgcc_logo} alt='screenshot' h='80px' m='10px' mx='30px'/>
               Nov 2020

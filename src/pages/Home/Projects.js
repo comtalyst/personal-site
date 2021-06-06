@@ -30,7 +30,7 @@ function Projects(props) {
     },
     {
       name: 'Generative Facial Cosmetics',
-      desc: 'Apply various facial makeup products to the input face automatically and smoothly using machine learning techniques. ' +
+      desc: 'Transfer lipstick colors from a face to another face automatically and smoothly using machine learning techniques. ' +
             'More details and live tryout are in the link provided. ',
       year: 'Jul 2020 - Dec 2020',
       keywords: ['Machine Learning', 'Computer Vision', 'Back-End Development', 'Generative Adversarial Networks', 'API', 'Flask', 'PostgreSQL', 'TensorFlow', 'Keras', 'OpenCV', 'Dlib', 'Google Cloud Services', 'Python'],
@@ -39,7 +39,7 @@ function Projects(props) {
     },
     {
       name: 'Shootdown',
-      desc: 'A mobile arcade/abstract tap-to-shoot game. Made available on Google Play. ',
+      desc: 'A mobile arcade/abstract shooting game. Made available on Google Play. ',
       year: 'Jun 2019 - Jan 2020',
       keywords: ['Game Development', 'Object-Oriented Programming', 'Unity 2D', 'C#', 'Google Play Services'],
       link: 'https://play.google.com/store/apps/details?id=com.comtalyst.shootdown',

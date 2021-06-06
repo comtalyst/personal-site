@@ -8,12 +8,12 @@ function Experiences(props) {
   // these data may need to stay here instead of JSON since we are making use of component tags directly
   const experiences=[
     {
-      name: 'Participant / Trainee Startup Co-Founder, AIS Young Digital Talent Camp 2020',
+      name: 'Participant / Startup Co-Founder Trainee, AIS Young Digital Talent Camp 2020',
       desc: 'Participated in the practical startup building program and competition organized by AIS (Thailand) and Stanford University. ' +
             'Formed and conducted market research on several tech startup ideas along with 3 other team members. ' +
             'The qualified finalists will have a chance to deliver a pitch of their final product to several venture capitalists and the AIS Corporation executives.',
       year: 'Jul 2020 - Sep 2020',
-      keywords: ['Businesses and Startups', 'Design Thinking', 'Market Research', 'Leadership and Communication'],
+      keywords: ['Team Leadership', 'Businesses and Startups', 'Design Thinking', 'Market Research'],
       link: 'https://www.aydtcamp.com/',
     },
     {

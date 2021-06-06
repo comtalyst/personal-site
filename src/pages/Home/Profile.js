@@ -30,12 +30,27 @@ function Profile(props) {
             <TextMedium mt='1rem'>
               Bangkok, Thailand is my hometown. 
               However, I am currently pursuing my undergraduate degree in the United States 
-              at the University of Wisconsin-Madison as a Sophomore.
+              at the University of Wisconsin-Madison as a rising junior, as of 2021.
             </TextMedium>
             <TextMedium mt='1rem'>
-              My biggest passion and dreams always are around computing and digital technologies since I was very young.
-              That prompts me to pursue my career in Computer Science and Data Science since years ago and from now on.
-              Current specific interests of mine in those fields are Artificial Intelligence, Machine Learning, and Full-Stack Development.
+              My brightest passion and dreams are always around computing and digital technologies since I was very young.
+              This prompts me to begin my journey of pursuing a career in Computer Science and Data Science when I was in high school.
+              Since then, I keep seeking more knowledge about the things that lie ahead without having to wait for the predefined curriculum 
+              defined by the formal education system. Throughout my almost-a-decade-long journey, I discover many new things outside of the classroom
+              apart from technical knowledge that might be helpful for my careers such as soft skills, connections, leadership opportunities, 
+              or even life lessons and philosophy.
+            </TextMedium>
+            <TextMedium mt='1rem'>
+              But, if I were to talk more on the technical side, I believe the topics that catch my attention the most in meantime are 
+              Full-Stack Development and Machine Learning. In the past, during high school years, my major focus was
+              Data Structures and Algorithms, which is my main weapon for programming competitions at advanced levels.
+              I recently decided to explore more on the applications of computer science through the two topics I mentioned.
+              Despite this, I am still confident in my algorithmic skills, as I still practice programming problems and participate
+              in several competitions. Anyway, tangible traces of my exploration in these topics are visible through my projects and 
+              participations that will be listed below on this website. Feel free to explore!
+            </TextMedium>
+            <TextMedium mt='1rem'>
+              The end of my journey is still far from reach, but maybe the fun part is what I experience during the journey itself, right?
             </TextMedium>
           </Flex>
         </Flex>
