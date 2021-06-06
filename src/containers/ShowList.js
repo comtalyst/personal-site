@@ -9,7 +9,7 @@ import { DividerBold } from '../components/Decors';
 function ShowList(props) {
   const {rows, collapseTitle} = props
 
-  const [show, setShow] = React.useState(Array(rows.length).fill(false));        // collapsible row list state management
+  const [show, setShow] = React.useState(Array(rows.length).fill(true));        // collapsible row list state management
   const handleToggle = (idx) => {
     let nshow = Array.from(show)
     nshow[idx] = !nshow[idx]
