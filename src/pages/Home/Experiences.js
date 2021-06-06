@@ -43,7 +43,7 @@ function Experiences(props) {
 
   return (
     <ShowBlock {...props}>
-      <Title>Experiences</Title>
+      <Title>Extracurricular Experiences</Title>
       <ShowList rows={experiences} collapseTitle='Experiences'/>
     </ShowBlock>
   )

@@ -9,6 +9,8 @@ import Education from './Home/Education.js';
 import Skills from './Home/Skills.js';
 import Projects from './Home/Projects.js';
 import Experiences from './Home/Experiences.js';
+import ResearchExperiences from './Home/ResearchExperiences.js';
+import ProfExperiences from './Home/ProfExperiences.js';
 import Honors from './Home/Honors.js';
 import Contact from './global/Contact.js';
 
@@ -19,6 +21,8 @@ function Home() {
     "Profile": useRef(null),
     "Education": useRef(null),
     "Skills": useRef(null),
+    "Works": useRef(null),
+    "Research": useRef(null),
     "Projects": useRef(null),
     "Experiences": useRef(null),
     "Honors": useRef(null),
@@ -30,7 +34,7 @@ function Home() {
   }
   return (
     <Box bg='matte.bg' color='white' bgRepeat="no-repeat" bgSize='100% 100%'> 
-      <NavigationBar navClick={scrollTo} names={['Profile', 'Education', 'Skills', 'Projects', 'Experiences', 'Honors', 'Contact']}/>
+      <NavigationBar navClick={scrollTo} names={['Profile', 'Education', 'Skills', 'Works', 'Research', 'Projects', 'Experiences', 'Honors', 'Contact']}/>
       <Landing/>
       <hr/>
       <div ref={ref['Profile']}></div>
@@ -41,6 +45,12 @@ function Home() {
       <hr/>
       <div ref={ref['Skills']}></div>
       <Skills bg='trans.gray'/>
+      <hr/>
+      <div ref={ref['Works']}></div>
+      <ProfExperiences />
+      <hr/>
+      <div ref={ref['Research']}></div>
+      <ResearchExperiences  bg='trans.gray'/>
       <hr/>
       <div ref={ref['Projects']}></div>
       <Projects />
