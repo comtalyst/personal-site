@@ -73,6 +73,10 @@ function Skills(props) {
       level: 4
     },
     {
+      name: 'HTML',
+      level: 4
+    },
+    {
       name: 'Scala',
       level: 3
     },
@@ -89,7 +93,7 @@ function Skills(props) {
       level: 3
     },
     {
-      name: 'HTML5 & CSS3',
+      name: 'CSS',
       level: 2
     },
     {
@@ -185,11 +189,11 @@ function Skills(props) {
       level: 2
     },
     {
-      name: 'Redis',
+      name: 'Google Cloud Platform',
       level: 2
     },
     {
-      name: 'Google Cloud Platform',
+      name: 'TeamCity',
       level: 2
     },
     {
@@ -197,8 +201,16 @@ function Skills(props) {
       level: 2
     },
     {
+      name: 'Redis',
+      level: 2
+    },
+    {
       name: 'Android Studio',
       level: 2
+    },
+    {
+      name: 'Grafana',
+      level: 1
     },
   ]
   const specialties = [
@@ -228,6 +240,10 @@ function Skills(props) {
     },
     {
       name: 'Front-End Development',
+      level: 2
+    },
+    {
+      name: 'CI/CD',
       level: 2
     },
     {
@@ -262,8 +278,6 @@ function Skills(props) {
         <SkillContainer skills={platforms}/>
         <SkillTitle>Specialties</SkillTitle>
         <SkillContainer skills={specialties}/>
-        <SkillTitle>Business</SkillTitle>
-        <SkillContainer skills={business}/>
       </Flex>
     </ShowBlock>
   )
