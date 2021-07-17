@@ -29,11 +29,17 @@ function Projects(props) {
       source: 'https://github.com/comtalyst/personal-site',
     },
     {
+      name: 'TBA',
+      desc: 'Stay tuned for this fall!',
+      year: 'Apr 2021 ---',
+      keywords: ['Front-End Development', 'Back-End Development', 'React', 'Redux', 'Node.js', 'Express.js', 'MongoDB', 'Redis', 'bee-queue', 'Docker', 'Google Cloud Services', 'JavaScript', 'HTML5 & CSS3', 'Chakra UI'],
+    },
+    {
       name: 'Generative Facial Cosmetics',
       desc: 'Transfer lipstick colors from a face to another face automatically and smoothly using machine learning techniques. ' +
             'More details and live tryout are in the link provided. ',
       year: 'Jul 2020 - Dec 2020',
-      keywords: ['Machine Learning', 'Computer Vision', 'Back-End Development', 'Generative Adversarial Networks', 'API', 'Flask', 'PostgreSQL', 'TensorFlow', 'Keras', 'OpenCV', 'Dlib', 'Google Cloud Services', 'Python'],
+      keywords: ['Machine Learning', 'Computer Vision', 'Back-End Development', 'Generative Adversarial Networks', 'API', 'Flask', 'PostgreSQL', 'TensorFlow', 'Keras', 'OpenCV', 'Dlib', 'Docker', 'Google Cloud Services', 'Python'],
       link: '#/pages/GFC',
       source: 'https://github.com/comtalyst/generative-facial-cosmetics',
     },
