@@ -99,7 +99,11 @@ function Skills(props) {
   ]
   const frameworks = [
     {
-      name: 'Node.js & Express.js',
+      name: 'Node.js',
+      level: 3
+    },
+    {
+      name: 'Express.js',
       level: 3
     },
     {
@@ -133,7 +137,23 @@ function Skills(props) {
     {
       name: 'Scikit-learn',
       level: 2
-    }
+    },
+    {
+      name: 'Cucumber',
+      level: 2
+    },
+    {
+      name: 'Mockito',
+      level: 2
+    },
+    {
+      name: 'Ajax',
+      level: 1
+    },
+    {
+      name: 'Play',
+      level: 1
+    },
   ]
   const platforms = [
     {
@@ -142,15 +162,23 @@ function Skills(props) {
     },
     {
       name: 'Git',
-      level: 3
+      level: 4
     },
     {
       name: 'Linux',
-      level: 3
+      level: 4
     },
     {
       name: 'MongoDB',
       level: 3
+    },
+    {
+      name: 'Unity 2D',
+      level: 3
+    },
+    {
+      name: 'Kafka',
+      level: 2
     },
     {
       name: 'Docker',
@@ -169,10 +197,6 @@ function Skills(props) {
       level: 2
     },
     {
-      name: 'Unity 2D',
-      level: 2
-    },
-    {
       name: 'Android Studio',
       level: 2
     },
@@ -187,16 +211,24 @@ function Skills(props) {
       level: 4
     },
     {
-      name: 'Full-Stack Web Development',
+      name: 'Back-End Development',
       level: 3
     },
     {
-      name: 'Deep & Machine Learning',
+      name: 'Machine Learning',
       level: 3
     },
     {
       name: 'Object-Oriented Programming',
       level: 3
+    },
+    {
+      name: 'Functional Programming',
+      level: 3
+    },
+    {
+      name: 'Front-End Development',
+      level: 2
     },
     {
       name: 'Event-Driven Programming',
