@@ -29,10 +29,10 @@ function Projects(props) {
       source: 'https://github.com/comtalyst/personal-site',
     },
     {
-      name: 'TBA',
-      desc: 'Stay tuned for this fall!',
+      name: 'Wiscoursealert',
+      desc: 'Stay tuned for this spring!',
       year: 'Apr 2021 ---',
-      keywords: ['Front-End Development', 'Back-End Development', 'React', 'Redux', 'Node.js', 'Express.js', 'MongoDB', 'Redis', 'bee-queue', 'Docker', 'Google Cloud Services', 'JavaScript', 'HTML5 & CSS3', 'Chakra UI'],
+      keywords: ['Back-End Development', 'React', 'Node.js', 'Express.js', 'MongoDB', 'Redis', 'Docker', 'Google Cloud Services', 'JavaScript'],
     },
     {
       name: 'Generative Facial Cosmetics',

@@ -169,7 +169,7 @@ function Skills(props) {
       level: 4
     },
     {
-      name: 'Linux',
+      name: 'Unix',
       level: 4
     },
     {
@@ -276,8 +276,6 @@ function Skills(props) {
         <SkillContainer skills={frameworks}/>
         <SkillTitle>Platforms</SkillTitle>
         <SkillContainer skills={platforms}/>
-        <SkillTitle>Specialties</SkillTitle>
-        <SkillContainer skills={specialties}/>
       </Flex>
     </ShowBlock>
   )
