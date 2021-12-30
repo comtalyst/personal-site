@@ -6,6 +6,8 @@ import { BulletPoint } from '../../containers/BlogPage.js';
 import { Flex, Box } from "@chakra-ui/core";
 import ShowList from '../../containers/ShowList.js';
 import ShowBlock from '../../containers/ShowBlock.js';
+import BackgroundContainer from '../../containers/BackgroundContainer';
+import scene from '../../media/scene7.jpg';
 
 function ResearchExperiences(props) {
   // these data may need to stay here instead of JSON since we are making use of component tags directly
@@ -28,10 +30,12 @@ function ResearchExperiences(props) {
   ]
 
   return (
-    <ShowBlock {...props}>
+    <BackgroundContainer {...props} bg={scene} bgSize={"cover"} backgroundPosition={"center"}>
+    <ShowBlock bg='bgCover3'>
       <Title>Research Experiences</Title>
       <ShowList rows={experiences} collapseTitle='Experiences'/>
     </ShowBlock>
+    </BackgroundContainer>
   )
 }
 

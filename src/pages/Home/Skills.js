@@ -3,6 +3,8 @@ import {Text, Box, Flex} from "@chakra-ui/core";
 
 import { Title, TextBig, HeaderBig } from '../../components/Texts.js';
 import ShowBlock from '../../containers/ShowBlock.js';
+import BackgroundContainer from '../../containers/BackgroundContainer';
+import scene from '../../media/scene5.png';
 
 function Skills(props) {
 
@@ -267,7 +269,8 @@ function Skills(props) {
   ]
 
   return (
-    <ShowBlock {...props}>
+    <BackgroundContainer {...props} bg={scene} bgSize={"cover"} backgroundPosition={"center"}>
+    <ShowBlock bg='bgCover3'>
       <Title>Tech Skills</Title>
       <Flex direction='column' px='20px' maxW='1200px'>
         <SkillTitle>Languages</SkillTitle>
@@ -278,6 +281,7 @@ function Skills(props) {
         <SkillContainer skills={platforms}/>
       </Flex>
     </ShowBlock>
+    </BackgroundContainer>
   )
 }
 

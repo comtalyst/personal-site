@@ -12,6 +12,9 @@ import { Title } from '../../components/Texts.js';
 import ShowList from '../../containers/ShowList.js';
 import ShowBlock from '../../containers/ShowBlock';
 
+import BackgroundContainer from '../../containers/BackgroundContainer';
+import scene from '../../media/scene10.jpeg';
+
 function Honors(props) {
   const gold = 'yellow.400'
   const silver = 'gray.300'
@@ -108,10 +111,12 @@ function Honors(props) {
   ]
 
   return (
-    <ShowBlock {...props}>
+    <BackgroundContainer {...props} bg={scene} bgSize={"cover"} backgroundPosition={"bottom center"}>
+    <ShowBlock bg='bgCover3'>
       <Title>Awards and Honors</Title>
       <ShowList rows={honors} collapseTitle='Aspects'/>
     </ShowBlock>
+    </BackgroundContainer>
   )
 }
 

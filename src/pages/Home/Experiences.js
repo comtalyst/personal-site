@@ -3,6 +3,8 @@ import React from 'react';
 import { Title } from '../../components/Texts.js';
 import ShowList from '../../containers/ShowList.js';
 import ShowBlock from '../../containers/ShowBlock.js';
+import BackgroundContainer from '../../containers/BackgroundContainer';
+import scene from '../../media/scene9.png';
 
 function Experiences(props) {
   // these data may need to stay here instead of JSON since we are making use of component tags directly
@@ -42,10 +44,12 @@ function Experiences(props) {
   ]
 
   return (
-    <ShowBlock {...props}>
+    <BackgroundContainer {...props} bg={scene} bgSize={"cover"} backgroundPosition={"center"}>
+    <ShowBlock bg='bgCover3'>
       <Title>Extracurricular Experiences</Title>
       <ShowList rows={experiences} collapseTitle='Experiences'/>
     </ShowBlock>
+    </BackgroundContainer>
   )
 }
 

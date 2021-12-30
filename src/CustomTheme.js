@@ -18,6 +18,7 @@ const customTheme = {
     },
     bgCover: '#1A202CBB',
     bgCover2: '#1A202CDD',
+    bgCover3: '#1A202CEE',
     matte: {
       bg: '#26272B',
       1: '#293556',

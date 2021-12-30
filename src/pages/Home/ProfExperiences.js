@@ -6,6 +6,8 @@ import { BulletPoint } from '../../containers/BlogPage.js';
 import { Title } from '../../components/Texts.js';
 import ShowList from '../../containers/ShowList.js';
 import ShowBlock from '../../containers/ShowBlock.js';
+import BackgroundContainer from '../../containers/BackgroundContainer';
+import scene from '../../media/scene6.png';
 
 function ProfExperiences(props) {
   const JobText = (props) => {
@@ -34,10 +36,12 @@ function ProfExperiences(props) {
   ]
 
   return (
-    <ShowBlock {...props}>
+    <BackgroundContainer {...props} bg={scene} bgSize={"cover"} backgroundPosition={"center"}>
+    <ShowBlock bg='bgCover3'>
       <Title>Professional Experiences</Title>
       <ShowList rows={experiences} collapseTitle='Experiences'/>
     </ShowBlock>
+    </BackgroundContainer>
   )
 }
 

@@ -16,6 +16,9 @@ import { Title } from '../../components/Texts.js';
 import ShowList from '../../containers/ShowList.js';
 import ShowBlock from '../../containers/ShowBlock';
 
+import BackgroundContainer from '../../containers/BackgroundContainer';
+import scene from '../../media/scene8.jpeg';
+
 function Projects(props) {
 
   // these data may need to stay here instead of JSON since we are making use of component tags directly
@@ -113,10 +116,12 @@ function Projects(props) {
   ]
 
   return (
-    <ShowBlock {...props}>
+    <BackgroundContainer {...props} bg={scene} bgSize={"cover"} backgroundPosition={"center"}>
+    <ShowBlock bg='bgCover3'>
       <Title>Projects</Title>
       <ShowList rows={projects} collapseTitle='Technologies'/>
     </ShowBlock>
+    </BackgroundContainer>
   )
 }
 
