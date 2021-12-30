@@ -19,23 +19,8 @@ function Contact(props) {
           <TextMedium textAlign='center'>
             Mr. Rawin (Robin) Deeboonchai
           </TextMedium>
-          <TextMedium fontWeight='b' textAlign='center' color='gray.400'>
-            &nbsp;/&nbsp;
-          </TextMedium>
-          <TextMedium textAlign='center'>
-            นาย รวินท์ ดีบุญชัย
-          </TextMedium>
         </Flex>
         <Flex justifyContent='center' alignItems='center' wrap='wrap'>
-          <Flex alignItems='center'>
-            <Box as={FaMapMarkerAlt} size='15px' mx='10px' />
-            <TextMedium textAlign='center'>
-              Bangkok, Thailand (Summer)
-            </TextMedium>
-          </Flex>
-          <TextMedium fontWeight='b' textAlign='center' color='gray.400'>
-            &nbsp;/&nbsp;
-          </TextMedium>
           <Flex alignItems='center'>
             <Box as={FaMapMarkerAlt} size='15px' mx='10px' ml='2px'/>
             <TextMedium textAlign='center'>
