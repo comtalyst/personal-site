@@ -30,12 +30,11 @@ function Contact(props) {
         </Flex>
         <Flex justifyContent='center' alignItems='center'>
           <Box as={FaEnvelope} size='15px' mx='10px' mt='3px'/>
-          <Link isExternal href='mailto:rawin.dbc@outlook.com'>
-            <TextMedium textAlign='center'>rawin.dbc@outlook.com</TextMedium>
+          <Link isExternal href='mailto:comtalyst@outlook.com'>
+            <TextMedium textAlign='center'>comtalyst@outlook.com</TextMedium>
           </Link>
         </Flex>
         <Flex justifyContent='center' alignItems='center' pt='30px'>
-          <Link isExternal href='https://www.facebook.com/comtalyst'><Box as={FaFacebook} size='30px' mx='10px'/></Link>
           <Link isExternal href='https://github.com/comtalyst'><Box as={FaGithub} size='30px' mx='10px'/></Link>
           <Link isExternal href='https://www.instagram.com/pun_rawin'><Box as={FaInstagram} size='30px' mx='10px'/></Link>
           <Link isExternal href='https://www.linkedin.com/in/rawin-dbc/'><Box as={FaLinkedin} size='30px' mx='10px'/></Link>

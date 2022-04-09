@@ -21,7 +21,6 @@ function Landing(props) {
         </TextBig>
         
         <Flex justifyContent='center' alignItems='center' pt='30px'>
-          <Link isExternal href='https://www.facebook.com/comtalyst'><Box as={FaFacebook} size='30px' mx='10px'/></Link>
           <Link isExternal href='https://github.com/comtalyst'><Box as={FaGithub} size='30px' mx='10px'/></Link>
           <Link isExternal href='https://www.instagram.com/pun_rawin'><Box as={FaInstagram} size='30px' mx='10px'/></Link>
           <Link isExternal href='https://www.linkedin.com/in/rawin-dbc/'><Box as={FaLinkedin} size='30px' mx='10px'/></Link>

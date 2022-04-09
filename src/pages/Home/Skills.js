@@ -67,6 +67,10 @@ function Skills(props) {
       level: 4
     },
     {
+      name: 'C#',
+      level: 4
+    },
+    {
       name: 'Java',
       level: 4
     },
@@ -79,20 +83,20 @@ function Skills(props) {
       level: 4
     },
     {
+      name: 'SQL',
+      level: 3
+    },
+    {
       name: 'Scala',
       level: 3
     },
     {
-      name: 'C/C++',
+      name: 'C',
       level: 3
     },
     {
-      name: 'C#',
-      level: 3
-    },
-    {
-      name: 'SQL',
-      level: 3
+      name: 'C++',
+      level: 2
     },
     {
       name: 'CSS',
@@ -100,16 +104,16 @@ function Skills(props) {
     },
     {
       name: 'R',
-      level: 2
+      level: 1
     },
   ]
   const frameworks = [
     {
-      name: 'Node.js',
+      name: 'ASP.NET Core',
       level: 3
     },
     {
-      name: 'Express.js',
+      name: 'Node.js + Express.js',
       level: 3
     },
     {
@@ -125,15 +129,11 @@ function Skills(props) {
       level: 3
     },
     {
-      name: 'Pandas',
-      level: 3
-    },
+      name: 'Tailwind',
+      level: 2
+    }, 
     {
       name: 'Redux',
-      level: 2
-    },
-    {
-      name: 'Jest',
       level: 2
     },
     {
@@ -141,31 +141,27 @@ function Skills(props) {
       level: 2
     },
     {
+      name: 'Jest',
+      level: 2
+    },
+    {
       name: 'Scikit-learn',
       level: 2
     },
     {
+      name: 'Play Framework',
+      level: 2
+    },
+    {
+      name: 'Pandas',
+      level: 2
+    },
+    {
       name: 'Cucumber',
-      level: 2
-    },
-    {
-      name: 'Mockito',
-      level: 2
-    },
-    {
-      name: 'Ajax',
-      level: 1
-    },
-    {
-      name: 'Play',
       level: 1
     },
   ]
   const platforms = [
-    {
-      name: 'Arduino',
-      level: 4
-    },
     {
       name: 'Git',
       level: 4
@@ -175,12 +171,24 @@ function Skills(props) {
       level: 4
     },
     {
-      name: 'MongoDB',
+      name: 'Microsoft Azure',
+      level: 3
+    },
+    {
+      name: 'Arduino',
       level: 3
     },
     {
       name: 'Unity 2D',
       level: 3
+    },
+    {
+      name: 'PostgreSQL',
+      level: 2
+    },
+    {
+      name: 'MongoDB',
+      level: 2
     },
     {
       name: 'Kafka',
@@ -195,20 +203,16 @@ function Skills(props) {
       level: 2
     },
     {
-      name: 'TeamCity',
+      name: 'Android Studio',
       level: 2
     },
     {
-      name: 'PostgreSQL',
-      level: 2
+      name: 'TeamCity',
+      level: 1
     },
     {
       name: 'Redis',
-      level: 2
-    },
-    {
-      name: 'Android Studio',
-      level: 2
+      level: 1
     },
     {
       name: 'Grafana',
@@ -225,7 +229,7 @@ function Skills(props) {
       level: 4
     },
     {
-      name: 'Back-End Development',
+      name: 'Backend Development',
       level: 3
     },
     {
@@ -233,15 +237,7 @@ function Skills(props) {
       level: 3
     },
     {
-      name: 'Object-Oriented Programming',
-      level: 3
-    },
-    {
-      name: 'Functional Programming',
-      level: 3
-    },
-    {
-      name: 'Front-End Development',
+      name: 'Frontend Development',
       level: 2
     },
     {
@@ -249,12 +245,8 @@ function Skills(props) {
       level: 2
     },
     {
-      name: 'Event-Driven Programming',
-      level: 2
-    },
-    {
       name: 'Game Development',
-      level: 2
+      level: 1
     },
   ]
   const business = [
