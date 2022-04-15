@@ -5,7 +5,7 @@ const customTheme = {
   ...theme,
   colors: {
     ...theme.colors,
-    reactDark: '#20232a',
+    reactDark: '#282A31',
     trans: {
       gray: '#A0AEC020',
       blue: {
@@ -16,9 +16,11 @@ const customTheme = {
         700: '#1E4E8C60'
       }
     },
-    bgCover: '#1A202CBB',
+    bgCover0: '#1A202C11',
+    bgCover: '#1A202C88',
     bgCover2: '#1A202CDD',
-    bgCover3: '#1A202CEE',
+    bgCover3: '#1A202CCC',
+    bgCover4: '#1A202CBB',
     matte: {
       bg: '#26272B',
       1: '#293556',
@@ -28,13 +30,13 @@ const customTheme = {
     }
   },
   fonts: {
-    body: "system-ui, sans-serif",
+    body: "Zen Kaku Gothic New, system-ui, sans-serif",
   },
   fontWeights: {
-    light: 350,
-    normal: 400,
+    light: 400,
+    normal: 500,
     medium: 500,
-    semibold: 600,
+    semibold: 700,
     bold: 700,
   },
   lineHeights: {

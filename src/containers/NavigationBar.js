@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import { Button, Text, Flex, Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/core";
 import { TextMedium } from '../components/Texts';
 
-const clashRange = 80                         // additional constant for title-buttons clash measurement
-export const barHeight = 64
+const clashRange = 220                         // additional constant for title-buttons clash measurement
+export const barHeight = 48
 
 class NavigationBar extends Component {
   constructor(){
@@ -56,18 +56,12 @@ class NavigationBar extends Component {
     return (
       <Flex>
         <Flex h={barHeight + 'px'}></Flex>
-        <Flex bg='reactDark' w='100%' color='white' py='0' justifyContent='space-between' px='1.5rem' h={barHeight + 'px'}
-          alignItems='center' position='fixed' zIndex={100}
+        <Flex bg='reactDark' w='100%' color='white' py='0' justifyContent='space-between' px={this.state.compact? "1.5rem":"6rem"} h={barHeight + 'px'}
+          alignItems='center' position='fixed' zIndex={100} boxShadow='2xl'
         >
           <Flex ref={this.setTitleRef}>
-            <Text fontSize='xl' letterSpacing='wide' fontWeight='light'>
-              Rawin&nbsp;
-            </Text>
-            <Text fontSize='xl' letterSpacing='wider' color='blue.400'>
-              (Robin) 
-            </Text>
-            <Text fontSize='xl' letterSpacing='wide' fontWeight='light'>
-              &nbsp;Deeboonchai
+            <Text fontSize='xl' letterSpacing='wider' color='blue.400' fontWeight='bold'>
+              Robin D.
             </Text>
           </Flex>
           {

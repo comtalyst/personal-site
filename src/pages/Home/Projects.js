@@ -20,7 +20,7 @@ import ShowList from '../../containers/ShowList.js';
 import ShowBlock from '../../containers/ShowBlock';
 
 import BackgroundContainer from '../../containers/BackgroundContainer';
-import scene from '../../media/scene8.jpeg';
+import scene from '../../media/scene8.jpg';
 
 function Projects(props) {
 
@@ -45,7 +45,7 @@ function Projects(props) {
       link: 'https://www.timelette.app/',
       source: 'https://github.com/comtalyst/chronoria',
       extras: (<Flex justifyContent='center' mt='1rem' wrap='wrap'>
-                <Image src={timelette1} alt='screenshot' h='300px' m='10px' borderRadius='5px' shadow='4px 4px #00000020'/>
+                <Image src={timelette1} alt='screenshot' h='300px' m='10px' borderRadius='4px' boxShadow='xl'/>
               </Flex>)
     },
     {
@@ -57,8 +57,8 @@ function Projects(props) {
       link: 'https://wiscoursealert.com/',
       source: 'https://github.com/wiscoursealert/wiscoursealert',
       extras: (<Flex justifyContent='center' mt='1rem' wrap='wrap'>
-                <Image src={wiscoursealert1} alt='screenshot' h='300px' m='10px' borderRadius='5px' shadow='4px 4px #00000020'/>
-                <Image src={wiscoursealert2} alt='screenshot' h='300px' m='10px' borderRadius='5px' shadow='4px 4px #00000020'/>
+                <Image src={wiscoursealert1} alt='screenshot' h='300px' m='10px' borderRadius='4px' boxShadow='xl'/>
+                <Image src={wiscoursealert2} alt='screenshot' h='300px' m='10px' borderRadius='4px' boxShadow='xl'/>
               </Flex>)
     },
     {
@@ -77,11 +77,11 @@ function Projects(props) {
       keywords: ['Game Development', 'Object-Oriented Programming', 'Unity 2D', 'C#', 'Google Play Services'],
       link: 'https://play.google.com/store/apps/details?id=com.comtalyst.shootdown',
       extras: (<Flex justifyContent='center' mt='1rem' wrap='wrap'>
-                <Image src={shootdown1} alt='screenshot' h='250px' m='10px' borderRadius='5px' shadow='4px 4px #00000020'/>
-                <Image src={shootdown2} alt='screenshot' h='250px' m='10px' borderRadius='5px' shadow='4px 4px #00000020'/>
-                <Image src={shootdown3} alt='screenshot' h='250px' m='10px' borderRadius='5px' shadow='4px 4px #00000020'/>
-                <Image src={shootdown4} alt='screenshot' h='250px' m='10px' borderRadius='5px' shadow='4px 4px #00000020'/>
-                <Image src={shootdown5} alt='screenshot' h='250px' m='10px' borderRadius='5px' shadow='4px 4px #00000020'/>
+                <Image src={shootdown1} alt='screenshot' h='250px' m='10px' borderRadius='4px' boxShadow='xl'/>
+                <Image src={shootdown2} alt='screenshot' h='250px' m='10px' borderRadius='4px' boxShadow='xl'/>
+                <Image src={shootdown3} alt='screenshot' h='250px' m='10px' borderRadius='4px' boxShadow='xl'/>
+                <Image src={shootdown4} alt='screenshot' h='250px' m='10px' borderRadius='4px' boxShadow='xl'/>
+                <Image src={shootdown5} alt='screenshot' h='250px' m='10px' borderRadius='4px' boxShadow='xl'/>
               </Flex>)
     },
     {
@@ -91,8 +91,8 @@ function Projects(props) {
       keywords: ['Robotics', 'Arduino', 'C'],
       source: 'https://github.com/comtalyst/Luminateer',
       extras: (<Flex justifyContent='center' mt='1rem' wrap='wrap'>
-                <Image src={luminateer1} alt='screenshot' h='200px' m='10px' borderRadius='5px' shadow='4px 4px #00000020'/>
-                <Image src={luminateer2} alt='screenshot' h='200px' m='10px' borderRadius='5px' shadow='4px 4px #00000020'/>
+                <Image src={luminateer1} alt='screenshot' h='200px' m='10px' borderRadius='4px' boxShadow='xl'/>
+                <Image src={luminateer2} alt='screenshot' h='200px' m='10px' borderRadius='4px' boxShadow='xl'/>
               </Flex>)
     },
     {
@@ -109,8 +109,8 @@ function Projects(props) {
       keywords: ['Robotics', 'Arduino', 'C'],
       source: 'https://github.com/comtalyst/Firex',
       extras: (<Flex justifyContent='center' mt='1rem' wrap='wrap'>
-                <Image src={firex1} alt='screenshot' h='200px' m='10px' borderRadius='5px' shadow='4px 4px #00000020'/>
-                <Image src={firex2} alt='screenshot' h='200px' m='10px' borderRadius='5px' shadow='4px 4px #00000020'/>
+                <Image src={firex1} alt='screenshot' h='200px' m='10px' borderRadius='4px' boxShadow='xl'/>
+                <Image src={firex2} alt='screenshot' h='200px' m='10px' borderRadius='4px' boxShadow='xl'/>
               </Flex>)
     },
     {
@@ -120,7 +120,7 @@ function Projects(props) {
       keywords: ['Machine Learning', 'Neural Networks', 'Genetic Algorithms', 'Java'],
       source: 'https://github.com/comtalyst/Minesweepers',
       extras: (<Flex justifyContent='center' mt='1rem' wrap='wrap'>
-                <Image src={minesweepers1} alt='screenshot' h='300px' m='10px' borderRadius='5px' shadow='4px 4px #00000020'/>
+                <Image src={minesweepers1} alt='screenshot' h='300px' m='10px' borderRadius='4px' boxShadow='xl'/>
               </Flex>)
     },
     {
@@ -141,9 +141,9 @@ function Projects(props) {
 
   return (
     <BackgroundContainer {...props} bg={scene} bgSize={"cover"} backgroundPosition={"center"}>
-    <ShowBlock bg='bgCover3'>
+    <ShowBlock bg='bgCover2'>
       <Title>Projects</Title>
-      <ShowList rows={projects} collapseTitle='Technologies'/>
+      <ShowList rows={projects} collapseTitle='Techs'/>
     </ShowBlock>
     </BackgroundContainer>
   )

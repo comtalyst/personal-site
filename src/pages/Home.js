@@ -44,25 +44,25 @@ function Home() {
       <Education/>
       <hr/>
       <div ref={ref['Skills']}></div>
-      <Skills bg='trans.gray'/>
+      <Skills/>
       <hr/>
       <div ref={ref['Works']}></div>
       <ProfExperiences />
       <hr/>
       <div ref={ref['Research']}></div>
-      <ResearchExperiences  bg='trans.gray'/>
+      <ResearchExperiences />
       <hr/>
       <div ref={ref['Projects']}></div>
       <Projects />
       <hr/>
       <div ref={ref['Experiences']}></div>
-      <Experiences bg='trans.gray'/>
+      <Experiences/>
       <hr/>
       <div ref={ref['Honors']}></div>
       <Honors />
       <hr/>
       <div ref={ref['Contact']}></div>
-      <Contact bg='trans.gray'/>
+      <Contact/>
     </Box>
   );
 }

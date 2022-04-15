@@ -31,7 +31,7 @@ function ResearchExperiences(props) {
 
   return (
     <BackgroundContainer {...props} bg={scene} bgSize={"cover"} backgroundPosition={"center"}>
-    <ShowBlock bg='bgCover3'>
+    <ShowBlock bg='bgCover4'>
       <Title>Research Experiences</Title>
       <ShowList rows={experiences} collapseTitle='Experiences'/>
     </ShowBlock>

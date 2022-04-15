@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, Box, Flex, Image, Link } from "@chakra-ui/core";
+import {Text, Box, Flex, Image, Link, PseudoBox } from "@chakra-ui/core";
 import { FaEnvelope, FaMapMarkerAlt, FaGithub, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 
 import comtalyst_hidden from '../../media/comtalyst_hidden.png';
@@ -17,7 +17,7 @@ function Contact(props) {
         <br/>
         <Flex justifyContent='center' alignItems='center' wrap='wrap'>
           <TextMedium textAlign='center'>
-            Mr. Rawin (Robin) Deeboonchai
+            Rawin (Robin) Deeboonchai
           </TextMedium>
         </Flex>
         <Flex justifyContent='center' alignItems='center' wrap='wrap'>
@@ -35,9 +35,9 @@ function Contact(props) {
           </Link>
         </Flex>
         <Flex justifyContent='center' alignItems='center' pt='30px'>
-          <Link isExternal href='https://github.com/comtalyst'><Box as={FaGithub} size='30px' mx='10px'/></Link>
-          <Link isExternal href='https://www.instagram.com/pun_rawin'><Box as={FaInstagram} size='30px' mx='10px'/></Link>
-          <Link isExternal href='https://www.linkedin.com/in/rawin-dbc/'><Box as={FaLinkedin} size='30px' mx='10px'/></Link>
+          <Link isExternal href='https://github.com/comtalyst'><PseudoBox as={FaGithub} size='30px' mx='10px' transition="all 0.2s cubic-bezier(.08,.52,.52,1)" _hover={{ transform: 'scale(1.2)'}}/></Link>
+          <Link isExternal href='https://www.instagram.com/pun_rawin'><PseudoBox as={FaInstagram} size='30px' mx='10px' transition="all 0.2s cubic-bezier(.08,.52,.52,1)" _hover={{ transform: 'scale(1.2)'}}/></Link>
+          <Link isExternal href='https://www.linkedin.com/in/rawin-dbc/'><PseudoBox as={FaLinkedin} size='30px' mx='10px' transition="all 0.2s cubic-bezier(.08,.52,.52,1)" _hover={{ transform: 'scale(1.2)'}}/></Link>
         </Flex>
         <Flex pt='20px' mx='-20px' mb='-40px'>
           <Link isExternal href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'><Image src={comtalyst_hidden} alt='logo' size='30px' mx='10px'/></Link>
