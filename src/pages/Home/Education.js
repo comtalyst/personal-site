@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Text, Box, Flex, Image, Grid, Collapse } from "@chakra-ui/core";
+import { Button, Text, Box, Flex, Image, Grid, Collapse, PseudoBox } from "@chakra-ui/core";
 
 import uw_logo from './media/uw_logo.png';
 import gs_logo from './media/gs_logo.png';
@@ -67,9 +67,9 @@ function Education(props) {
   }
 
   return (
-    <BackgroundContainer bg={scene} {...props}>
-    <ShowBlock bg='bgCover2'>
-      <Title>Education</Title>
+    <BackgroundContainer bg={scene} backgroundPosition='center' {...props}>
+    <ShowBlock bg='bgCover4'>
+      <Title mb='36px'>Education</Title>
       {
         schools.map((school, idx) => {
           const {name, color, desc, year, courses, logo} = school
@@ -78,10 +78,10 @@ function Education(props) {
               {
                 logo === 'n/a'?
                 (<Box h='100px' w='100px' pr='10px'></Box>):
-                (<Image src={logo} alt='logo' size='100px' objectFit='contain' pr='10px'/>)
+                (<PseudoBox transition="all 0.2s cubic-bezier(.08,.52,.52,1)" _hover={{ transform: 'scale(1.05)'}}><Image src={logo} alt='logo' size='100px' objectFit='contain' pr='10px'/></PseudoBox>)
               }
               <Flex direction='column'>
-                <TextBig color={color}>
+                <TextBig color={color} fontWeight='bold'>
                   {name}
                 </TextBig>
                 <TextBig>
@@ -99,6 +99,7 @@ function Education(props) {
                     pl='0'
                     pr='2'
                     onClick={() => handleToggle(idx)}
+                    fontWeight='normal' letterSpacing='wide'
                   >
                     Highlighted Courses
                   </Button>

@@ -10,6 +10,15 @@ export function Title(props) {
   )
 }
 
+export function TextSmall(props) {
+  return (
+    <Text fontSize='md' letterSpacing='wider' fontWeight='light' flexWrap='wrap'
+          {...props}>
+      {props.children}
+    </Text>
+  )
+}
+
 export function TextMedium(props) {
   return (
     <Text fontSize='l' lineHeight='taller' letterSpacing='wider' fontWeight='light' flexWrap='wrap'

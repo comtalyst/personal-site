@@ -4,7 +4,7 @@ import {Text, Box, Flex, PseudoBox} from "@chakra-ui/core";
 import { Title, TextBig, HeaderBig } from '../../components/Texts.js';
 import ShowBlock from '../../containers/ShowBlock.js';
 import BackgroundContainer from '../../containers/BackgroundContainer';
-import scene from '../../media/scene5.png';
+import scene from '../../media/scene5.jpg';
 
 function Skills(props) {
 
@@ -43,7 +43,7 @@ function Skills(props) {
             const bgColor = color
             const bgColorLight = color
             return (<PseudoBox borderWidth='1px' px='10px' py='0px' borderRadius='10px' m='2px' borderColor={bgColor} minWidth='fit-content' bg={bgColor}
-            transition="all 0.2s cubic-bezier(.08,.52,.52,1)" _hover={{ transform: 'scale(1.1)', mx:'8px', bg:bgColorLight, boxShadow:'2xl'}}>
+            boxShadow='lg' transition="all 0.2s cubic-bezier(.08,.52,.52,1)" _hover={{ transform: 'scale(1.1)', mx:'8px', bg:bgColorLight, boxShadow:'xl'}}>
               <TextBig my='5px'>
                 {skill.name}
               </TextBig>

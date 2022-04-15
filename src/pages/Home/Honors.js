@@ -13,7 +13,7 @@ import ShowList from '../../containers/ShowList.js';
 import ShowBlock from '../../containers/ShowBlock';
 
 import BackgroundContainer from '../../containers/BackgroundContainer';
-import scene from '../../media/scene10.jpeg';
+import scene from '../../media/scene10.jpg';
 
 function Honors(props) {
   const gold = 'yellow.400'
@@ -105,14 +105,14 @@ function Honors(props) {
       keywords: ['Competitive Programming', 'C/C++', 'Data Structure and Algorithms'],
       link: 'http://www.enews.psu.ac.th/index.php/education/28-the-12th-thailand-olympiad-in-informatics',
       extras: (<Flex justifyContent='center' mt='1rem' wrap='wrap'>
-                <Image src={toi1} alt='screenshot' h='250px' m='10px' borderRadius='5px'  shadow='4px 4px #00000020'/>
+                <Image src={toi1} alt='screenshot' h='250px' m='10px' borderRadius='4px' boxShadow='xl'/>
               </Flex>)
     },
   ]
 
   return (
     <BackgroundContainer {...props} bg={scene} bgSize={"cover"} backgroundPosition={"bottom center"}>
-    <ShowBlock bg='bgCover3'>
+    <ShowBlock bg='bgCover2'>
       <Title>Awards and Honors</Title>
       <ShowList rows={honors} collapseTitle='Aspects'/>
     </ShowBlock>

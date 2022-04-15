@@ -3,7 +3,7 @@ import { Button, Text, Flex, Menu, MenuButton, MenuList, MenuItem } from "@chakr
 import { TextMedium } from '../components/Texts';
 
 const clashRange = 220                         // additional constant for title-buttons clash measurement
-export const barHeight = 64
+export const barHeight = 48
 
 class NavigationBar extends Component {
   constructor(){

@@ -4,16 +4,23 @@ import {Flex, Box, Text} from "@chakra-ui/core";
 import agoda_logo from './media/agoda_logo.png';
 import microsoft_logo from './media/microsoft_logo.png';
 import { BulletPoint } from '../../containers/BlogPage.js';
-import { Title } from '../../components/Texts.js';
+import { Title, TextSmall } from '../../components/Texts.js';
 import ShowList from '../../containers/ShowList.js';
 import ShowBlock from '../../containers/ShowBlock.js';
 import BackgroundContainer from '../../containers/BackgroundContainer';
-import scene from '../../media/scene6.png';
+import scene from '../../media/scene6.jpg';
 
 function ProfExperiences(props) {
   const JobText = (props) => {
-    return (<Flex wrap='true'>
-      <Text flexWrap='true'>{props.title}&nbsp;&nbsp;•&nbsp;&nbsp;<Text fontWeight='semibold'>{props.company}</Text>&nbsp;&nbsp;•&nbsp;&nbsp;{props.location}</Text>
+    return (<Flex direction={'column'}>
+      <Text fontWeight='bold'>{props.title}</Text>
+      <Flex>
+        <TextSmall fontWeight='semibold'>{props.company}</TextSmall>
+        <TextSmall>
+        &nbsp;&nbsp;•&nbsp;&nbsp;
+        </TextSmall>
+        <TextSmall>{props.location}</TextSmall>
+      </Flex>
     </Flex>)
   }
 
@@ -21,7 +28,7 @@ function ProfExperiences(props) {
   const experiences=[
     {
       logo: microsoft_logo,
-      name: (<JobText title='Software Engineering Intern' company='Microsoft' location='Redmond, WA'></JobText>),
+      name: (<JobText title='Software Engineering Intern' company='Microsoft' location='Redmond, WA, USA'></JobText>),
       desc: (<Box>
             Coming soon!
             </Box>),
@@ -32,8 +39,8 @@ function ProfExperiences(props) {
       logo: agoda_logo,
       name: (<JobText title='Software Engineering Intern' company='Agoda' location='Bangkok, Thailand'></JobText>),
       desc: (<Box>
-            <BulletPoint>Focused on CI/CD backend software development of a large-scale system of Agoda’s hotel allotment supply system</BulletPoint>
-            <BulletPoint>Developed a data purging tool using Ajax for the interface, Kafka for producing and consuming requests, SQL for modifying the database, Cucumber for integration testing, and Scala for logics and unit tests on both ends</BulletPoint>
+            <BulletPoint>Focused on CI/CD backend software development of a large-scale system of hotel allotment supply system</BulletPoint>
+            <BulletPoint>Developed a data purging tool using Ajax for the interface, Kafka for producing and consuming requests, SQL for data access, Cucumber for integration testing, and Scala for logics and unit tests on both ends</BulletPoint>
             <BulletPoint>Developed a system feature to track each distributed request in the scaled messaging pipeline to the original request from the RESTful API with a UUID mainly using Scala</BulletPoint>
             <BulletPoint>Deployed and monitored the products using TeamCity, Docker, Grafana, and Agoda-original DevOps tools</BulletPoint>
             <BulletPoint>Worked with and went through code reviews with senior software engineers in GitHub for each project</BulletPoint>
@@ -47,7 +54,7 @@ function ProfExperiences(props) {
 
   return (
     <BackgroundContainer {...props} bg={scene} bgSize={"cover"} backgroundPosition={"center"}>
-    <ShowBlock bg='bgCover3'>
+    <ShowBlock bg='bgCover2'>
       <Title>Professional Experiences</Title>
       <ShowList rows={experiences} collapseTitle='Experiences'/>
     </ShowBlock>

@@ -11,12 +11,12 @@ import scene from '../../media/scene4.jpg';
 function Profile(props) {
   return (
     <BackgroundContainer bg={scene} {...props}>
-    <ShowBlock bg='bgCover2'>
+    <ShowBlock bg='bgCover4'>
       <Title>Hello There!</Title>
       <Grid templateColumns={{ base: "1fr", md: "minmax(0px, 150px) minmax(300px, auto) minmax(300px, auto) minmax(0px, 150px)"}} columnGap='3.5rem'>
         <Box></Box>
         <Flex justifyContent='center'pt='1.5rem' mx='20px'>
-          <Image src={portrait} alt='Portrait' width='500px' height='667px' objectFit='cover' borderRadius='5px' boxShadow='2xl'/>
+          <Image src={portrait} alt='Portrait' width='500px' height='667px' objectFit='cover' borderRadius='4px' boxShadow='2xl'/>
         </Flex>
         <Flex justifyContent='center' marginTop='-0.5rem' pt='1.5rem' mx='20px'>
           <Flex maxW='500px' wrap='wrap' direction='column'>

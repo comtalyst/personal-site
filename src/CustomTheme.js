@@ -5,7 +5,7 @@ const customTheme = {
   ...theme,
   colors: {
     ...theme.colors,
-    reactDark: '#20232a',
+    reactDark: '#282A31',
     trans: {
       gray: '#A0AEC020',
       blue: {
@@ -19,7 +19,7 @@ const customTheme = {
     bgCover0: '#1A202C11',
     bgCover: '#1A202C88',
     bgCover2: '#1A202CDD',
-    bgCover3: '#1A202CEE',
+    bgCover3: '#1A202CCC',
     bgCover4: '#1A202CBB',
     matte: {
       bg: '#26272B',
