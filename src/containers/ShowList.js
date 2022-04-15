@@ -33,7 +33,7 @@ function ShowList(props) {
             (<Image src={logo} alt='logo' w='120px' objectFit='contain' pt='10px' pr='30px'/>)
           }
           <Flex direction='column'>
-            <TextBig color={color !== null && color !== undefined? color:'blue.200'}>
+            <TextBig wrap='true' color={color !== null && color !== undefined? color:'blue.200'}>
               {name}
             </TextBig>
             {

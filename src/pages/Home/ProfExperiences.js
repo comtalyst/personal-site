@@ -12,8 +12,8 @@ import scene from '../../media/scene6.png';
 
 function ProfExperiences(props) {
   const JobText = (props) => {
-    return (<Flex>
-      {props.title}&nbsp;&nbsp;•&nbsp;&nbsp;<Text fontWeight='semibold'>{props.company}</Text>&nbsp;&nbsp;•&nbsp;&nbsp;{props.location}
+    return (<Flex wrap='true'>
+      <Text flexWrap='true'>{props.title}&nbsp;&nbsp;•&nbsp;&nbsp;<Text fontWeight='semibold'>{props.company}</Text>&nbsp;&nbsp;•&nbsp;&nbsp;{props.location}</Text>
     </Flex>)
   }
 

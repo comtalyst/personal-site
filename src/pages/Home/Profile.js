@@ -16,7 +16,7 @@ function Profile(props) {
       <Grid templateColumns={{ base: "1fr", md: "minmax(0px, 150px) minmax(300px, auto) minmax(300px, auto) minmax(0px, 150px)"}} columnGap='3.5rem'>
         <Box></Box>
         <Flex justifyContent='center'pt='1.5rem' mx='20px'>
-          <Image src={portrait} alt='Portrait' width='500px' height='667px' objectFit='cover' borderRadius='5px' shadow='5px 5px #00000030'/>
+          <Image src={portrait} alt='Portrait' width='500px' height='667px' objectFit='cover' borderRadius='5px' boxShadow='2xl'/>
         </Flex>
         <Flex justifyContent='center' marginTop='-0.5rem' pt='1.5rem' mx='20px'>
           <Flex maxW='500px' wrap='wrap' direction='column'>
@@ -25,18 +25,18 @@ function Profile(props) {
               But I usually let people call me <span style={{color: '#63B3ED', fontWeight:'bold'}}>Robin</span> for the sake of simplicity.<br/>
             </TextMedium>
             <TextMedium mt='1rem'>
-              <span style={{color: '#63B3ED', fontWeight:'bold'}}>comtalyst</span> is my digital codename, originate from the word "computing" and "catalyst." It does not make much sense, but it is sounds sooo cool, at least for me.
+              <span style={{color: '#63B3ED', fontWeight:'bold'}}>comtalyst</span> is my digital codename, originate from the word "computing" and "catalyst." It does not make much sense, but it is sounds really cool for me.
             </TextMedium>
             <TextMedium mt='1rem'>
-              Bangkok, Thailand is my hometown. 
-              However, I am currently pursuing my undergraduate degree in the United States 
+              Bangkok, 🇹🇭 Thailand is my hometown. 
+              However, I am currently pursuing my undergraduate degree in the 🇺🇸 United States
               at the University of Wisconsin-Madison and will graduate in May 2023.
             </TextMedium>
             <TextMedium mt='1rem'>
               My brightest passion and dreams are always around computing and digital technologies since I was very young.
-              This prompts me to begin my journey of pursuing a career in Computer Science and Data Science when I was in high school.
+              This prompts me to begin my journey of pursuing a career in Computer Science when I was in high school.
               Since then, I keep seeking more knowledge about the things that lie ahead without having to wait for the predefined curriculum 
-              defined by the formal education system. Throughout my almost-a-decade-long journey, I discover many new things outside of the classroom
+              defined by the formal education system. Throughout my journey, I discover many new things outside of the classroom
               apart from technical knowledge that might be helpful for my careers such as soft skills, connections, leadership opportunities, 
               or even life lessons and philosophy.
             </TextMedium>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex } from "@chakra-ui/core";
+import { Box, Flex, PseudoBox } from "@chakra-ui/core";
 import { exist } from '../utils';
 import { TextMedium } from './Texts.js'
 
@@ -14,15 +14,17 @@ export function TagBoxes(props) {
     <Flex justifyContent='left' flexWrap='wrap'
           {...props}>
       {props.keywords.map(keyword => {
-        let bgColor = 'gray.600'          // default
+        const bgColor = 'gray.700'          // default
+        const bgColorLight = 'gray.600'
         if(exist(props.boxColor)){
           bgColor = props.boxColor
         }
-        return (<Box borderWidth='2px' px='5px' py='1px' borderRadius='5px' m='2px' borderColor={bgColor} minWidth='fit-content' bg={bgColor}>
+        return (<PseudoBox borderWidth='1px' px='10px' py='0px' borderRadius='10px' m='2px' borderColor={bgColor} minWidth='fit-content' bg={bgColor} 
+        transition="all 0.2s cubic-bezier(.08,.52,.52,1)" _hover={{ transform: 'scale(1.05)', mx:'4px', bg:bgColorLight, boxShadow:'2xl'}}>
           <TextMedium>
             {keyword}
           </TextMedium>
-        </Box>)
+        </PseudoBox>)
       })}
     </Flex>
   )
